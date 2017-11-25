@@ -18,18 +18,21 @@ class BinaryTree<T> implements Traversal {
 
     @Override
     public void preOrder() {
+        System.out.println("PreOrder Traversal");
         preOrder(this);
         System.out.println();
     }
 
     @Override
     public void inOrder() {
+        System.out.println("InOrder Traversal");
         inOrder(this);
         System.out.println();
     }
 
     @Override
     public void postOrder() {
+        System.out.println("PostOrder Traversal");
         postOrder(this);
         System.out.println();
     }
@@ -45,7 +48,8 @@ class BinaryTree<T> implements Traversal {
     public void isAncestor(T q1, T q2) {
         System.out.println(isAncestor(this, q1, q2));
     }
-
+    // QUIZ 12
+    // PROBLEM 1
     private boolean isAncestor(BinaryTree<T> start, T q1, T q2) {
         if (start == null) return false;
         if (start.getValue().equals(q1))

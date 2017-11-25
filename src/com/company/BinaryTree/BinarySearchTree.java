@@ -63,6 +63,8 @@ public class BinarySearchTree<T> extends BinaryTree<T> {
         removePhoneNum(this, first);
     }
 
+    // QUIZ 12
+    // PROBLEM 2
     private void removePhoneNum(BinarySearchTree<T> start, char first) {
         if (start == null) return;
         removePhoneNum((BinarySearchTree<T>) start.getLeft(), first);
