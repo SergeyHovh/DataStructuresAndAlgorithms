@@ -1,38 +1,84 @@
 package com.company.LinkedList;
 
-public class LinkedList {
-    private Link firstLink;
+public class LinkedList<E> {
+    static class Node<E> {
+        Node<E> next;
+        E val;
 
-    LinkedList() {
-        this.firstLink = null;
-    }
-
-    boolean isEmpty() {
-        return firstLink == null;
-    }
-
-    public void insertFirstLink(String name, int age) {
-        Link newLink = new Link(name, age);
-        newLink.next = firstLink;
-        firstLink = newLink;
-    }
-
-    public Link removeFirst() {
-        Link linkRef = firstLink;
-        if (!isEmpty()) {
-            firstLink = firstLink.next;
-        } else {
-            System.out.println("empty linked list");
+        Node(E val) {
+            this.val = val;
+            this.next = null;
         }
-        return linkRef;
+
+        void print() {
+            System.out.println(val.toString());
+        }
+    }
+
+    private boolean isEmpty() {
+        return head == null;
+    }
+
+    private Node<E> head;
+
+    public LinkedList() {
+        head = null;
+    }
+
+    public void insertFirst(E val) {
+        Node<E> newNode = new Node<>(val);
+        newNode.next = head;
+        head = newNode;
+    }
+
+    public Node<E> removeFirst() {
+        Node<E> temp = head;
+        if (!isEmpty()) {
+            head = head.next;
+        }
+        return temp;
     }
 
     public void display() {
-        Link theLink = firstLink;
-        while (theLink != null) {
-            theLink.display();
-            theLink = theLink.next;
+        Node<E> node = head;
+        while (node != null) {
+            node.print();
+            node = node.next;
         }
+        System.out.println();
+    }
+
+    public Node<E> find(E val) {
+        Node<E> node = head;
+        if (!isEmpty()) {
+            while (!node.val.equals(val)) {
+                if (node.next == null) {
+                    return null;
+                } else {
+                    node = node.next;
+                }
+            }
+        } else {
+            System.out.println("Empty List");
+        }
+        return node;
+    }
+
+    public Node<E> removeNode(E val) {
+        Node<E> current = head;
+        Node<E> prev = head;
+        while (!current.val.equals(val)) {
+            if (current.next == null) return null;
+            else {
+                prev = current;
+                current = current.next;
+            }
+        }
+        if(current == head) head = head.next;
+        else {
+            prev.next = current.next;
+        }
+        return current;
     }
 }
 
