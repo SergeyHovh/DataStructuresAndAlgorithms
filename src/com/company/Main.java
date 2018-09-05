@@ -1,24 +1,23 @@
 package com.company;
 
-import com.company.BinaryTree.BinarySearchTree;
+interface Functions {
+    void hello();
+
+    void bye();
+
+    void arg(String arg);
+}
 
 public class Main {
     public static void main(String[] args) {
-        BinarySearchTree<Integer> tree = new BinarySearchTree<>(10);
-        tree.insert(25, "asjdnk");
-        tree.insert(102, "aksdladml");
-        tree.insert(8, "maksdnasdn");
-        tree.insert(9, "ahdb");
-        tree.insert(6, "aksjdba");
-        tree.insert(30);
-        tree.preOrder();
-        tree.inOrder();
-        tree.postOrder();
-        int[] pre = {10, 8, 6, 9, 25, 102, 30};
-        int[] in = {6, 8, 9, 10, 25, 30, 102};
-        System.out.println();
-        postOrder(in, pre);
+        MapGraph<String, Integer> stringIntegerMapGraph = new MapGraph<>();
+        stringIntegerMapGraph.addEdgeUD("Help", "Me", 3);
+        stringIntegerMapGraph.addEdgeD("Help", "No", 10);
+        System.out.println(stringIntegerMapGraph);
+
     }
+
+    private static int preIndex = 0;
 
     private static int search(int start, int end, int arr[], int x) {
         for (int i = start; i <= end; i++)
@@ -27,10 +26,10 @@ public class Main {
         return -1;
     }
 
-    private static int preIndex = 0;
-
     private static void postOrder(int[] in, int[] pre) {
+        System.out.println();
         printPostOrder(0, in.length - 1, in, pre);
+        System.out.println();
     }
 
     private static void printPostOrder(int inStart, int inEnd, int in[], int pre[]) {

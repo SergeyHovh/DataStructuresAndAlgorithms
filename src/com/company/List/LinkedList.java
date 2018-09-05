@@ -1,7 +1,7 @@
-package com.company.LinkedList;
+package com.company.List;
 
 public class LinkedList<E> {
-    static class Node<E> {
+    class Node<E> {
         Node<E> next;
         E val;
 
@@ -11,7 +11,7 @@ public class LinkedList<E> {
         }
 
         void print() {
-            System.out.println(val.toString());
+            System.out.print(val.toString());
         }
     }
 
@@ -25,13 +25,13 @@ public class LinkedList<E> {
         head = null;
     }
 
-    public void insertFirst(E val) {
+    public void insert(E val) {
         Node<E> newNode = new Node<>(val);
         newNode.next = head;
         head = newNode;
     }
 
-    public Node<E> removeFirst() {
+    public Node<E> pop() {
         Node<E> temp = head;
         if (!isEmpty()) {
             head = head.next;
@@ -43,6 +43,8 @@ public class LinkedList<E> {
         Node<E> node = head;
         while (node != null) {
             node.print();
+            if (node.next != null)
+                System.out.print(" -> ");
             node = node.next;
         }
         System.out.println();
@@ -74,7 +76,7 @@ public class LinkedList<E> {
                 current = current.next;
             }
         }
-        if(current == head) head = head.next;
+        if (current == head) head = head.next;
         else {
             prev.next = current.next;
         }

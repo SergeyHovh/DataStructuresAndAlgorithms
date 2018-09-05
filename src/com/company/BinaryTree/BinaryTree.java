@@ -8,37 +8,42 @@ public class BinaryTree<T> implements Traversal {
     private T value;
     private int objectHashCode;
     private final String className = getClass().getSimpleName();
+    private String valType;
 
     // constructor
-    public BinaryTree(T val) {
+    BinaryTree(T val) {
         this.value = val;
         this.right = null;
         this.left = null;
         objectHashCode = val.toString().toLowerCase().hashCode();
+        valType = val.getClass().getSimpleName();
+//        System.out.println(val.getClass().getSimpleName());
     }
+
+    private final String type = valType + " " + className;
 
     @Override
     public void preOrder() {
-        System.out.println(className + " PreOrder Traversal");
+        System.out.println(type + " PreOrder Traversal");
         preOrder(this);
         System.out.println();
     }
 
     @Override
     public void inOrder() {
-        System.out.println(className + " InOrder Traversal");
+        System.out.println(type + " InOrder Traversal");
         inOrder(this);
         System.out.println();
     }
 
     @Override
     public void postOrder() {
-        System.out.println(className + " PostOrder Traversal");
+        System.out.println(type + " PostOrder Traversal");
         postOrder(this);
         System.out.println();
     }
 
-    public boolean isLeaf() {
+    boolean isLeaf() {
         return this.left == null && this.right == null;
     }
 
@@ -100,27 +105,28 @@ public class BinaryTree<T> implements Traversal {
         return root == null;
     }
 
-    public T getValue() {
+    T getValue() {
         return value;
     }
 
-    public void setValue(T value) {
+    void setValue(T value) {
         this.value = value;
     }
 
-    private void print(BinaryTree<T> root) {
+    private String print(BinaryTree<T> root) {
         System.out.print(root.getValue() + " ");
+        return root.getValue() + " ";
     }
 
-    public int getObjectHashCode() {
+    int getObjectHashCode() {
         return objectHashCode;
     }
 
-    public BinaryTree<T> getLeft() {
+    BinaryTree<T> getLeft() {
         return left;
     }
 
-    public void setLeft(BinaryTree<T> left) {
+    void setLeft(BinaryTree<T> left) {
         this.left = left;
     }
 
@@ -128,11 +134,11 @@ public class BinaryTree<T> implements Traversal {
         this.left = new BinaryTree<>(value);
     }
 
-    public BinaryTree<T> getRight() {
+    BinaryTree<T> getRight() {
         return right;
     }
 
-    public void setRight(BinaryTree<T> right) {
+    void setRight(BinaryTree<T> right) {
         this.right = right;
     }
 
