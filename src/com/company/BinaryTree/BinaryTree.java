@@ -93,8 +93,8 @@ public class BinaryTree<T> implements Traversal {
     private void printTree(BinaryTree<T> start) {
         if (start == null) return;
         printTree(start.left);
-        toString += start.getValue() + " ";
         printTree(start.right);
+        toString += start.getValue() + " ";
     }
 
     private void postOrder(BinaryTree<T> start) {

@@ -46,6 +46,10 @@ public class MapGraph<K, V> {
         vertices = new HashSet<>();
     }
 
+    public void BFS(K source) {
+
+    }
+
     public void addEdgeD(K source, K destination, V weight) {
         if (!graph.containsKey(source)) {
             graph.put(source, new LinkedList<>());

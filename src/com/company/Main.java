@@ -2,43 +2,49 @@ package com.company;
 
 import com.company.BinaryTree.BinarySearchTree;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(generateTree(5));
-        System.out.println(generateGraph(5));
+        System.out.println(generateTree(10));
+        System.out.println(generateGraph(10));
     }
 
     private static BinarySearchTree<Integer> generateTree(int size) {
-        BinarySearchTree<Integer> tree = new BinarySearchTree<>(new Random().nextInt(2 * size));
-        for (Integer integer : generateSet(size)) {
-            tree.insert(integer);
+        Set<Integer> set = generateSet(size);
+        int iter = 0;
+        BinarySearchTree<Integer> tree = null;
+        for (Integer integer : set) {
+            if (iter == 0) {
+                tree = new BinarySearchTree<>(integer);
+                iter++;
+            } else {
+                tree.insert(integer);
+            }
         }
         return tree;
     }
 
     private static MapGraph<Integer, Integer> generateGraph(int size) {
         MapGraph<Integer, Integer> graph = new MapGraph<>(0);
-        Set<Integer> set = generateSet(size);
-        Integer[] arr = set.toArray(new Integer[size]);
-        for (Integer integer : arr) {
-            for (int i = 0; i < new Random().nextInt(2) + 1; i++) {
-                int s = integer, d = arr[new Random().nextInt(size)];
-                if (!graph.isConnected(s, d) && s != d) {
-                    graph.addEdgeUD(integer, d, new Random().nextInt(size));
+        for (int i = 0; i < size; ++i) {
+            for (int k = 0; k < new Random().nextInt(3) + 1; k++) {
+                int d = new Random().nextInt(size);
+                if (!graph.isConnected(i, d) && i != d) {
+                    graph.addEdgeUD(i, d, new Random().nextInt(size / 2)
+                            + new Random().nextInt(size / 2));
                 }
             }
         }
         return graph;
     }
 
-    static Set<Integer> generateSet(int size) {
-        Set<Integer> integerSet = new HashSet<>(1);
+    private static Set<Integer> generateSet(int size) {
+        Set<Integer> integerSet = new LinkedHashSet<>(1);
         while (integerSet.size() != size) {
-            integerSet.add(new Random().nextInt(2 * size));
+            integerSet.add(new Random().nextInt(size * size));
         }
         System.out.println(integerSet);
         return integerSet;
