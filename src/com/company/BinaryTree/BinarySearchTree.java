@@ -8,6 +8,7 @@ public class BinarySearchTree<T> extends BinaryTree<T> {
         super(val);
     }
 
+
     public BinarySearchTree<T> getMin(BinarySearchTree<T> start) {
         if (start.getLeft() == null) {
             return start;

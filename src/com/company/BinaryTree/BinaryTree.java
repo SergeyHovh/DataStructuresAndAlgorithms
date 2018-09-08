@@ -9,6 +9,7 @@ public class BinaryTree<T> implements Traversal {
     private int objectHashCode;
     private final String className = getClass().getSimpleName();
     private String valType;
+    private static String toString = "";
 
     // constructor
     BinaryTree(T val) {
@@ -31,6 +32,7 @@ public class BinaryTree<T> implements Traversal {
 
     @Override
     public void inOrder() {
+        toString = "";
         System.out.println(type + " InOrder Traversal");
         inOrder(this);
         System.out.println();
@@ -86,6 +88,13 @@ public class BinaryTree<T> implements Traversal {
         inOrder(start.left);
         print(start);
         inOrder(start.right);
+    }
+
+    private void printTree(BinaryTree<T> start) {
+        if (start == null) return;
+        printTree(start.left);
+        toString += start.getValue() + " ";
+        printTree(start.right);
     }
 
     private void postOrder(BinaryTree<T> start) {
@@ -144,5 +153,11 @@ public class BinaryTree<T> implements Traversal {
 
     public void setRight(T value) {
         this.right = new BinaryTree<>(value);
+    }
+
+    @Override
+    public String toString() {
+        printTree(this);
+        return toString;
     }
 }

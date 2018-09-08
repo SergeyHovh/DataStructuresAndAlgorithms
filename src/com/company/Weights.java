@@ -17,7 +17,7 @@ class Weights {
         m4 = k4;
     }
 
-    Weights(int ...weigths) {
+    Weights(int... weigths) {
         this.weigths = weigths;
     }
 
@@ -25,7 +25,7 @@ class Weights {
         count(m1, m2, m3, m4, M, N);
     }
 
-    static void count(int M, int N, int ...weights) {
+    static void count(int M, int N, int... weights) {
         int iterator = 1, times = weights.length;
         int[] Xs = new int[times];
         Arrays.sort(weights);
@@ -42,14 +42,7 @@ class Weights {
      * @param M  total mass
      * @param N  exact number of rocks needed
      */
-    static void count(
-            int k1,
-            int k2,
-            int k3,
-            int k4,
-            int M,
-            int N
-    ) {
+    static void count(int k1, int k2, int k3, int k4, int M, int N) {
         System.out.println(M + " KGs with " + N + " weights" + '\n');
         int x1, x2, x3, x4, iterator = 1;
         int[] vals = {k1, k2, k3, k4};
@@ -60,8 +53,7 @@ class Weights {
                 x4 = j;
                 x1 = (k2 * N - M - x3 * (k2 - k3) - x4 * (k2 - k4)) / (k2 - k1); // GAUSS-JORDAN ELIMINATION
                 x2 = (M - k1 * N - x3 * (k3 - k1) - x4 * (k4 - k1)) / (k2 - k1); // GAUSS-JORDAN ELIMINATION
-                if (x1 + x2 + x3 + x4 == N && x1 * k1 + x2 * k2 + x3 * k3 + x4 * k4 == M
-                        && x1 >= 0 && x2 >= 0) {
+                if (x1 + x2 + x3 + x4 == N && x1 * k1 + x2 * k2 + x3 * k3 + x4 * k4 == M && x1 >= 0 && x2 >= 0) {
                     System.out.println(iterator++ + ") " + '\n' +
                             k1 + " kg weights: " + x1 + '\n' +
                             k2 + " kg weights: " + x2 + '\n' +
