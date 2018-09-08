@@ -8,8 +8,11 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(generateTree(10));
-        System.out.println(generateGraph(10));
+//        System.out.println(generateTree(10));
+//        System.out.println(generateGraph(10));
+        MapGraph<Integer, Integer> mapGraph = generateGraph(10);
+        System.out.println(mapGraph);
+        mapGraph.BFS(0);
     }
 
     private static BinarySearchTree<Integer> generateTree(int size) {

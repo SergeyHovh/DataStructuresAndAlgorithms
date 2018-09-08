@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/BinaryTree/BinarySearchTree.class" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/BinaryTree/BinarySearchTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/BinaryTree/BinaryTree.class" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/BinaryTree/BinaryTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/BinaryTree/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/com/company/BinaryTree/BinarySearchTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/BinaryTree/BinaryTree.java" afterPath="$PROJECT_DIR$/src/com/company/BinaryTree/BinaryTree.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/MapGraph.java" afterPath="$PROJECT_DIR$/src/com/company/MapGraph.java" />
     </list>
@@ -21,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="12" column="62" lean-forward="false" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#search#0;class#Main#0" expanded="false" />
@@ -36,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapGraph.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MapGraph.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/MapGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="185">
+              <caret line="60" column="44" lean-forward="false" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -89,10 +84,10 @@
         <option value="$PROJECT_DIR$/src/com/company/List/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/com/company/Person.java" />
         <option value="$PROJECT_DIR$/src/com/company/Weights.java" />
-        <option value="$PROJECT_DIR$/src/com/company/MapGraph.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinaryTree/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinaryTree/BinaryTree.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/MapGraph.java" />
       </list>
     </option>
   </component>
@@ -171,7 +166,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -215,8 +210,46 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DataStructuresAndAlgorithms" type="cbb8eebc:String" user="DataStructuresAndAlgorithms" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DataStructuresAndAlgorithms" type="cbb8eebc:String" user="DataStructuresAndAlgorithms" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DataStructuresAndAlgorithms" type="cbb8eebc:String" user="DataStructuresAndAlgorithms" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="com/company" type="cbb8eebc:String" user="com/company" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DataStructuresAndAlgorithms" type="cbb8eebc:String" user="DataStructuresAndAlgorithms" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="com/company" type="cbb8eebc:String" user="com/company" />
+              <item name="BinaryTree" type="cbb8eebc:String" user="BinaryTree" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -305,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536410664975</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="improved generate... methods">
+      <created>1536413707686</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1536413707686</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -329,7 +369,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32098764" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32561728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -355,7 +395,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST" />
     <MESSAGE value="&#10;edited MapGraph class - added isConnected method&#10;edited Main class - added generateGraph, generateSet and generateTree methods&#10;created Person class, made it Comparable" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;edited MapGraph class - added isConnected method&#10;edited Main class - added generateGraph, generateSet and generateTree methods&#10;created Person class, made it Comparable" />
+    <MESSAGE value="improved generate... methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved generate... methods" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -756,24 +797,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MapGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="62" lean-forward="false" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#search#0;class#Main#0" expanded="false" />
             <element signature="method#postOrder#0;class#Main#0" expanded="false" />
             <element signature="method#printPostOrder#0;class#Main#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MapGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="60" column="44" lean-forward="false" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

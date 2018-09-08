@@ -41,13 +41,32 @@ public class MapGraph<K, V> {
         if (Main.isComparable(type.getClass())) {
             graph = new TreeMap<>();
         } else {
-            graph = new HashMap<>();
+            graph = new LinkedHashMap<>();
         }
         vertices = new HashSet<>();
     }
 
-    public void BFS(K source) {
-
+    void BFS(K source) {
+        int iter = 0;
+        LinkedList<K> queue = new LinkedList<>();
+        Map<K, Boolean> visited = new HashMap<>();
+        for (K vertex : vertices) {
+            visited.put(vertex, vertex == source);
+        }
+        queue.add(source);
+        while (!queue.isEmpty()) {
+            K explore = queue.removeFirst();
+            System.out.print(explore + " ");
+            iter++;
+            if (iter == graph.size()) break;
+            if (!graph.containsKey(explore)) continue;
+            for (Edge<K, V> kvEdge : graph.get(explore)) {
+                if (!visited.get(kvEdge.value)) {
+                    visited.put(kvEdge.value, true);
+                    queue.add(kvEdge.value);
+                }
+            }
+        }
     }
 
     public void addEdgeD(K source, K destination, V weight) {
@@ -61,7 +80,7 @@ public class MapGraph<K, V> {
         }
     }
 
-    public void addEdgeUD(K source, K destination, V weight) {
+    void addEdgeUD(K source, K destination, V weight) {
         if (!graph.containsKey(source)) {
             graph.put(source, new LinkedList<>());
         }
@@ -76,7 +95,7 @@ public class MapGraph<K, V> {
         }
     }
 
-    public boolean isConnected(K s, K d) {
+    boolean isConnected(K s, K d) {
         if (graph.containsKey(s) && graph.containsKey(d)) {
             for (Edge<K, V> kvEdge : graph.get(s)) {
                 if (kvEdge.value.equals(d)) {
