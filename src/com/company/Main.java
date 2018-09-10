@@ -10,9 +10,15 @@ public class Main {
     public static void main(String[] args) {
 //        System.out.println(generateTree(10));
 //        System.out.println(generateGraph(10));
-        MapGraph<Integer, Integer> mapGraph = generateGraph(10);
+        MapGraph<Integer, Integer> mapGraph = generateGraph(5);
         System.out.println(mapGraph);
-        mapGraph.BFS(0);
+        for (Integer integer : mapGraph.getVertices()) {
+            System.out.print("BFS from: " + integer + ": ");
+            mapGraph.BFS(integer);
+            System.out.print("DFS from: " + integer + ": ");
+            mapGraph.DFS(integer);
+            System.out.println();
+        }
     }
 
     private static BinarySearchTree<Integer> generateTree(int size) {

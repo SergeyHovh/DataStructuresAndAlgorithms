@@ -46,8 +46,28 @@ public class MapGraph<K, V> {
         vertices = new HashSet<>();
     }
 
+    void DFS(K source) {
+        LinkedList<K> stack = new LinkedList<>();
+        Map<K, Boolean> visited = new HashMap<>();
+        for (K vertex : vertices) {
+            visited.put(vertex, vertex == source);
+        }
+        stack.add(source);
+        while (!stack.isEmpty()) {
+            K explore = stack.removeLast();
+            System.out.print(explore + " ");
+            if (!graph.containsKey(explore)) continue;
+            for (Edge<K, V> kvEdge : graph.get(explore)) {
+                if (!visited.get(kvEdge.value)) {
+                    visited.put(kvEdge.value, true);
+                    stack.addLast(kvEdge.value);
+                }
+            }
+        }
+        System.out.println();
+    }
+
     void BFS(K source) {
-        int iter = 0;
         LinkedList<K> queue = new LinkedList<>();
         Map<K, Boolean> visited = new HashMap<>();
         for (K vertex : vertices) {
@@ -57,8 +77,6 @@ public class MapGraph<K, V> {
         while (!queue.isEmpty()) {
             K explore = queue.removeFirst();
             System.out.print(explore + " ");
-            iter++;
-            if (iter == graph.size()) break;
             if (!graph.containsKey(explore)) continue;
             for (Edge<K, V> kvEdge : graph.get(explore)) {
                 if (!visited.get(kvEdge.value)) {
@@ -67,6 +85,7 @@ public class MapGraph<K, V> {
                 }
             }
         }
+        System.out.println();
     }
 
     public void addEdgeD(K source, K destination, V weight) {
@@ -108,6 +127,10 @@ public class MapGraph<K, V> {
 
     public int getSize() {
         return vertices.size();
+    }
+
+    public Set<K> getVertices() {
+        return vertices;
     }
 
     @Override
