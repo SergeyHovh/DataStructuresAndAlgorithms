@@ -6,19 +6,16 @@ import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Set;
 
+
 public class Main {
+    private static int preIndex = 0;
+
     public static void main(String[] args) {
-//        System.out.println(generateTree(10));
-//        System.out.println(generateGraph(10));
-        MapGraph<Integer, Integer> mapGraph = generateGraph(5);
-        System.out.println(mapGraph);
-        for (Integer integer : mapGraph.getVertices()) {
-            System.out.print("BFS from: " + integer + ": ");
-            mapGraph.BFS(integer);
-            System.out.print("DFS from: " + integer + ": ");
-            mapGraph.DFS(integer);
-            System.out.println();
-        }
+        Decoder custom = new Decoder();
+        String decode = custom.decode("pxikneri ashxarhum");
+        System.out.println(decode);
+        String encode = custom.encode(decode);
+        System.out.println(encode);
     }
 
     private static BinarySearchTree<Integer> generateTree(int size) {
@@ -36,14 +33,13 @@ public class Main {
         return tree;
     }
 
-    private static MapGraph<Integer, Integer> generateGraph(int size) {
-        MapGraph<Integer, Integer> graph = new MapGraph<>(0);
+    private static MapGraph<Integer> generateGraph(int size) {
+        MapGraph<Integer> graph = new MapGraph<>(0);
         for (int i = 0; i < size; ++i) {
-            for (int k = 0; k < new Random().nextInt(3) + 1; k++) {
+            for (int k = 0; k < new Random().nextInt(2 * size) + 1; k++) {
                 int d = new Random().nextInt(size);
                 if (!graph.isConnected(i, d) && i != d) {
-                    graph.addEdgeUD(i, d, new Random().nextInt(size / 2)
-                            + new Random().nextInt(size / 2));
+                    graph.addEdgeUD(i, d, new Random().nextDouble() * size);
                 }
             }
         }
@@ -55,7 +51,6 @@ public class Main {
         while (integerSet.size() != size) {
             integerSet.add(new Random().nextInt(size * size));
         }
-        System.out.println(integerSet);
         return integerSet;
     }
 
@@ -68,11 +63,10 @@ public class Main {
         return false;
     }
 
-    private static int preIndex = 0;
-
     private static int search(int start, int end, int arr[], int x) {
-        for (int i = start; i <= end; i++)
+        for (int i = start; i <= end; i++) {
             if (arr[i] == x) return i;
+        }
         return -1;
     }
 

@@ -9,7 +9,7 @@ public class Person implements Comparable<Person> {
     }
 
     Person() {
-
+        this.name = this.surname = "";
     }
 
     @Override

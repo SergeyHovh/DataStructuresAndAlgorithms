@@ -1,7 +1,6 @@
 package com.company.BinaryTree;
 
 public class BinarySearchTree<T> extends BinaryTree<T> {
-
     private String phoneNumber;
 
     public BinarySearchTree(T val) {

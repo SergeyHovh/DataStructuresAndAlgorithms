@@ -1,8 +1,6 @@
 package com.company.BinaryTree;
 
-import com.company.Traversal;
-
-public class BinaryTree<T> implements Traversal {
+public class BinaryTree<T> {
     private BinaryTree<T> left;
     private BinaryTree<T> right;
     private T value;
@@ -12,25 +10,23 @@ public class BinaryTree<T> implements Traversal {
     private static String toString = "";
 
     // constructor
-    BinaryTree(T val) {
+    public BinaryTree(T val) {
         this.value = val;
         this.right = null;
         this.left = null;
-        objectHashCode = val.toString().toLowerCase().hashCode();
-        valType = val.getClass().getSimpleName();
+        this.objectHashCode = val.toString().toLowerCase().hashCode();
+        this.valType = val.getClass().getSimpleName();
 //        System.out.println(val.getClass().getSimpleName());
     }
 
     private final String type = valType + " " + className;
 
-    @Override
     public void preOrder() {
         System.out.println(type + " PreOrder Traversal");
         preOrder(this);
         System.out.println();
     }
 
-    @Override
     public void inOrder() {
         toString = "";
         System.out.println(type + " InOrder Traversal");
@@ -38,7 +34,6 @@ public class BinaryTree<T> implements Traversal {
         System.out.println();
     }
 
-    @Override
     public void postOrder() {
         System.out.println(type + " PostOrder Traversal");
         postOrder(this);
@@ -93,8 +88,8 @@ public class BinaryTree<T> implements Traversal {
     private void printTree(BinaryTree<T> start) {
         if (start == null) return;
         printTree(start.left);
-        printTree(start.right);
         toString += start.getValue() + " ";
+        printTree(start.right);
     }
 
     private void postOrder(BinaryTree<T> start) {
@@ -131,7 +126,7 @@ public class BinaryTree<T> implements Traversal {
         return objectHashCode;
     }
 
-    BinaryTree<T> getLeft() {
+    public BinaryTree<T> getLeft() {
         return left;
     }
 
@@ -143,7 +138,7 @@ public class BinaryTree<T> implements Traversal {
         this.left = new BinaryTree<>(value);
     }
 
-    BinaryTree<T> getRight() {
+    public BinaryTree<T> getRight() {
         return right;
     }
 
