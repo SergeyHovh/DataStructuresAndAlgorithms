@@ -12,9 +12,10 @@ public class Main {
 
     public static void main(String[] args) {
         Decoder custom = new Decoder();
-        String decode = custom.decode("pxikneri ashxarhum");
-        System.out.println(decode);
+        String text = "afyan@ pxik a";
+        String decode = custom.decode(text);
         String encode = custom.encode(decode);
+        System.out.println(decode);
         System.out.println(encode);
     }
 

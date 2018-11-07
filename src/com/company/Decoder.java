@@ -1,43 +1,19 @@
 package com.company;
 
 import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 class Decoder {
     // strings
-    public static final String integers = "0123456789";
-    public static final String alphabetLow = "abc defghijklmnopqrstuvwxyz";
-    public static final String alphabetUpper = alphabetLow.toUpperCase();
-    public static final String chars = "()<>,./?[]{}!@#$%^&*_+-=`~";
-    public static final String allKeys = alphabetUpper + alphabetLow + integers + chars;
+    private static final String integers = "012345 6789";
+    private static final String alphabetLow = "abcdefghijklmnopqrstuvwxyz";
+    private static final String alphabetUpper = alphabetLow.toUpperCase();
+    private static final String chars = "()<>,./?[]{}!@#$%^&*_+-=`~";
+    private static final String allKeys = integers + alphabetUpper + alphabetLow + chars;
 
     // keys
-    private static final char[] INTEGERS = integers.toCharArray();
-    private static final char[] ALPHABET_LOW = alphabetLow.toCharArray();
-    private static final char[] ALPHABET_UPPER = alphabetUpper.toCharArray();
-    private static final char[] CHARS = chars.toCharArray();
 
     private static final int INTERVAL = 3;
-    private char[] KEYS;
-
-    Decoder() {
-        this(allKeys);
-    }
-
-    Decoder(String keySet) {
-        Set<Character> characterSet = new LinkedHashSet<>();
-        int i = 0;
-        for (char c : keySet.toCharArray()) {
-            characterSet.add(c);
-        }
-        char[] localKeys = new char[characterSet.size()];
-        for (Character character : characterSet) {
-            localKeys[i] = character;
-            i++;
-        }
-        this.KEYS = localKeys;
-    }
+    private char[] KEYS = allKeys.toCharArray();
 
     void printKeySet() {
         for (char key : KEYS) {
@@ -52,15 +28,15 @@ class Decoder {
         String first = text.substring(1, f + 1);
         String last = text.substring(text.length() - l - 1, text.length() - 1);
 
-        int ten = Integer.parseInt(convertToText(17, first)) * 10;
-        int one = Integer.parseInt(convertToText(19, last));
+        int ten = Integer.parseInt(convertToText(31, first)) * 10;
+        int one = Integer.parseInt(convertToText(37, last));
         return convertText(ten + one, text.substring(f + 1, text.length() - l - 1));
     }
 
     public String decode(String text) {
         int BASE = getBase(text);
-        String first = convertText(17, BASE / 10 + "");
-        String last = convertText(19, BASE % 10 + "");
+        String first = convertText(31, BASE / 10 + "");
+        String last = convertText(37, BASE % 10 + "");
         return first.length() + first + convertToText(BASE, text) + last + last.length();
     }
 
@@ -124,7 +100,7 @@ class Decoder {
 
     private String[] equalParts(String text) {
         String[] result = new String[text.length() / INTERVAL + 1];
-        int start = 0, iter = 0;
+        int start = 0;
         for (int i = 0; i < result.length; ++i) {
             if (start + INTERVAL < text.length())
                 result[i] = text.substring(start, start + INTERVAL);
