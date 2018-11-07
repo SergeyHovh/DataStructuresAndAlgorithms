@@ -1,18 +1,19 @@
-package com.company;
+package com.company.Algorithms;
 
 import java.util.Arrays;
 
 class Decoder {
+    //    Base64.Decoder decoder = Base64.getMimeDecoder();
+//    Base64.Encoder encoder = Base64.getMimeEncoder();
     // strings
-    private static final String integers = "012345 6789";
+    private static final String integers = "0123456789";
     private static final String alphabetLow = "abcdefghijklmnopqrstuvwxyz";
     private static final String alphabetUpper = alphabetLow.toUpperCase();
-    private static final String chars = "()<>,./?[]{}!@#$%^&*_+-=`~";
+    private static final String chars = "()<>,./?[]{ }!@#$:;'%^&*_+-=`~";
     private static final String allKeys = integers + alphabetUpper + alphabetLow + chars;
-
-    // keys
-
     private static final int INTERVAL = 3;
+    // keys
+    private final int BASE_ONE = 3, BASE_TWO = 5;
     private char[] KEYS = allKeys.toCharArray();
 
     void printKeySet() {
@@ -28,16 +29,17 @@ class Decoder {
         String first = text.substring(1, f + 1);
         String last = text.substring(text.length() - l - 1, text.length() - 1);
 
-        int ten = Integer.parseInt(convertToText(31, first)) * 10;
-        int one = Integer.parseInt(convertToText(37, last));
+        int ten = Integer.parseInt(convertToText(BASE_ONE, first)) * 10;
+        int one = Integer.parseInt(convertToText(BASE_TWO, last));
         return convertText(ten + one, text.substring(f + 1, text.length() - l - 1));
     }
 
     public String decode(String text) {
         int BASE = getBase(text);
-        String first = convertText(31, BASE / 10 + "");
-        String last = convertText(37, BASE % 10 + "");
-        return first.length() + first + convertToText(BASE, text) + last + last.length();
+        String first = convertText(BASE_ONE, BASE / 10 + "");
+        String last = convertText(BASE_TWO, BASE % 10 + "");
+        String toBeDecoded = first.length() + first + convertToText(BASE, text) + last + last.length();
+        return toBeDecoded;
     }
 
     private String convert(int from, int to, String expression) {

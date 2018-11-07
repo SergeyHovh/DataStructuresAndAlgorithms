@@ -1,4 +1,6 @@
-package com.company;
+package com.company.Graph;
+
+import com.company.Main;
 
 import java.util.*;
 
@@ -7,8 +9,21 @@ import java.util.*;
  */
 public class MapGraph<K> {
     private Map<K, List<Edge<K>>> graph;
+    private Set<K> vertices;
 
-    void DFS(K source) {
+    /**
+     * @param type requires parameter, to determine if data type is comparable or not.
+     */
+    public MapGraph(K type) {
+        if (Main.isComparable(type.getClass())) {
+            graph = new TreeMap<>();
+        } else {
+            graph = new LinkedHashMap<>();
+        }
+        vertices = new HashSet<>();
+    }
+
+    public void DFS(K source) {
         LinkedList<K> stack = new LinkedList<>();
         Map<K, Boolean> visited = new HashMap<>();
         for (K vertex : vertices) {
@@ -27,20 +42,6 @@ public class MapGraph<K> {
             }
         }
         System.out.println();
-    }
-
-    private Set<K> vertices;
-
-    /**
-     * @param type requires parameter, to determine if data type is comparable or not.
-     */
-    MapGraph(K type) {
-        if (Main.isComparable(type.getClass())) {
-            graph = new TreeMap<>();
-        } else {
-            graph = new LinkedHashMap<>();
-        }
-        vertices = new HashSet<>();
     }
 
     MapGraph<K> dijkstra(K source) {
@@ -72,7 +73,7 @@ public class MapGraph<K> {
         return path;
     }
 
-    void BFS(K source) {
+    public void BFS(K source) {
         LinkedList<K> queue = new LinkedList<>();
         Map<K, Boolean> visited = new HashMap<>();
         for (K vertex : vertices) {
@@ -104,7 +105,7 @@ public class MapGraph<K> {
         }
     }
 
-    void addEdgeUD(K source, K destination, Double weight) {
+    public void addEdgeUD(K source, K destination, Double weight) {
         if (!graph.containsKey(source)) {
             graph.put(source, new LinkedList<>());
         }
@@ -119,7 +120,7 @@ public class MapGraph<K> {
         }
     }
 
-    boolean isConnected(K s, K d) {
+    public boolean isConnected(K s, K d) {
         if (graph.containsKey(s) && graph.containsKey(d)) {
             for (Edge<K> kvEdge : graph.get(s)) {
                 if (kvEdge.value.equals(d)) {
@@ -128,6 +129,23 @@ public class MapGraph<K> {
             }
         }
         return false;
+    }
+
+    public int getSize() {
+        return vertices.size();
+    }
+
+    public Set<K> getVertices() {
+        return vertices;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        for (K i : graph.keySet()) {
+            result.append(i).append(" -> ").append(graph.get(i)).append('\n');
+        }
+        return result.toString();
     }
 
     private class Edge<T> {
@@ -151,22 +169,5 @@ public class MapGraph<K> {
             }
             return false;
         }
-    }
-
-    public int getSize() {
-        return vertices.size();
-    }
-
-    public Set<K> getVertices() {
-        return vertices;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder result = new StringBuilder();
-        for (K i : graph.keySet()) {
-            result.append(i).append(" -> ").append(graph.get(i)).append('\n');
-        }
-        return result.toString();
     }
 }

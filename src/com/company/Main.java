@@ -1,7 +1,9 @@
 package com.company;
 
 import com.company.BinaryTree.BinarySearchTree;
+import com.company.Graph.MapGraph;
 
+import java.util.Base64;
 import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Set;
@@ -11,12 +13,20 @@ public class Main {
     private static int preIndex = 0;
 
     public static void main(String[] args) {
-        Decoder custom = new Decoder();
-        String text = "afyan@ pxik a";
-        String decode = custom.decode(text);
-        String encode = custom.encode(decode);
-        System.out.println(decode);
-        System.out.println(encode);
+        Base64.Decoder decoder = Base64.getMimeDecoder();
+        Base64.Encoder encoder = Base64.getMimeEncoder();
+        byte[] pxiks = decoder.decode("pxik");
+        String pxik = new String(pxiks);
+        System.out.println(pxik);
+        byte[] encode = encoder.encode(pxiks);
+        String x = new String(encode);
+        System.out.println(x);
+//        Decoder custom = new Decoder();
+//        String text = "afyan@ pxik a";
+//        String decode = custom.decode(text);
+////        String encode = custom.encode(decode);
+//        System.out.println(decode);
+//        System.out.println(encode);
     }
 
     private static BinarySearchTree<Integer> generateTree(int size) {

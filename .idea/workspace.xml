@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="added Decoder">
-      <change afterPath="$PROJECT_DIR$/src/com/company/DecoderTest.java" afterDir="false" />
+    <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="fixed Decoder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataStructuresAndAlgorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructuresAndAlgorithms.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Decoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Algorithms/Decoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/DecoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Algorithms/DecoderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/InterfacePractice.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/MapGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Graph/MapGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Traversal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Weights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Algorithms/Weights.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,21 +78,21 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="9305" />
+          <entry key="java" value="9911" />
           <entry key="sql" value="68" />
-          <entry key="txt" value="29" />
+          <entry key="txt" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9305" />
-          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="JAVA" value="9911" />
+          <entry key="PLAIN_TEXT" value="50" />
           <entry key="Scratch" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="9" />
+          <entry key="java" value="11" />
           <entry key="sql" value="2" />
           <entry key="sqlite_master" value="3" />
         </counts>
@@ -97,7 +100,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="3" />
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="11" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -108,11 +111,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+            <state relative-caret-position="221">
+              <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,22 +124,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Decoder.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/Decoder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/DecoderTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/DecoderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="123">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1221#1222#0" expanded="true" />
+                <element signature="e#1257#1258#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/Weights.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Graph/MapGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -187,12 +210,12 @@
         <option value="$PROJECT_DIR$/src/com/company/Convert.java" />
         <option value="$PROJECT_DIR$/src/com/company/Algorithms/Weights.java" />
         <option value="$PROJECT_DIR$/src/com/company/Algorithms/MapGraph.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Graph/MapGraph.java" />
         <option value="$PROJECT_DIR$/src/com/company/Algorithms/DecoderTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Algorithms/Decoder.java" />
         <option value="$PROJECT_DIR$/src/com/company/Decoder.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/DecoderTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Algorithms/Decoder.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Graph/MapGraph.java" />
       </list>
     </option>
   </component>
@@ -414,7 +437,7 @@
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541595759109" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541614285789" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -446,29 +469,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.DecoderTest (1)">
+  <component name="RunManager" selected="TestNG.DecoderTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="DataStructuresAndAlgorithms" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DecoderTest (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DataStructuresAndAlgorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.DecoderTest" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -481,7 +488,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.Algorithms" />
+      <option name="PACKAGE_NAME" value="com.company" />
       <option name="MAIN_CLASS_NAME" value="com.company.Algorithms.DecoderTest" />
       <properties />
       <listeners />
@@ -492,13 +499,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="TestNG.DecoderTest" />
-      <item itemvalue="TestNG.DecoderTest (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DecoderTest (1)" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.DecoderTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -519,7 +524,7 @@
       <workItem from="1537521700311" duration="915000" />
       <workItem from="1538482602789" duration="1037000" />
       <workItem from="1538925417980" duration="1189000" />
-      <workItem from="1541434421501" duration="33097000" />
+      <workItem from="1541434421501" duration="37288000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST">
       <created>1536172967431</created>
@@ -563,28 +568,50 @@
       <option name="project" value="LOCAL" />
       <updated>1541509979987</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed Decoder">
+      <created>1541595824445</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1541595824445</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DecoderTest - 2018.11.07 at 15h 46m 59s.xml">
+    <history-entry file="DecoderTest_(1) - 2018.11.07 at 18h 40m 11s.xml">
+      <configuration name="DecoderTest (1)" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DecoderTest_(1) - 2018.11.07 at 18h 40m 27s.xml">
+      <configuration name="DecoderTest (1)" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DecoderTest_(1) - 2018.11.07 at 18h 40m 41s.xml">
+      <configuration name="DecoderTest (1)" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DecoderTest_(1) - 2018.11.07 at 18h 41m 23s.xml">
+      <configuration name="DecoderTest (1)" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DecoderTest_(1) - 2018.11.07 at 18h 41m 35s.xml">
+      <configuration name="DecoderTest (1)" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DecoderTest_(1) - 2018.11.07 at 18h 42m 11s.xml">
+      <configuration name="DecoderTest (1)" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DecoderTest_(1) - 2018.11.07 at 18h 44m 29s.xml">
+      <configuration name="DecoderTest (1)" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DecoderTest - 2018.11.07 at 18h 57m 10s.xml">
       <configuration name="DecoderTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DecoderTest - 2018.11.07 at 15h 48m 10s.xml">
+    <history-entry file="DecoderTest - 2018.11.07 at 22h 01m 36s.xml">
       <configuration name="DecoderTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DecoderTest - 2018.11.07 at 15h 49m 46s.xml">
-      <configuration name="DecoderTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DecoderTest - 2018.11.07 at 15h 51m 18s.xml">
-      <configuration name="DecoderTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DecoderTest - 2018.11.07 at 15h 51m 56s.xml">
+    <history-entry file="DecoderTest - 2018.11.07 at 22h 08m 43s.xml">
       <configuration name="DecoderTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36678000" />
+    <option name="totallyTimeSpent" value="40869000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -610,7 +637,7 @@
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.32923076" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3276923" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.37538463" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.35538462" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39846155" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -644,7 +671,8 @@
     <MESSAGE value="implemented BFS" />
     <MESSAGE value="implemented DFS" />
     <MESSAGE value="added Decoder" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Decoder" />
+    <MESSAGE value="fixed Decoder" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed Decoder" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -792,16 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Graph/MapGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="149" column="43" lean-forward="true" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -810,13 +828,6 @@
             <element signature="e#229#230#0" expanded="true" />
             <element signature="e#274#275#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/Weights.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -837,27 +848,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/Decoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/DecoderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1221#1222#0" expanded="true" />
+            <element signature="e#1257#1258#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Decoder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/Weights.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/DecoderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Graph/MapGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
