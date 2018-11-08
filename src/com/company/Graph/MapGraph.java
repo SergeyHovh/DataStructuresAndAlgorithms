@@ -1,7 +1,5 @@
 package com.company.Graph;
 
-import com.company.Main;
-
 import java.util.*;
 
 /**
@@ -15,7 +13,7 @@ public class MapGraph<K> {
      * @param type requires parameter, to determine if data type is comparable or not.
      */
     public MapGraph(K type) {
-        if (Main.isComparable(type.getClass())) {
+        if (isComparable(type.getClass())) {
             graph = new TreeMap<>();
         } else {
             graph = new LinkedHashMap<>();
@@ -44,6 +42,7 @@ public class MapGraph<K> {
         System.out.println();
     }
 
+    // TODO: 11/8/2018 implement dijkstra
     MapGraph<K> dijkstra(K source) {
         double min = 0;
         MapGraph<K> path = new MapGraph<>(source);
@@ -126,6 +125,15 @@ public class MapGraph<K> {
                 if (kvEdge.value.equals(d)) {
                     return true;
                 }
+            }
+        }
+        return false;
+    }
+
+    private boolean isComparable(Class<?> x) {
+        for (Class<?> aClass : x.getInterfaces()) {
+            if (aClass.toString().equals("interface java.lang.Comparable")) {
+                return true;
             }
         }
         return false;
