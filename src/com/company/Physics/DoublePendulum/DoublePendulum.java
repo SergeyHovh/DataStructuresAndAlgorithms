@@ -4,14 +4,15 @@ import com.company.Physics.Base;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class DoublePendulum extends Base {
+class DoublePendulum extends Base {
 
-    static Map<String, JSlider> map = new LinkedHashMap<>();
+    private static Map<String, JSlider> map = new LinkedHashMap<>();
 
-    public DoublePendulum(String name, int width, int height) {
+    DoublePendulum(String name, int width, int height) {
         super(name, width, height);
         setLayout(new GridLayout(1, 1));
         JPanel controlPanel = new JPanel();
@@ -25,11 +26,19 @@ public class DoublePendulum extends Base {
             controlPanel.add(new JLabel(s));
             controlPanel.add(map.get(s));
         }
+        JButton reset = new JButton("Reset");
+        reset.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Scene.reset();
+            }
+        });
+        controlPanel.add(reset);
         add(new Scene());
         add(controlPanel);
     }
 
-    public static Map<String, JSlider> getMap() {
+    static Map<String, JSlider> getMap() {
         return map;
     }
 }
