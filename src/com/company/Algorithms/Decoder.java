@@ -14,6 +14,7 @@ public class Decoder {
     // keys
     private final int BASE_ONE = 3, BASE_TWO = 5;
     private char[] KEYS = allKeys.toCharArray();
+    private boolean startsWithZero = false;
 
     public void printKeySet() {
         for (char key : KEYS) {
@@ -45,16 +46,22 @@ public class Decoder {
         return toBeDecoded;
     }
 
+    // TODO: 11/9/2018 fix the "0123" issue
     private String convertText(int to, String text) {
         String[] lines = text.split("\n");
         StringBuilder res = new StringBuilder();
         for (int i = 0, linesLength = lines.length; i < linesLength; i++) {
             String line = lines[i];
-            if (getBase(line) > 10 && to > 10) { // checks if contains only numbers
+//            System.out.println("convert text line " + i + ") " + line);
+//            System.out.println("convert text " + line.charAt(0));
+            System.out.println("convert text " + (line.charAt(0) == '0'));
+            if ((getBase(line) > 10 && to > 10) || line.charAt(0) == '0') { // checks if contains only numbers
                 String[] words = equalParts(line);
                 for (String word : words) {
                     if (word == null) continue;
-                    res.append(convert(KEYS.length, to, word));
+                    String convert = convert(KEYS.length, to, word);
+                    System.out.println(word + " -> " + convert);
+                    res.append(convert);
                 }
             } else {
                 String convert = convert(KEYS.length, to, line);
@@ -71,11 +78,15 @@ public class Decoder {
         StringBuilder res = new StringBuilder();
         for (int i = 0, linesLength = lines.length; i < linesLength; i++) {
             String line = lines[i];
-            if (getBase(line) > 10) { // checks if contains only numbers
+//            System.out.println("convert to text line " + i + ") " + line);
+//            System.out.println("convert to text " + line.charAt(0));
+            System.out.println("convert to text " + (line.charAt(0) == '0'));
+            if (getBase(line) > 10 || line.charAt(0) == '0') { // checks if contains only numbers
                 String[] words = equalParts(line);
                 for (String word : words) {
                     if (word == null) continue;
                     String convert = convert(from, KEYS.length, word);
+                    System.out.println(word + " -> " + convert);
                     res.append(convert);
                 }
             } else {

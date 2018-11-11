@@ -1,5 +1,6 @@
-package com.company.Algorithms.Tests;
+package Algorithms;
 
+import com.company.Algorithms.DataStructureGenerator;
 import com.company.Algorithms.Decoder;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -31,7 +32,13 @@ public class DecoderTest {
                 {"1010"},
                 {"10101"},
                 {"858481"},
-                {"985812"}
+                {"985812"},
+                {"0 123"},
+                {"0123"},
+                {"01 23"},
+                {DataStructureGenerator.generateGraph(3).toString()},
+                {DataStructureGenerator.generateTree(5).toString()},
+                {DataStructureGenerator.generateSet(5).toString()}
         };
     }
 

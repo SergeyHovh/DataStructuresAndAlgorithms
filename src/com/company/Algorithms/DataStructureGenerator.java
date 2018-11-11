@@ -29,7 +29,7 @@ public class DataStructureGenerator {
             for (int k = 0; k < new Random().nextInt(2 * size) + 1; k++) {
                 int d = new Random().nextInt(size);
                 if (!graph.isConnected(i, d) && i != d) {
-                    graph.addEdgeUD(i, d, new Random().nextDouble() * size);
+                    graph.addEdgeUD(i, d, (double) new Random().nextInt(size));
                 }
             }
         }
