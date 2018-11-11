@@ -86,7 +86,6 @@ public class Scene extends JPanel implements ActionListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        compute();
         // drawing
         Graphics2D graphics2D = (Graphics2D) g;
         graphics2D.fill(ball1);
@@ -102,6 +101,7 @@ public class Scene extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        compute();
         offsetY = getSize().height * 0.5;
         offsetX = getSize().width * 0.5;
         r1 = DoublePendulum.getMap().get("Length 1").getValue();
