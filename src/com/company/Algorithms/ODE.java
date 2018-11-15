@@ -2,9 +2,9 @@ package com.company.Algorithms;
 
 public interface ODE {
     /**
-     * @param x
-     * @param y
-     * @return dy/dx = f(x, y)
+     * @param x initial position
+     * @param y initial values of y, y', y'' ...
+     * @return
      */
-    double derivative(double x, double y);
+    double derivative(double x, double... y);
 }
