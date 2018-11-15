@@ -1,4 +1,4 @@
-package com.company.Physics.DoublePendulum;
+package com.company.Physics.Pendulums.DoublePendulum;
 
 import com.company.Physics.Base;
 
@@ -26,15 +26,34 @@ class DoublePendulum extends Base {
             controlPanel.add(new JLabel(s));
             controlPanel.add(map.get(s));
         }
+        Scene scene = new Scene();
         JButton reset = new JButton("Reset");
+        JButton start = new JButton("Start");
+        JButton stop = new JButton("Stop");
+        start.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                scene.start();
+            }
+        });
+        stop.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                scene.stop();
+            }
+        });
         reset.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Scene.reset();
+                scene.reset();
             }
         });
-        controlPanel.add(reset);
-        add(new Scene());
+        JPanel control = new JPanel(new GridLayout(1, 0));
+        control.add(start);
+        control.add(stop);
+        control.add(reset);
+        controlPanel.add(control);
+        add(scene);
         add(controlPanel);
     }
 

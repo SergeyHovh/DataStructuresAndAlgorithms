@@ -1,4 +1,4 @@
-package com.company.Physics.DoublePendulum;
+package com.company.Physics.Pendulums.DoublePendulum;
 
 public class DoublePendulumApp {
     public static void main(String[] args) {

@@ -5,16 +5,15 @@
       <change afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulum.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulumApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Algorithms/ODE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Algorithms/ODE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Algorithms/RK4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Algorithms/RK4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Bouncing/tablesAndBalls/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Bouncing/tablesAndBalls/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/DoublePendulum/DoublePendulum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/DoublePendulum/DoublePendulumApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/DoublePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/data.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,15 +92,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="26993" />
+          <entry key="java" value="30315" />
           <entry key="sql" value="68" />
-          <entry key="txt" value="309" />
+          <entry key="txt" value="328" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="26993" />
-          <entry key="PLAIN_TEXT" value="317" />
+          <entry key="JAVA" value="30315" />
+          <entry key="PLAIN_TEXT" value="336" />
           <entry key="Scratch" value="68" />
         </counts>
       </usages-collector>
@@ -109,10 +108,10 @@
         <counts>
           <entry key="class" value="2" />
           <entry key="html" value="1" />
-          <entry key="java" value="70" />
+          <entry key="java" value="89" />
           <entry key="sql" value="2" />
           <entry key="sqlite_master" value="3" />
-          <entry key="txt" value="3" />
+          <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -120,8 +119,8 @@
           <entry key="CLASS" value="2" />
           <entry key="Database Element" value="3" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="70" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="JAVA" value="89" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -135,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="12" selection-end-column="60" />
+            <state relative-caret-position="221">
+              <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,19 +144,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/RK4.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
+            <state relative-caret-position="178">
+              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/ODE.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="212">
+              <caret line="122" column="19" lean-forward="true" selection-start-line="122" selection-start-column="19" selection-end-line="122" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,8 +173,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TestNG Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -184,9 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/StacksAndQueues/Queue.java" />
-        <option value="$PROJECT_DIR$/src/com/company/StacksAndQueues/Stack.java" />
-        <option value="$PROJECT_DIR$/src/InterfacePractice.java" />
         <option value="$PROJECT_DIR$/src/com/company/InterfacePractice.java" />
         <option value="$PROJECT_DIR$/src/com/company/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/com/company/Graph.java" />
@@ -228,13 +230,16 @@
         <option value="$PROJECT_DIR$/src/com/company/Physics/Bouncing/tablesAndBalls/Ball.java" />
         <option value="$PROJECT_DIR$/src/com/company/Algorithms/RungeKutta.java" />
         <option value="$PROJECT_DIR$/src/com/company/Algorithms/Equation.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulumApp.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulum.java" />
         <option value="$PROJECT_DIR$/src/com/company/data.txt" />
         <option value="$PROJECT_DIR$/src/com/company/Algorithms/ODE.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Algorithms/RK4.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Physics.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulumApp.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulum.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulum.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" />
       </list>
     </option>
   </component>
@@ -251,8 +256,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="921" />
-    <option name="height" value="768" />
+    <option name="x" value="707" />
+    <option name="width" value="666" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -458,6 +464,39 @@
             <path>
               <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Physics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Physics" type="462c0819:PsiDirectoryNode" />
+              <item name="Pendulums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Physics" type="462c0819:PsiDirectoryNode" />
+              <item name="Pendulums" type="462c0819:PsiDirectoryNode" />
+              <item name="DoublePendulum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Physics" type="462c0819:PsiDirectoryNode" />
+              <item name="Pendulums" type="462c0819:PsiDirectoryNode" />
+              <item name="SinglePendulum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -501,7 +540,7 @@
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542230441526" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542308984896" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -542,7 +581,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RK4">
+  <component name="RunManager" selected="Application.SinglePendulumApp">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="DataStructuresAndAlgorithms" />
@@ -559,6 +598,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.Algorithms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SinglePendulumApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Physics.Pendulums.SinglePendulum.SinglePendulumApp" />
+      <module name="DataStructuresAndAlgorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Physics.Pendulums.SinglePendulum.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -595,9 +647,11 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="TestNG.DecoderTest" />
       <item itemvalue="Application.RK4" />
+      <item itemvalue="Application.SinglePendulumApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SinglePendulumApp" />
         <item itemvalue="Application.RK4" />
       </list>
     </recent_temporary>
@@ -622,7 +676,7 @@
       <workItem from="1541434421501" duration="44394000" />
       <workItem from="1541663188351" duration="11517000" />
       <workItem from="1541935172414" duration="55865000" />
-      <workItem from="1542277659748" duration="2954000" />
+      <workItem from="1542277659748" duration="15975000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST">
       <created>1536172967431</created>
@@ -715,7 +769,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542190308459</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="implemented RK4">
+      <created>1542280714301</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1542280714301</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -751,7 +812,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118311000" />
+    <option name="totallyTimeSpent" value="131332000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -773,10 +834,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" sideWeight="0.50442475" side_tool="true" weight="0.23333333" />
       <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="0" weight="0.32923076" />
+      <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3276923" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3276923" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.28" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.33846155" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39846155" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1048,17 +1109,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Bouncing/Bouncing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,6 +1123,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#164#165#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1080,6 +1140,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,6 +1164,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,6 +1174,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,20 +1186,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#121#122#0" expanded="true" />
+            <element signature="e#184#185#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java">
+    <entry file="file://$PROJECT_DIR$/data.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/Equation.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/ODE.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulum.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/RK4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state relative-caret-position="935">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding>
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="105" column="8" lean-forward="true" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Physics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="64" lean-forward="true" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1137,53 +1248,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#194#195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/Equation.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="12" selection-end-column="60" />
+        <state relative-caret-position="456">
+          <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/ODE.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="127">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/RK4.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
+        <state relative-caret-position="212">
+          <caret line="122" column="19" lean-forward="true" selection-start-line="122" selection-start-column="19" selection-end-line="122" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

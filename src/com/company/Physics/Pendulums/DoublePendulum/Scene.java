@@ -1,4 +1,4 @@
-package com.company.Physics.DoublePendulum;
+package com.company.Physics.Pendulums.DoublePendulum;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,16 +8,16 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
 public class Scene extends JPanel implements ActionListener {
-    private static int unitLength = 30;
+    private int unitLength = 30;
+    private Timer timer = new Timer(25, this);
     // values
-    private double offsetY;
-    private double offsetX;
-    private double m1 = 8, m2 = 10;
-    private double L_1 = 3, L_2 = 5;
-    private double r1 = L_1 * unitLength, r2 = L_2 * unitLength;
-    private double theta1 = 1, theta2 = 0, theta_v1 = 0, theta_v2 = 0, theta_a1 = 0, theta_a2 = 0;
-    private double x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+    private double offsetX, offsetY;
+    private double m1 = 8, m2 = 10; // masses
+    private double L_1 = 3, L_2 = 5; // rode lengths
+    private double theta1 = 1, theta2 = 0, theta_v1 = 0, theta_v2 = 0, theta_a1 = 0, theta_a2 = 0; // angles
+    private double x1 = 0, y1 = 0, x2 = 0, y2 = 0; // initial positions
     private double gravity = 10;
+    private double r1 = L_1 * unitLength, r2 = L_2 * unitLength;
     // drawable elements
     private Line2D line1, line2;
     private Ellipse2D ball1 = new Ellipse2D.Double(0, 0, m1, m1);
@@ -29,16 +29,26 @@ public class Scene extends JPanel implements ActionListener {
         setPosition(ball2, x2, y2);
         line1 = new Line2D.Double(offsetX, offsetY, ball1.getCenterX(), ball1.getCenterY());
         line2 = new Line2D.Double(ball1.getCenterX(), ball1.getCenterY(), ball2.getCenterX(), ball2.getCenterY());
-        Timer timer = new Timer(25, this);
-        timer.start();
+        repaint();
     }
 
-    static void reset() {
+    void reset() {
+        offsetY = getSize().height * 0.5;
+        offsetX = getSize().width * 0.5;
         DoublePendulum.getMap().get("Length 1").setValue(3 * unitLength);
         DoublePendulum.getMap().get("Length 2").setValue(5 * unitLength);
         DoublePendulum.getMap().get("Mass 1").setValue(8);
         DoublePendulum.getMap().get("Mass 2").setValue(10);
         DoublePendulum.getMap().get("Gravity").setValue(10);
+        repaint();
+    }
+
+    void start() {
+        timer.start();
+    }
+
+    void stop() {
+        timer.stop();
     }
 
     private void setup() {
@@ -53,21 +63,24 @@ public class Scene extends JPanel implements ActionListener {
         DoublePendulum.getMap().get("Length 2").setMinimum(unitLength);
         DoublePendulum.getMap().get("Mass 1").setMinimum(3);
         DoublePendulum.getMap().get("Mass 2").setMinimum(1);
+        DoublePendulum.getMap().get("Gravity").setMinimum(1);
         // initial values
         reset();
     }
 
     private void compute() {
+        offsetY = getSize().height * 0.5;
+        offsetX = getSize().width * 0.5;
         // math & physics
         gravity /= 10;
         x1 = r1 * Math.sin(theta1) + offsetX;
         y1 = r1 * Math.cos(theta1) + offsetY;
         x2 = x1 + r2 * Math.sin(theta2);
         y2 = y1 + r2 * Math.cos(theta2);
-        theta1 += theta_v1;
-        theta2 += theta_v2;
         theta_v1 += theta_a1;
         theta_v2 += theta_a2;
+        theta1 += theta_v1;
+        theta2 += theta_v2;
         // theta 1 double dot calculation
         double num1 = -gravity * (2 * m1 + m2) * Math.sin(theta1);
         double num2 = -gravity * m2 * Math.sin(theta1 - 2 * theta2);
@@ -101,9 +114,9 @@ public class Scene extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        // compute
         compute();
-        offsetY = getSize().height * 0.5;
-        offsetX = getSize().width * 0.5;
+        // update values
         r1 = DoublePendulum.getMap().get("Length 1").getValue();
         r2 = DoublePendulum.getMap().get("Length 2").getValue();
         m1 = DoublePendulum.getMap().get("Mass 1").getValue();
