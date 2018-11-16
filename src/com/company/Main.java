@@ -1,15 +1,12 @@
 package com.company;
 
 import com.company.Numerical.ODE;
-import com.company.Numerical.RK4;
-import com.company.Numerical.RK438;
-import com.company.Numerical.RK4Classic;
+import com.company.Numerical.RK;
 
 import java.io.FileNotFoundException;
 import java.util.Formatter;
 
 import static java.lang.Math.expm1;
-import static java.lang.Math.sin;
 
 public class Main {
     public static final String PATH = "src/com/company/data.txt";
@@ -18,13 +15,9 @@ public class Main {
 
 
     public static void main(String[] args) {
-        ODE ode = (x, y) -> -G / 4 * sin(y[0]);
-        RK4Classic rk4Classic = new RK4Classic();
-        RK438 rk438 = new RK438();
-        getPoints(0, new double[]{1, 0}, 10, ode, rk4Classic);
     }
 
-    private static void getPoints(double x0, double[] y0, double upTo, ODE ode, RK4 rk) {
+    private static void getPoints(double x0, double[] y0, double upTo, ODE ode, RK rk) {
         Formatter file;
         double iter = 0.0;
         double[] before = new double[y0.length];
@@ -44,11 +37,3 @@ public class Main {
         }
     }
 }
-/*
- *
- * classic    3/8	3_8
- *
- * ab
-
- *
- * */

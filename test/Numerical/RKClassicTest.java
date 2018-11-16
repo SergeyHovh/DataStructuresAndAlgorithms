@@ -1,15 +1,15 @@
 package Numerical;
 
 import com.company.Numerical.ODE;
-import com.company.Numerical.RK4Classic;
+import com.company.Numerical.RKClassic;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static java.lang.Math.exp;
 import static org.testng.Assert.assertEquals;
 
-public class RK4ClassicTest {
-    private RK4Classic rk4Classic = new RK4Classic();
+public class RKClassicTest {
+    private RKClassic rk4Classic = new RKClassic();
 
     @DataProvider
     public static Object[][] firstOrderData() {
@@ -19,7 +19,7 @@ public class RK4ClassicTest {
                 {1, 0, 0},
                 {1, 1, 0},
                 {3, 12, 8},
-                {0, 10, 9}
+                {0, 10, 8}
         };
     }
 

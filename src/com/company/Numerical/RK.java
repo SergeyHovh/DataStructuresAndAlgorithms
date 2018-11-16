@@ -1,14 +1,14 @@
 package com.company.Numerical;
 
-public abstract class RK4 {
+public abstract class RK {
 
     private int ITERATION_COUNT;
 
-    public RK4(int STEP_SIZE) {
+    RK(int STEP_SIZE) {
         this.ITERATION_COUNT = STEP_SIZE;
     }
 
-    public RK4() {
+    RK() {
         this(1000);
     }
 
@@ -75,6 +75,33 @@ public abstract class RK4 {
     }
 
     abstract double[][] keys(ODE[] system, double x0, double[] y0, double[] before, double h);
+
+    double[][] generateKeys(ODE[] system, double x0, double[] y0, double[] before, double h, double[][] coefficients) {
+        int order = y0.length;
+        double[][] K = new double[coefficients.length - 1][order];
+        System.arraycopy(y0, 0, before, 0, order);
+        // init Ks
+        for (int i = 0; i < K.length; i++) {
+            for (int j = 0; j < order; j++) {
+                for (int k = 0; k < K.length; k++) {
+                    y0[j] += coefficients[i][k + 1] * K[k][j];
+                }
+            }
+            for (int j = 0; j < order; j++) {
+                K[i][j] = h * system[j].derivative(x0 + coefficients[i][0] * h, y0);
+            }
+            System.arraycopy(before, 0, y0, 0, order); // reset
+        }
+        // adjust weights
+        for (int i = 0; i < K.length; i++) {
+            double[] aK = K[i];
+            for (int j = 0; j < aK.length; j++) {
+                double multiplier = coefficients[coefficients.length - 1][i + 1];
+                K[i][j] *= multiplier;
+            }
+        }
+        return K;
+    }
 
     private ODE[] higherOrderToSystem(ODE ode, int order) {
         ODE[] system = new ODE[order];

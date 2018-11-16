@@ -1,6 +1,6 @@
 package com.company.Physics.Pendulums.SinglePendulum;
 
-import com.company.Numerical.RK4Classic;
+import com.company.Numerical.RKClassic;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +10,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
 public class Scene extends JPanel implements ActionListener {
-    private RK4Classic rk4 = new RK4Classic(2000);
+    private RKClassic rk4 = new RKClassic(2000);
     private int unitLength = 30;
     private int delay = 0;
     private Timer timer = new Timer(delay, this);
