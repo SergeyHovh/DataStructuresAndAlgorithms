@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="added minor helper methods&#10;-ODE&#10;--- add, subtract&#10;-Main&#10;--- getPoints">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/RK438.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/RK4Classic.java" afterDir="false" />
+    <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="made RK4 abstract&#10;added RK4Classic and RK438">
+      <change afterPath="$PROJECT_DIR$/test/Numerical/RK438Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Numerical/RK4ClassicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Algorithms/ODE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Algorithms/RK4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/RK4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/data.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,15 +85,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="33578" />
+          <entry key="java" value="34093" />
           <entry key="sql" value="68" />
-          <entry key="txt" value="446" />
+          <entry key="txt" value="506" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="33578" />
-          <entry key="PLAIN_TEXT" value="454" />
+          <entry key="JAVA" value="34093" />
+          <entry key="PLAIN_TEXT" value="514" />
           <entry key="Scratch" value="68" />
         </counts>
       </usages-collector>
@@ -105,7 +101,7 @@
         <counts>
           <entry key="class" value="2" />
           <entry key="html" value="1" />
-          <entry key="java" value="105" />
+          <entry key="java" value="111" />
           <entry key="sql" value="2" />
           <entry key="sqlite_master" value="3" />
           <entry key="txt" value="6" />
@@ -116,7 +112,7 @@
           <entry key="CLASS" value="2" />
           <entry key="Database Element" value="3" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="105" />
+          <entry key="JAVA" value="111" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -128,13 +124,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="68">
+              <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/RK4Classic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/Numerical/RK4ClassicTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1157#1158#0" expanded="true" />
+                <element signature="e#1235#1236#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Numerical/RK438Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/RK438.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding>
+                <element signature="e#84#85#0" expanded="true" />
+                <element signature="e#107#108#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,9 +199,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TestNG Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
@@ -171,8 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/List/LinkedList.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Weights.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinaryTree/Heap.java" />
         <option value="$PROJECT_DIR$/src/com/company/MapGraph.java" />
         <option value="$PROJECT_DIR$/src/com/company/Person.java" />
@@ -222,6 +265,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Numerical/RK4Classic.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/RK438.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/test/Numerical/RK438Test.java" />
+        <option value="$PROJECT_DIR$/test/Numerical/RK4ClassicTest.java" />
       </list>
     </option>
   </component>
@@ -454,6 +499,12 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -489,9 +540,10 @@
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542384249243" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542387720949" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -502,6 +554,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Numerical" />
       <recent name="com.company" />
       <recent name="com.company.Algorithms" />
     </key>
@@ -530,7 +583,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="TestNG.RK438Test">
     <configuration name="DoublePendulumApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Physics.Pendulums.DoublePendulum.DoublePendulumApp" />
       <module name="DataStructuresAndAlgorithms" />
@@ -605,15 +658,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RK438Test" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DataStructuresAndAlgorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Numerical.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Numerical" />
+      <option name="MAIN_CLASS_NAME" value="Numerical.RK438Test" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RK4ClassicTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DataStructuresAndAlgorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Numerical.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Numerical" />
+      <option name="MAIN_CLASS_NAME" value="Numerical.RK4ClassicTest" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="TestNG.DecoderTest" />
       <item itemvalue="Application.RK4" />
       <item itemvalue="Application.SinglePendulumApp" />
       <item itemvalue="Application.DoublePendulumApp" />
+      <item itemvalue="TestNG.RK4ClassicTest" />
+      <item itemvalue="TestNG.RK438Test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RK438Test" />
+        <item itemvalue="TestNG.RK4ClassicTest" />
         <item itemvalue="Application.DoublePendulumApp" />
         <item itemvalue="Application.SinglePendulumApp" />
         <item itemvalue="Application.RK4" />
@@ -640,7 +729,7 @@
       <workItem from="1541434421501" duration="44394000" />
       <workItem from="1541663188351" duration="11517000" />
       <workItem from="1541935172414" duration="55865000" />
-      <workItem from="1542277659748" duration="36881000" />
+      <workItem from="1542277659748" duration="39766000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST">
       <created>1536172967431</created>
@@ -754,25 +843,17 @@
       <option name="project" value="LOCAL" />
       <updated>1542353666823</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="made RK4 abstract&#10;added RK4Classic and RK438">
+      <created>1542384304219</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1542384304219</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DecoderTest - 2018.11.08 at 18h 39m 14s.xml">
-      <configuration name="DecoderTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DecoderTest - 2018.11.08 at 18h 59m 33s.xml">
-      <configuration name="DecoderTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DecoderTest - 2018.11.08 at 19h 00m 10s.xml">
-      <configuration name="DecoderTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DecoderTest - 2018.11.08 at 21h 34m 24s.xml">
-      <configuration name="DecoderTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DecoderTest - 2018.11.09 at 00h 30m 44s.xml">
-      <configuration name="DecoderTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="DecoderTest - 2018.11.09 at 00h 31m 00s.xml">
       <configuration name="DecoderTest" configurationId="TestNG" />
     </history-entry>
@@ -788,9 +869,24 @@
     <history-entry file="DecoderTest - 2018.11.09 at 00h 36m 11s.xml">
       <configuration name="DecoderTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="RK4ClassicTest - 2018.11.16 at 20h 28m 38s.xml">
+      <configuration name="RK4ClassicTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RK4ClassicTest - 2018.11.16 at 20h 29m 42s.xml">
+      <configuration name="RK4ClassicTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RK4ClassicTest - 2018.11.16 at 20h 32m 12s.xml">
+      <configuration name="RK4ClassicTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RK438Test - 2018.11.16 at 20h 40m 12s.xml">
+      <configuration name="RK438Test" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RK438Test - 2018.11.16 at 20h 42m 35s.xml">
+      <configuration name="RK438Test" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152238000" />
+    <option name="totallyTimeSpent" value="155123000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -815,7 +911,7 @@
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3276923" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3276923" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.3476923" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.36923078" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.6292308" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -907,7 +1003,8 @@
     <MESSAGE value="implemented RK4" />
     <MESSAGE value="added SinglePendulum" />
     <MESSAGE value="added minor helper methods&#10;-ODE&#10;--- add, subtract&#10;-Main&#10;--- getPoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="added minor helper methods&#10;-ODE&#10;--- add, subtract&#10;-Main&#10;--- getPoints" />
+    <MESSAGE value="made RK4 abstract&#10;added RK4Classic and RK438" />
+    <option name="LAST_COMMIT_MESSAGE" value="made RK4 abstract&#10;added RK4Classic and RK438" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -921,20 +1018,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Iterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-669">
-          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="143" column="40" lean-forward="true" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -1242,31 +1325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/RK4Classic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/RK4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/RK438.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="e#84#85#0" expanded="true" />
-            <element signature="e#107#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/data.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1274,12 +1332,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/RK4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="64" column="38" lean-forward="true" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="68">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/RK4Classic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/RK438.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <element signature="e#84#85#0" expanded="true" />
+            <element signature="e#107#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Numerical/RK438Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Numerical/RK4ClassicTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
           </folding>
         </state>
       </provider>

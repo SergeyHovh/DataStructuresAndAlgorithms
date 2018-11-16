@@ -8,14 +8,17 @@ import com.company.Numerical.RK4Classic;
 import java.io.FileNotFoundException;
 import java.util.Formatter;
 
+import static java.lang.Math.expm1;
+import static java.lang.Math.sin;
+
 public class Main {
     public static final String PATH = "src/com/company/data.txt";
-    public static final double PI = Math.PI;
-    public static final double E = Math.expm1(1) + 1;
+    public static final double E = expm1(1) + 1;
     public static final double G = 9.8;
 
+
     public static void main(String[] args) {
-        ODE ode = (x, y) -> -G / 4 * Math.sin(y[0]);
+        ODE ode = (x, y) -> -G / 4 * sin(y[0]);
         RK4Classic rk4Classic = new RK4Classic();
         RK438 rk438 = new RK438();
         getPoints(0, new double[]{1, 0}, 10, ode, rk4Classic);
