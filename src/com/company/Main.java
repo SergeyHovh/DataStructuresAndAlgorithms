@@ -1,7 +1,9 @@
 package com.company;
 
-import com.company.Algorithms.ODE;
-import com.company.Algorithms.RK4;
+import com.company.Numerical.ODE;
+import com.company.Numerical.RK4;
+import com.company.Numerical.RK438;
+import com.company.Numerical.RK4Classic;
 
 import java.io.FileNotFoundException;
 import java.util.Formatter;
@@ -13,12 +15,13 @@ public class Main {
     public static final double G = 9.8;
 
     public static void main(String[] args) {
-        getPoints(0, new double[]{1, 0}, (x, y) -> -5 * Math.sin(y[0]));
-
+        ODE ode = (x, y) -> -G / 4 * Math.sin(y[0]);
+        RK4Classic rk4Classic = new RK4Classic();
+        RK438 rk438 = new RK438();
+        getPoints(0, new double[]{1, 0}, 10, ode, rk4Classic);
     }
 
-    private static void getPoints(double x0, double[] y0, ODE ode) {
-        RK4 rk4 = new RK4();
+    private static void getPoints(double x0, double[] y0, double upTo, ODE ode, RK4 rk) {
         Formatter file;
         double iter = 0.0;
         double[] before = new double[y0.length];
@@ -26,9 +29,9 @@ public class Main {
         try {
             file = new Formatter(PATH);
             file.flush();
-            while (iter < 10) {
-                double v = rk4.solveHighOrder(x0, y0, iter, ode);
-                file.format("%s", v + "\n");
+            while (iter < upTo) {
+                double v1 = rk.solveHighOrder(x0, y0, iter, ode);
+                file.format("%s", v1 + "\n");
                 iter += 0.01;
                 System.arraycopy(before, 0, y0, 0, before.length);
             }
@@ -38,3 +41,11 @@ public class Main {
         }
     }
 }
+/*
+ *
+ * classic    3/8	3_8
+ *
+ * ab
+
+ *
+ * */

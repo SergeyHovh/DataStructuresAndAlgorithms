@@ -1,6 +1,6 @@
 package com.company.Physics.Pendulums.SinglePendulum;
 
-import com.company.Algorithms.RK4;
+import com.company.Numerical.RK4Classic;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,19 +10,19 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
 public class Scene extends JPanel implements ActionListener {
-    private RK4 rk4 = new RK4();
+    private RK4Classic rk4 = new RK4Classic(2000);
     private int unitLength = 30;
-    private int delay = 5;
+    private int delay = 0;
     private Timer timer = new Timer(delay, this);
     private double offsetX, offsetY;
     private double r = 5;
     private double M = 10, L = r * unitLength, theta = 1, gravity = 10;
-    private double theta0 = Math.PI / 2;
+    private double theta0 = Math.PI + 0.00001;
     private double x = 0, y = 0;
     private double x0 = x, y0 = y;
     private double v0 = 0;
     private double step = 0;
-    private double stepSize = delay * 0.01;
+    private double stepSize = 0.01;
     private double friction = 0;
 
     private Line2D line = new Line2D.Double(0, 0, 0, 0);

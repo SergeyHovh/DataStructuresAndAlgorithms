@@ -1,6 +1,6 @@
-package com.company.Algorithms;
+package com.company.Numerical;
 
-public class RK4 {
+public abstract class RK4 {
 
     private int ITERATION_COUNT;
 
@@ -60,49 +60,21 @@ public class RK4 {
         double h = (x - x0) / ITERATION_COUNT;
         double[] before = new double[order];
         System.arraycopy(y0, 0, before, 0, order);
-        double[] k1 = new double[order], k2 = new double[order], k3 = new double[order], k4 = new double[order];
 
         for (int i = 0; i < ITERATION_COUNT; i++) {
-            // k1
-            for (int j = 0; j < order; j++) {
-                k1[j] = h * system[j].derivative(x0, y0);
-            }
-
-            // k2
-            for (int j = 0; j < order; j++) {
-                y0[j] += k1[j] / 2;
-            }
-            for (int j = 0; j < order; j++) {
-                k2[j] = h * system[j].derivative(x0 + h / 2, y0);
-            }
-            System.arraycopy(before, 0, y0, 0, order); // reset
-
-            // k3
-            for (int j = 0; j < order; j++) {
-                y0[j] += k2[j] / 2;
-            }
-            for (int j = 0; j < order; j++) {
-                k3[j] = h * system[j].derivative(x0 + h / 2, y0);
-            }
-            System.arraycopy(before, 0, y0, 0, order); // reset
-
-            // k4
-            for (int j = 0; j < order; j++) {
-                y0[j] += k3[j];
-            }
-            for (int j = 0; j < order; j++) {
-                k4[j] = h * system[j].derivative(x0 + h, y0);
-            }
-            System.arraycopy(before, 0, y0, 0, order); // reset
-
-            for (int j = 0; j < order; j++) {
-                y0[j] += 1.0 / 6.0 * (k1[j] + 2 * k2[j] + 2 * k3[j] + k4[j]);
+            double[][] keys = keys(system, x0, y0, before, h);
+            for (double[] key : keys) {
+                for (int j = 0; j < key.length; j++) {
+                    y0[j] += key[j];
+                }
             }
             System.arraycopy(y0, 0, before, 0, order); // update
             x0 += h; // increment
         }
         return y0[0];
     }
+
+    abstract double[][] keys(ODE[] system, double x0, double[] y0, double[] before, double h);
 
     private ODE[] higherOrderToSystem(ODE ode, int order) {
         ODE[] system = new ODE[order];

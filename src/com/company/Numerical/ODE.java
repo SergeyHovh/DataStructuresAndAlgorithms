@@ -1,4 +1,4 @@
-package com.company.Algorithms;
+package com.company.Numerical;
 
 public interface ODE {
     static ODE add(ODE f1, ODE f2) {
