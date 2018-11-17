@@ -2,11 +2,12 @@ package com.company;
 
 import com.company.Numerical.ODE;
 import com.company.Numerical.RK;
+import com.company.Numerical.RK438;
 
 import java.io.FileNotFoundException;
 import java.util.Formatter;
 
-import static java.lang.Math.expm1;
+import static java.lang.Math.*;
 
 public class Main {
     public static final String PATH = "src/com/company/data.txt";
@@ -15,6 +16,9 @@ public class Main {
 
 
     public static void main(String[] args) {
+        RK rungeKutta = new RK438();
+        ODE ode = (x, y) -> 9 * sin(y[0]) - 0.04 * pow(y[1], 2);
+        getPoints(0, new double[]{1, 0}, 10, ode, rungeKutta);
     }
 
     private static void getPoints(double x0, double[] y0, double upTo, ODE ode, RK rk) {

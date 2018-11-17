@@ -62,7 +62,7 @@ public abstract class RK {
         System.arraycopy(y0, 0, before, 0, order);
 
         for (int i = 0; i < ITERATION_COUNT; i++) {
-            double[][] keys = keys(system, x0, y0, before, h);
+            double[][] keys = generateKeys(system, x0, y0, before, h, coefficients());
             for (double[] key : keys) {
                 for (int j = 0; j < key.length; j++) {
                     y0[j] += key[j];
@@ -74,9 +74,9 @@ public abstract class RK {
         return y0[0];
     }
 
-    abstract double[][] keys(ODE[] system, double x0, double[] y0, double[] before, double h);
+    protected abstract double[][] coefficients();
 
-    double[][] generateKeys(ODE[] system, double x0, double[] y0, double[] before, double h, double[][] coefficients) {
+    private double[][] generateKeys(ODE[] system, double x0, double[] y0, double[] before, double h, double[][] coefficients) {
         int order = y0.length;
         double[][] K = new double[coefficients.length - 1][order];
         System.arraycopy(y0, 0, before, 0, order);
