@@ -1,14 +1,14 @@
-package com.company.Numerical;
+package com.company.Numerical.ODE;
 
-public abstract class RK {
+public abstract class ODESolver {
 
     private int ITERATION_COUNT;
 
-    RK(int STEP_SIZE) {
+    ODESolver(int STEP_SIZE) {
         this.ITERATION_COUNT = STEP_SIZE;
     }
 
-    RK() {
+    ODESolver() {
         this(1000);
     }
 

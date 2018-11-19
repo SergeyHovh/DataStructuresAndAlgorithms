@@ -1,6 +1,6 @@
-package com.company.Numerical;
+package com.company.Numerical.ODE;
 
-public class RK438 extends RK {
+public class RK438 extends ODESolver {
     public RK438() {
         super();
     }

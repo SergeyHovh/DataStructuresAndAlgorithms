@@ -1,8 +1,8 @@
 package Numerical;
 
-import com.company.Numerical.ODE;
-import com.company.Numerical.RK;
-import com.company.Numerical.RKF45;
+import com.company.Numerical.ODE.ODE;
+import com.company.Numerical.ODE.ODESolver;
+import com.company.Numerical.ODE.RKF45;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -10,7 +10,7 @@ import static java.lang.Math.exp;
 import static org.testng.Assert.assertEquals;
 
 public class RKF45Test {
-    private RK rkf45 = new RKF45();
+    private ODESolver rkf45 = new RKF45();
 
     @DataProvider
     public static Object[][] firstOrderData() {

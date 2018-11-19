@@ -1,6 +1,6 @@
-package com.company.Numerical;
+package com.company.Numerical.ODE;
 
-public class Ralston extends RK {
+public class Ralston extends ODESolver {
     @Override
     protected double[][] coefficients() {
         return new double[][]{

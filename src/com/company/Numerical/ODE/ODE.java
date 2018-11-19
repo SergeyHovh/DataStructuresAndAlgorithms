@@ -1,4 +1,4 @@
-package com.company.Numerical;
+package com.company.Numerical.ODE;
 
 public interface ODE {
     static ODE add(ODE f1, ODE f2) {

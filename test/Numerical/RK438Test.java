@@ -1,7 +1,7 @@
 package Numerical;
 
-import com.company.Numerical.ODE;
-import com.company.Numerical.RK438;
+import com.company.Numerical.ODE.ODE;
+import com.company.Numerical.ODE.RK438;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

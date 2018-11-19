@@ -1,6 +1,6 @@
-package com.company.Numerical;
+package com.company.Numerical.ODE;
 
-public class RKF45 extends RK {
+public class RKF45 extends ODESolver {
     // TODO: 11/17/2018 UNDER CONSTRUCTION :D
     public RKF45() {
         super();

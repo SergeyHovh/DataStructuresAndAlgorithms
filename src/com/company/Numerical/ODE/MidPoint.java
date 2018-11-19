@@ -1,12 +1,12 @@
-package com.company.Numerical;
+package com.company.Numerical.ODE;
 
-public class Heun extends RK {
+public class MidPoint extends ODESolver {
     @Override
     protected double[][] coefficients() {
         return new double[][]{
                 {0, 0, 0},
-                {1, 1, 0},
-                {0, 0.5, 0.5}
+                {0.5, 0.5, 0},
+                {0, 0, 1}
         };
     }
 }

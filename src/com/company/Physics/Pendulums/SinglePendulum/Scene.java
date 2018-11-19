@@ -1,6 +1,6 @@
 package com.company.Physics.Pendulums.SinglePendulum;
 
-import com.company.Numerical.RKClassic;
+import com.company.Numerical.ODE.RKClassic;
 
 import javax.swing.*;
 import java.awt.*;

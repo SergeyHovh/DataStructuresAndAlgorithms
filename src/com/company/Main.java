@@ -1,8 +1,8 @@
 package com.company;
 
-import com.company.Numerical.ODE;
-import com.company.Numerical.RK;
-import com.company.Numerical.RK438;
+import com.company.Numerical.ODE.ODE;
+import com.company.Numerical.ODE.ODESolver;
+import com.company.Numerical.ODE.RK438;
 
 import java.io.FileNotFoundException;
 import java.util.Formatter;
@@ -16,12 +16,12 @@ public class Main {
 
 
     public static void main(String[] args) {
-        RK rungeKutta = new RK438();
+        ODESolver rungeKutta = new RK438();
         ODE ode = (x, y) -> 9 * sin(y[0]) - 0.04 * pow(y[1], 2);
         getPoints(0, new double[]{1, 0}, 10, ode, rungeKutta);
     }
 
-    private static void getPoints(double x0, double[] y0, double upTo, ODE ode, RK rk) {
+    private static void getPoints(double x0, double[] y0, double upTo, ODE ode, ODESolver ODESolver) {
         Formatter file;
         double iter = 0.0;
         double[] before = new double[y0.length];
@@ -30,7 +30,7 @@ public class Main {
             file = new Formatter(PATH);
             file.flush();
             while (iter < upTo) {
-                double v1 = rk.solveHighOrder(x0, y0, iter, ode);
+                double v1 = ODESolver.solveHighOrder(x0, y0, iter, ode);
                 file.format("%s", v1 + "\n");
                 iter += 0.01;
                 System.arraycopy(before, 0, y0, 0, before.length);

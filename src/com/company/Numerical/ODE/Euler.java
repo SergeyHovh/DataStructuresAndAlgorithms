@@ -1,6 +1,6 @@
-package com.company.Numerical;
+package com.company.Numerical.ODE;
 
-public class Euler extends RK {
+public class Euler extends ODESolver {
     @Override
     protected double[][] coefficients() {
         return new double[][]{

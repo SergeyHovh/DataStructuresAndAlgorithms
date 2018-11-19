@@ -1,6 +1,6 @@
-package com.company.Numerical;
+package com.company.Numerical.ODE;
 
-public class RKClassic extends RK {
+public class RKClassic extends ODESolver {
     public RKClassic(int N) {
         super(N);
     }

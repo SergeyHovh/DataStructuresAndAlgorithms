@@ -1,6 +1,6 @@
-package com.company.Numerical;
+package com.company.Numerical.ODE;
 
-public class Heun3 extends RK {
+public class Heun3 extends ODESolver {
 
     @Override
     protected double[][] coefficients() {
