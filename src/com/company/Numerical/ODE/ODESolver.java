@@ -2,7 +2,7 @@ package com.company.Numerical.ODE;
 
 public abstract class ODESolver {
 
-    private int ITERATION_COUNT;
+    int ITERATION_COUNT;
 
     ODESolver(int STEP_SIZE) {
         this.ITERATION_COUNT = STEP_SIZE;
@@ -62,7 +62,7 @@ public abstract class ODESolver {
         System.arraycopy(y0, 0, before, 0, order);
 
         for (int i = 0; i < ITERATION_COUNT; i++) {
-            double[][] keys = generateKeys(system, x0, y0, before, h, coefficients());
+            double[][] keys = generateKeys(system, x0, y0, before, h, coefficients(), false);
             for (double[] key : keys) {
                 for (int j = 0; j < key.length; j++) {
                     y0[j] += key[j];
@@ -76,7 +76,7 @@ public abstract class ODESolver {
 
     protected abstract double[][] coefficients();
 
-    private double[][] generateKeys(ODE[] system, double x0, double[] y0, double[] before, double h, double[][] coefficients) {
+    protected double[][] generateKeys(ODE[] system, double x0, double[] y0, double[] before, double h, double[][] coefficients, boolean f) {
         int order = y0.length;
         double[][] K = new double[coefficients.length - 1][order];
         System.arraycopy(y0, 0, before, 0, order);

@@ -2,23 +2,25 @@ package com.company;
 
 import com.company.Numerical.ODE.ODE;
 import com.company.Numerical.ODE.ODESolver;
-import com.company.Numerical.ODE.RK438;
+import com.company.Numerical.ODE.RKClassic;
+import com.company.Numerical.ODE.RKF45;
 
 import java.io.FileNotFoundException;
 import java.util.Formatter;
 
-import static java.lang.Math.*;
+import static java.lang.Math.expm1;
 
 public class Main {
     public static final String PATH = "src/com/company/data.txt";
     public static final double E = expm1(1) + 1;
     public static final double G = 9.8;
 
-
     public static void main(String[] args) {
-        ODESolver rungeKutta = new RK438();
-        ODE ode = (x, y) -> 9 * sin(y[0]) - 0.04 * pow(y[1], 2);
-        getPoints(0, new double[]{1, 0}, 10, ode, rungeKutta);
+        ODESolver rkf45 = new RKF45();
+        ODESolver rkClassic = new RKClassic();
+        ODE ode = (x, y) -> Math.sin(y[0]);
+        System.out.println(rkf45.solveSecondOrder(0, 1, 0, 1, ode));
+        System.out.println(rkClassic.solveSecondOrder(0, 1, 0, 1, ode));
     }
 
     private static void getPoints(double x0, double[] y0, double upTo, ODE ode, ODESolver ODESolver) {

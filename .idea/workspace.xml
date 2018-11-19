@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="added new explicit methods for RK">
+    <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="renamed RK to ODESolver, moved to Numerical/ODE">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Euler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/Euler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Heun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/Heun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Heun3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/Heun3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/MidPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/MidPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/RK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/RK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/RK3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/RK3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/RK438.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/RK438.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/RKClassic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/RKClassic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/RKF45.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/RKF45.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Ralston.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/Ralston.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Numerical/RK438Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Numerical/RK438Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Numerical/RKClassicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Numerical/RKClassicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Numerical/RKF45Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Numerical/RKF45Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/RKF45.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/RKF45.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,15 +90,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="29" />
-          <entry key="java" value="37209" />
+          <entry key="java" value="39733" />
           <entry key="sql" value="68" />
-          <entry key="txt" value="630" />
+          <entry key="txt" value="691" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="37209" />
-          <entry key="PLAIN_TEXT" value="659" />
+          <entry key="JAVA" value="39733" />
+          <entry key="PLAIN_TEXT" value="720" />
           <entry key="Scratch" value="68" />
         </counts>
       </usages-collector>
@@ -120,7 +107,7 @@
           <entry key="class" value="2" />
           <entry key="html" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="158" />
+          <entry key="java" value="167" />
           <entry key="sql" value="2" />
           <entry key="sqlite_master" value="3" />
           <entry key="txt" value="7" />
@@ -132,7 +119,7 @@
           <entry key="Database Element" value="3" />
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="158" />
+          <entry key="JAVA" value="167" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -161,11 +148,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="139">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/RKF45.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -192,9 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/Bouncing/Scene.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Bouncing/StadiumTable.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Bouncing/Base.java" />
         <option value="$PROJECT_DIR$/src/com/company/Bouncing/BouncingApp.java" />
         <option value="$PROJECT_DIR$/src/com/company/Bouncing/util/Base.java" />
         <option value="$PROJECT_DIR$/src/com/company/Bouncing/tablesAndBalls/PathBall.java" />
@@ -243,6 +254,9 @@
         <option value="$PROJECT_DIR$/test/ODE/RKClassicTest.java" />
         <option value="$PROJECT_DIR$/test/ODE/RKF45Test.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/RKF45.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" />
       </list>
     </option>
   </component>
@@ -498,7 +512,7 @@
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542609053157" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542642965382" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -569,12 +583,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglePendulumApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Physics.Pendulums.SinglePendulum.SinglePendulumApp" />
+    <configuration name="ODESolverAdaptive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Numerical.ODE.ODESolverAdaptive" />
       <module name="DataStructuresAndAlgorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Physics.Pendulums.SinglePendulum.*" />
+          <option name="PATTERN" value="com.company.Numerical.ODE.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -666,19 +680,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="TestNG.DecoderTest" />
-      <item itemvalue="Application.SinglePendulumApp" />
       <item itemvalue="Application.DoublePendulumApp" />
       <item itemvalue="TestNG.RKClassicTest" />
       <item itemvalue="TestNG.RK438Test" />
       <item itemvalue="TestNG.RKF45Test" />
+      <item itemvalue="Application.ODESolverAdaptive" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ODESolverAdaptive" />
         <item itemvalue="TestNG.RKClassicTest" />
         <item itemvalue="TestNG.RKF45Test" />
         <item itemvalue="TestNG.RK438Test" />
         <item itemvalue="Application.DoublePendulumApp" />
-        <item itemvalue="Application.SinglePendulumApp" />
       </list>
     </recent_temporary>
   </component>
@@ -708,7 +722,7 @@
       <workItem from="1542477256928" duration="4439000" />
       <workItem from="1542545511214" duration="1015000" />
       <workItem from="1542573864068" duration="713000" />
-      <workItem from="1542574988996" duration="691000" />
+      <workItem from="1542574988996" duration="15151000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST">
       <created>1536172967431</created>
@@ -850,7 +864,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542457982629</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="renamed RK to ODESolver, moved to Numerical/ODE">
+      <created>1542609128291</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1542609128291</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -886,7 +907,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178326000" />
+    <option name="totallyTimeSpent" value="192786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -902,7 +923,7 @@
     <editor active="true" />
     <layout>
       <window_info auto_hide="true" x="506" y="59" width="415" height="650" id="Learn" order="0" type="WINDOWED" weight="0.32936507" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.21587302" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.23095238" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -911,8 +932,8 @@
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3275862" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3276923" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7595238" weight="0.38923076" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.5892308" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.34615386" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.45692307" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49920633" weight="0.36" />
@@ -1007,7 +1028,8 @@
     <MESSAGE value="added RK4Classic and RK438 tests" />
     <MESSAGE value="created generateKeys method" />
     <MESSAGE value="added new explicit methods for RK" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new explicit methods for RK" />
+    <MESSAGE value="renamed RK to ODESolver, moved to Numerical/ODE" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed RK to ODESolver, moved to Numerical/ODE" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1021,35 +1043,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/InterfacePractice.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Algorithms/Weights.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/AssertionError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="72" column="11" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/testng-7.0.0-beta1.jar!/org/testng/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test-output/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2244">
@@ -1337,10 +1330,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/RK438.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/RKClassic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/RKF45.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="139">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
