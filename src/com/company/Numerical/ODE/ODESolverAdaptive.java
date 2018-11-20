@@ -3,33 +3,36 @@ package com.company.Numerical.ODE;
 public abstract class ODESolverAdaptive extends ODESolver {
     private final double min = 0.01;
     private final double max = 2 * min;
+    private double h = 0, X = 0;
 
 
     @Override
     public double solveHighOrder(double x0, double[] y0, double x, ODE[] system) {
-        double minErr = 1.0E-5;
+        double minErr = 1.0E-13;
         double maxErr = 2 * minErr;
         int order = y0.length;
-        double h = 0, error;
         double[] before = new double[order];
         double[] highOrder = new double[order];
         double[] lowOrder = new double[order];
         System.arraycopy(y0, 0, before, 0, order);
-        while (x0 <= x) {
-            if (h < max) h = max;
-            else if (h > min) h = min;
-            System.arraycopy(highOrder(x0, y0, system, h), 0, highOrder, 0, order);
-            System.arraycopy(before, 0, y0, 0, order);
-            System.arraycopy(lowOrder(x0, y0, system, h), 0, lowOrder, 0, order);
-            error = Math.abs(highOrder[0] - lowOrder[0]);
-            int multiplier = 10;
+        X = x0;
+        while (X < x) {
+            if (h <= min) h = min;
+            else if (h >= max) h = max;
+
+            System.arraycopy(before, 0, y0, 0, order); // reset y0
+            System.arraycopy(highOrder(X, y0, system, h), 0, highOrder, 0, order);
+            System.arraycopy(before, 0, y0, 0, order); // reset y0
+            System.arraycopy(lowOrder(X, y0, system, h), 0, lowOrder, 0, order);
+            double error = Math.abs(highOrder[0] - lowOrder[0]);
+            int multiplier = 2;
             if (error > maxErr && h > min) {
                 h /= multiplier;
             } else {
-                x0 += h;
-                System.arraycopy(highOrder, 0, y0, 0, highOrder.length);
+                System.arraycopy(highOrder, 0, y0, 0, order);
                 System.arraycopy(y0, 0, before, 0, order); // update
-                if (error < minErr && h < min) h *= multiplier;
+                X += h;
+                if (error < minErr && h <= max) h *= multiplier;
             }
         }
         return y0[0];
@@ -70,8 +73,6 @@ public abstract class ODESolverAdaptive extends ODESolver {
 
     private double[] highOrder(double x0, double[] y0, ODE[] system, double h) {
         int order = y0.length;
-        if (h < max) h = max;
-        else if (h > min) h = min;
         double[] before = new double[order];
         System.arraycopy(y0, 0, before, 0, order);
         double[][] generateKeys = generateKeys(system, x0, y0, before, h, coefficients(), true);
@@ -85,8 +86,6 @@ public abstract class ODESolverAdaptive extends ODESolver {
 
     private double[] lowOrder(double x0, double[] y0, ODE[] system, double h) {
         int order = y0.length;
-        if (h < max) h = max;
-        else if (h > min) h = min;
         double[] before = new double[order];
         System.arraycopy(y0, 0, before, 0, order);
         double[][] generateKeys = generateKeys(system, x0, y0, before, h, coefficients(), false);
