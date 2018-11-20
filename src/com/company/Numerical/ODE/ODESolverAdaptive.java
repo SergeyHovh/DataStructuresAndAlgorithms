@@ -1,10 +1,14 @@
 package com.company.Numerical.ODE;
 
+import java.util.Hashtable;
+import java.util.Map;
+
 public abstract class ODESolverAdaptive extends ODESolver {
     private final double min = 0.01;
     private final double max = 2 * min;
+    private Hashtable<Double, double[]> values = new Hashtable<>();
+    private Hashtable<ODE[], Map<Double, double[]>> odeValues = new Hashtable<>();
     private double h = 0, X = 0;
-
 
     @Override
     public double solveHighOrder(double x0, double[] y0, double x, ODE[] system) {
@@ -16,23 +20,30 @@ public abstract class ODESolverAdaptive extends ODESolver {
         double[] lowOrder = new double[order];
         System.arraycopy(y0, 0, before, 0, order);
         X = x0;
+        int multiplier = 2;
         while (X < x) {
-            if (h <= min) h = min;
-            else if (h >= max) h = max;
-
-            System.arraycopy(before, 0, y0, 0, order); // reset y0
-            System.arraycopy(highOrder(X, y0, system, h), 0, highOrder, 0, order);
-            System.arraycopy(before, 0, y0, 0, order); // reset y0
-            System.arraycopy(lowOrder(X, y0, system, h), 0, lowOrder, 0, order);
-            double error = Math.abs(highOrder[0] - lowOrder[0]);
-            int multiplier = 2;
-            if (error > maxErr && h > min) {
-                h /= multiplier;
-            } else {
-                System.arraycopy(highOrder, 0, y0, 0, order);
+            if (values.containsKey(X)) {
+                System.arraycopy(values.get(X), 0, y0, 0, order);
                 System.arraycopy(y0, 0, before, 0, order); // update
                 X += h;
-                if (error < minErr && h <= max) h *= multiplier;
+            } else {
+                if (h <= min) h = min;
+                else if (h >= max) h = max;
+                System.arraycopy(before, 0, y0, 0, order); // reset y0
+                System.arraycopy(highOrder(X, y0, system, h), 0, highOrder, 0, order);
+                System.arraycopy(before, 0, y0, 0, order); // reset y0
+                System.arraycopy(lowOrder(X, y0, system, h), 0, lowOrder, 0, order);
+                double error = Math.abs(highOrder[0] - lowOrder[0]);
+                if (error > maxErr && h > min) {
+                    h /= multiplier;
+                } else {
+                    values.put(X, highOrder);
+                    odeValues.put(system, values);
+                    System.arraycopy(highOrder, 0, y0, 0, order);
+                    System.arraycopy(y0, 0, before, 0, order); // update
+                    X += h;
+                    if (error < minErr && h <= max) h *= multiplier;
+                }
             }
         }
         return y0[0];
