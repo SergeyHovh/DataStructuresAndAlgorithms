@@ -1,4 +1,6 @@
-package com.company.Numerical.ODE;
+package com.company.Numerical.ODE.Explicit;
+
+import com.company.Numerical.ODE.ODESolver;
 
 public class RK3 extends ODESolver {
     @Override

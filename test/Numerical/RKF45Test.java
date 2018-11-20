@@ -1,8 +1,8 @@
 package Numerical;
 
+import com.company.Numerical.ODE.Embedded.RKF45;
 import com.company.Numerical.ODE.ODE;
 import com.company.Numerical.ODE.ODESolver;
-import com.company.Numerical.ODE.RKF45;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

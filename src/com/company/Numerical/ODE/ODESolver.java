@@ -8,7 +8,7 @@ public abstract class ODESolver {
         this.ITERATION_COUNT = STEP_SIZE;
     }
 
-    ODESolver() {
+    public ODESolver() {
         this(1000);
     }
 

@@ -1,4 +1,6 @@
-package com.company.Numerical.ODE;
+package com.company.Numerical.ODE.Embedded;
+
+import com.company.Numerical.ODE.ODESolverAdaptive;
 
 public class RKF45 extends ODESolverAdaptive {
     @Override

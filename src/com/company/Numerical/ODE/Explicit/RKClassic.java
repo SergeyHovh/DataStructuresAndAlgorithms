@@ -1,13 +1,8 @@
-package com.company.Numerical.ODE;
+package com.company.Numerical.ODE.Explicit;
+
+import com.company.Numerical.ODE.ODESolver;
 
 public class RKClassic extends ODESolver {
-    public RKClassic(int N) {
-        super(N);
-    }
-
-    public RKClassic() {
-        super();
-    }
 
     @Override
     protected double[][] coefficients() {

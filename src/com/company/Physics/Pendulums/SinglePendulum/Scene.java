@@ -1,6 +1,7 @@
 package com.company.Physics.Pendulums.SinglePendulum;
 
-import com.company.Numerical.ODE.RKClassic;
+import com.company.Numerical.ODE.Explicit.RK438;
+import com.company.Numerical.ODE.ODESolver;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,20 +11,20 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
 public class Scene extends JPanel implements ActionListener {
-    private RKClassic rk4 = new RKClassic(2000);
+    private ODESolver solveSecondOrder = new RK438();
     private int unitLength = 30;
     private int delay = 0;
     private Timer timer = new Timer(delay, this);
     private double offsetX, offsetY;
-    private double r = 5;
+    private double r = 3;
     private double M = 10, L = r * unitLength, theta = 1, gravity = 10;
-    private double theta0 = Math.PI + 0.00001;
+    private double theta0 = Math.PI / 2;
     private double x = 0, y = 0;
     private double x0 = x, y0 = y;
     private double v0 = 0;
     private double step = 0;
     private double stepSize = 0.01;
-    private double friction = 0;
+    private double friction = -0;
 
     private Line2D line = new Line2D.Double(0, 0, 0, 0);
     private Ellipse2D ball = new Ellipse2D.Double(0, 0, M, M);
@@ -61,7 +62,7 @@ public class Scene extends JPanel implements ActionListener {
     }
 
     private double motion(double x, double... y) {
-        return -gravity / L * Math.sin(y[0]) - friction * y[1];
+        return -gravity / L * y[0] - friction * y[1];
     }
 
     private void setup() {
@@ -101,7 +102,7 @@ public class Scene extends JPanel implements ActionListener {
         offsetX = getSize().width * 0.5;
         x = L * Math.sin(theta) + offsetX;
         y = L * Math.cos(theta) + offsetY;
-        theta = rk4.solveSecondOrder(x0, theta0, v0, step, this::motion);
+        theta = solveSecondOrder.solveSecondOrder(x0, theta0, v0, step, this::motion);
         step += stepSize;
     }
 }
