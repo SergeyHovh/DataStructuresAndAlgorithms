@@ -1,47 +1,58 @@
 package com.company.Numerical.ODE;
 
+import java.util.Arrays;
 import java.util.Hashtable;
-import java.util.Map;
 
 public abstract class ODESolverAdaptive extends ODESolver {
     private final double min = 0.01;
-    private final double max = 2 * min;
-    private Hashtable<Double, double[]> values = new Hashtable<>();
-    private Hashtable<ODE[], Map<Double, double[]>> odeValues = new Hashtable<>();
-    private double h = 0, X = 0;
+    private final double max = 5 * min;
+    IVP ivp;
+    private Hashtable<IVP, Hashtable<Double, Value>> odeValues = new Hashtable<>();
+    private double h = 0;
 
     @Override
     public double solveHighOrder(double x0, double[] y0, double x, ODE[] system) {
         double minErr = 1.0E-13;
         double maxErr = 2 * minErr;
         int order = y0.length;
+        ODE ode = system[order - 1];
         double[] before = new double[order];
-        double[] highOrder = new double[order];
-        double[] lowOrder = new double[order];
+        double[] high = new double[order];
+        double[] low = new double[order];
+        double[] current = new double[order];
+        Value value = new Value();
+        System.arraycopy(y0, 0, current, 0, order);
+        // set the unique initial value problem
+        ivp = new IVP(ode, x0, current);
+        odeValues.put(ivp, new Hashtable<>());
+        for (IVP ivp1 : odeValues.keySet()) {
+            if (ivp1.equals(ivp)) {
+                ivp = ivp1;
+            }
+        }
         System.arraycopy(y0, 0, before, 0, order);
-        X = x0;
         int multiplier = 2;
-        while (X < x) {
-            if (values.containsKey(X)) {
-                System.arraycopy(values.get(X), 0, y0, 0, order);
+        while (x0 < x) {
+            System.arraycopy(before, 0, y0, 0, order); // reset y0
+            adjustH();
+            if (odeValues.get(ivp).containsKey(x0)) {
+                System.arraycopy(odeValues.get(ivp).get(x0).value, 0, y0, 0, order);
                 System.arraycopy(y0, 0, before, 0, order); // update
-                X += h;
-            } else {
-                if (h <= min) h = min;
-                else if (h >= max) h = max;
+                x0 += odeValues.get(ivp).get(x0).h;
+            } else { // computation
+                System.arraycopy(rungeKutta(x0, y0, system, h, true), 0, high, 0, order);
                 System.arraycopy(before, 0, y0, 0, order); // reset y0
-                System.arraycopy(highOrder(X, y0, system, h), 0, highOrder, 0, order);
-                System.arraycopy(before, 0, y0, 0, order); // reset y0
-                System.arraycopy(lowOrder(X, y0, system, h), 0, lowOrder, 0, order);
-                double error = Math.abs(highOrder[0] - lowOrder[0]);
+                System.arraycopy(rungeKutta(x0, y0, system, h, false), 0, low, 0, order);
+                double error = Math.abs(high[0] - low[0]);
                 if (error > maxErr && h > min) {
                     h /= multiplier;
                 } else {
-                    values.put(X, highOrder);
-                    odeValues.put(system, values);
-                    System.arraycopy(highOrder, 0, y0, 0, order);
+                    System.arraycopy(high, 0, y0, 0, order);
                     System.arraycopy(y0, 0, before, 0, order); // update
-                    X += h;
+                    value.setValue(high);
+                    value.setH(h);
+                    odeValues.get(ivp).put(x0, value);
+                    x0 += h;
                     if (error < minErr && h <= max) h *= multiplier;
                 }
             }
@@ -82,11 +93,18 @@ public abstract class ODESolverAdaptive extends ODESolver {
         return K;
     }
 
-    private double[] highOrder(double x0, double[] y0, ODE[] system, double h) {
+    /**
+     * @param x0     - initial position
+     * @param y0     - initial value
+     * @param system - system of first order ODEs
+     * @param h      - step size
+     * @param high   true - returns high order RK, false - returns low order RK
+     */
+    private double[] rungeKutta(double x0, double[] y0, ODE[] system, double h, boolean high) {
         int order = y0.length;
         double[] before = new double[order];
         System.arraycopy(y0, 0, before, 0, order);
-        double[][] generateKeys = generateKeys(system, x0, y0, before, h, coefficients(), true);
+        double[][] generateKeys = generateKeys(system, x0, y0, before, h, coefficients(), high);
         for (double[] generateKey : generateKeys) {
             for (int i = 0; i < generateKey.length; i++) {
                 y0[i] += generateKey[i];
@@ -95,16 +113,47 @@ public abstract class ODESolverAdaptive extends ODESolver {
         return y0;
     }
 
-    private double[] lowOrder(double x0, double[] y0, ODE[] system, double h) {
-        int order = y0.length;
-        double[] before = new double[order];
-        System.arraycopy(y0, 0, before, 0, order);
-        double[][] generateKeys = generateKeys(system, x0, y0, before, h, coefficients(), false);
-        for (double[] generateKey : generateKeys) {
-            for (int i = 0; i < generateKey.length; i++) {
-                y0[i] += generateKey[i];
+    private void adjustH() {
+        if (h < min) h = min;
+        else if (h > max) h = max;
+    }
+
+    class Value {
+        double[] value;
+        double h;
+
+        void setValue(double[] value) {
+            this.value = value;
+        }
+
+        void setH(double h) {
+            this.h = h;
+        }
+    }
+
+    class IVP {
+        ODE ode;
+        double x0;
+        double[] y0;
+
+        IVP(ODE ode, double x0, double[] y0) {
+            this.ode = ode;
+            this.x0 = x0;
+            this.y0 = y0;
+        }
+
+        @Override
+        public String toString() {
+            return x0 + " " + Arrays.toString(y0);
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj instanceof IVP) {
+                return this.x0 == ((IVP) obj).x0 && Arrays.equals(this.y0, ((IVP) obj).y0);
+            } else {
+                return false;
             }
         }
-        return y0;
     }
 }

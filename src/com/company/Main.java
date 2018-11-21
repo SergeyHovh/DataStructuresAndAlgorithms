@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.Numerical.ODE.Embedded.RKDP;
+import com.company.Numerical.ODE.Embedded.RKF45;
+import com.company.Numerical.ODE.Explicit.RK438;
 import com.company.Numerical.ODE.ODE;
 import com.company.Numerical.ODE.ODESolver;
 
@@ -7,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.util.Formatter;
 
 import static java.lang.Math.expm1;
+import static java.lang.Math.sin;
 
 public class Main {
     public static final String PATH = "src/com/company/data.txt";
@@ -14,6 +18,14 @@ public class Main {
     public static final double G = 9.8;
 
     public static void main(String[] args) {
+        ODESolver rkf45 = new RKF45();
+        ODESolver rkClassic = new RK438();
+        ODESolver rkdp = new RKDP();
+        ODE ode = (x, y) -> -5 * sin(y[0]);
+        double x0 = 0;
+        double y0 = 1;
+        double yPrime0 = 0;
+        getPoints(x0, new double[]{y0, yPrime0}, 10, ode, rkf45);
     }
 
     private static void getPoints(double x0, double[] y0, double upTo, ODE ode, ODESolver ODESolver) {
