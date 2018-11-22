@@ -8,7 +8,6 @@ public interface ODE {
     /**
      * @param x initial position
      * @param y initial values of y, y', y'' ...
-     * @return
      */
     double derivative(double x, double... y);
 
@@ -18,5 +17,14 @@ public interface ODE {
 
     default ODE subtract(ODE ode) {
         return (x, y) -> this.derivative(x, y) - ode.derivative(x, y);
+    }
+
+    default boolean equal(ODE ode) {
+        for (double i = 0; i < 100; i++) {
+            if (!(this.derivative(i / 100, 1, 0) == ode.derivative(i / 100, 1, 0))) {
+                return false;
+            }
+        }
+        return true;
     }
 }

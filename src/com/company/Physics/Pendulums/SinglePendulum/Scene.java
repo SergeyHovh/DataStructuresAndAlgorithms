@@ -1,6 +1,6 @@
 package com.company.Physics.Pendulums.SinglePendulum;
 
-import com.company.Numerical.ODE.Explicit.RKClassic;
+import com.company.Numerical.ODE.Embedded.RKF45;
 import com.company.Numerical.ODE.ODESolver;
 
 import javax.swing.*;
@@ -11,7 +11,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
 public class Scene extends JPanel implements ActionListener {
-    private ODESolver solveSecondOrder = new RKClassic();
+    private ODESolver solveSecondOrder = new RKF45();
     private int unitLength = 30;
     private int delay = 0;
     private Timer timer = new Timer(delay, this);
@@ -23,7 +23,7 @@ public class Scene extends JPanel implements ActionListener {
     private double x0 = x, y0 = y;
     private double v0 = 0;
     private double step = 0;
-    private double stepSize = 0.02;
+    private double stepSize = 0.01;
     private double friction = 0;
 
     private Line2D line = new Line2D.Double(0, 0, 0, 0);

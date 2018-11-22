@@ -21,11 +21,14 @@ public class Main {
         ODESolver rkf45 = new RKF45();
         ODESolver rkClassic = new RK438();
         ODESolver rkdp = new RKDP();
-        ODE ode = (x, y) -> -5 * sin(y[0]);
+        ODE ode = (x, y) -> -16 * sin(y[0]);
         double x0 = 0;
         double y0 = 1;
         double yPrime0 = 0;
-        getPoints(x0, new double[]{y0, yPrime0}, 10, ode, rkf45);
+//        getPoints(x0, new double[]{y0, yPrime0}, 10, ode, rkf45);
+        System.out.println(rkf45.solveSecondOrder(x0, y0, yPrime0, 1, ode));
+        System.out.println(rkf45.solveSecondOrder(x0, y0, yPrime0, 2, ode));
+        System.out.println(rkf45.solveSecondOrder(x0 + 1, y0 - 1, yPrime0, 2, ode));
     }
 
     private static void getPoints(double x0, double[] y0, double upTo, ODE ode, ODESolver ODESolver) {

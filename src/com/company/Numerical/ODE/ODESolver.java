@@ -62,7 +62,7 @@ public abstract class ODESolver {
         System.arraycopy(y0, 0, before, 0, order);
 
         for (int i = 0; i < ITERATION_COUNT; i++) {
-            double[][] keys = generateKeys(system, x0, y0, before, h, coefficients(), false);
+            double[][] keys = generateKeys(generateUnweighted(system, x0, y0, before, h, coefficients()), coefficients(), false);
             for (double[] key : keys) {
                 for (int j = 0; j < key.length; j++) {
                     y0[j] += key[j];
@@ -76,7 +76,19 @@ public abstract class ODESolver {
 
     protected abstract double[][] coefficients();
 
-    protected double[][] generateKeys(ODE[] system, double x0, double[] y0, double[] before, double h, double[][] coefficients, boolean f) {
+    protected double[][] generateKeys(double[][] K, double[][] coefficients, boolean f) {
+        // adjust weights
+        for (int i = 0; i < K.length; i++) {
+            double[] aK = K[i];
+            for (int j = 0; j < aK.length; j++) {
+                double multiplier = coefficients[coefficients.length - 1][i + 1];
+                K[i][j] *= multiplier;
+            }
+        }
+        return K;
+    }
+
+    protected double[][] generateUnweighted(ODE[] system, double x0, double[] y0, double[] before, double h, double[][] coefficients) {
         int order = y0.length;
         double[][] K = new double[coefficients.length - 1][order];
         System.arraycopy(y0, 0, before, 0, order);
@@ -91,14 +103,6 @@ public abstract class ODESolver {
                 K[i][j] = h * system[j].derivative(x0 + coefficients[i][0] * h, y0);
             }
             System.arraycopy(before, 0, y0, 0, order); // reset
-        }
-        // adjust weights
-        for (int i = 0; i < K.length; i++) {
-            double[] aK = K[i];
-            for (int j = 0; j < aK.length; j++) {
-                double multiplier = coefficients[coefficients.length - 1][i + 1];
-                K[i][j] *= multiplier;
-            }
         }
         return K;
     }
