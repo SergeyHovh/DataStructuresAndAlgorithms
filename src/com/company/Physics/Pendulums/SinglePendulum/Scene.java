@@ -1,6 +1,6 @@
 package com.company.Physics.Pendulums.SinglePendulum;
 
-import com.company.Numerical.ODE.Embedded.RKF45;
+import com.company.Numerical.ODE.Embedded.CashKarp;
 import com.company.Numerical.ODE.ODESolver;
 
 import javax.swing.*;
@@ -10,17 +10,18 @@ import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
+import static java.lang.Math.PI;
 import static java.lang.Math.sin;
 
 public class Scene extends JPanel implements ActionListener {
-    private ODESolver solveSecondOrder = new RKF45();
+    private ODESolver solveSecondOrder = new CashKarp();
     private int unitLength = 30;
     private int delay = 1;
     private Timer timer = new Timer(delay, this);
     private double offsetX, offsetY;
     private double r = 3;
-    private double M = 10, L = r * unitLength, theta = 1, gravity = 10;
-    private double theta0 = Math.PI / 4;
+    private double M = 10, L = r * unitLength, theta = PI / 2, gravity = 10;
+    private double theta0 = theta;
     private double x = 0, y = 0;
     private double x0 = x, y0 = y;
     private double v0 = 0;

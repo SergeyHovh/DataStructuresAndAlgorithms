@@ -20,11 +20,12 @@ public class Main {
         ODESolver rkf45 = new RKF45();
         ODESolver rkClassic = new RK438();
         ODESolver rkdp = new RKDP();
-        ODE ode = (x, y) -> y[0];
-        double x0 = 0;
-        double y0 = 1;
-        double yPrime0 = 0;
-        getPoints(x0, new double[]{y0, yPrime0}, 10, ode, rkClassic);
+//        ODE ode = (x, y) -> y[0];
+        ODE[] system = new ODE[]{
+                (x, y) -> y[0],
+                (x, y) -> y[1]
+        };
+//        rkf45.solveHighSystem()
     }
 
     private static void getPoints(double x0, double[] y0, double upTo, ODE ode, ODESolver ODESolver) {

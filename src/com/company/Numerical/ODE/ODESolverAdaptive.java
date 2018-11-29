@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Hashtable;
 
 public abstract class ODESolverAdaptive extends ODESolver {
-    private final double min = 0.01;
-    private final double max = 10 * min;
+    private final double min = 1.0E-03;
+    private final double max = 5 * min;
     private final double minErr = 1.0E-13;
     private final double maxErr = 2 * minErr;
     private double h = 0;
