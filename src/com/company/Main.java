@@ -10,7 +10,6 @@ import java.io.FileNotFoundException;
 import java.util.Formatter;
 
 import static java.lang.Math.expm1;
-import static java.lang.Math.sin;
 
 public class Main {
     public static final String PATH = "src/com/company/data.txt";
@@ -21,14 +20,11 @@ public class Main {
         ODESolver rkf45 = new RKF45();
         ODESolver rkClassic = new RK438();
         ODESolver rkdp = new RKDP();
-        ODE ode = (x, y) -> -16 * sin(y[0]);
+        ODE ode = (x, y) -> y[0];
         double x0 = 0;
         double y0 = 1;
         double yPrime0 = 0;
-//        getPoints(x0, new double[]{y0, yPrime0}, 10, ode, rkf45);
-        System.out.println(rkf45.solveSecondOrder(x0, y0, yPrime0, 1, ode));
-        System.out.println(rkf45.solveSecondOrder(x0, y0, yPrime0, 2, ode));
-        System.out.println(rkf45.solveSecondOrder(x0 + 1, y0 - 1, yPrime0, 2, ode));
+        getPoints(x0, new double[]{y0, yPrime0}, 10, ode, rkClassic);
     }
 
     private static void getPoints(double x0, double[] y0, double upTo, ODE ode, ODESolver ODESolver) {
@@ -40,7 +36,7 @@ public class Main {
             file = new Formatter(PATH);
             file.flush();
             while (iter < upTo) {
-                double v1 = ODESolver.solveHighOrder(x0, y0, x0 + iter, ode);
+                double v1 = ODESolver.solveHighOrder(x0, y0, x0 + iter, ode)[0];
                 file.format("%s", v1 + "\n");
                 iter += 0.01;
                 System.arraycopy(before, 0, y0, 0, before.length);

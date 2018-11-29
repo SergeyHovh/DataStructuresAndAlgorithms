@@ -10,10 +10,12 @@ import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
+import static java.lang.Math.sin;
+
 public class Scene extends JPanel implements ActionListener {
     private ODESolver solveSecondOrder = new RKF45();
     private int unitLength = 30;
-    private int delay = 0;
+    private int delay = 1;
     private Timer timer = new Timer(delay, this);
     private double offsetX, offsetY;
     private double r = 3;
@@ -23,7 +25,7 @@ public class Scene extends JPanel implements ActionListener {
     private double x0 = x, y0 = y;
     private double v0 = 0;
     private double step = 0;
-    private double stepSize = 0.01;
+    private double stepSize = 0.05;
     private double friction = 0;
 
     private Line2D line = new Line2D.Double(0, 0, 0, 0);
@@ -48,9 +50,6 @@ public class Scene extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        M = SinglePendulum.getMap().get("Mass").getValue();
-        L = SinglePendulum.getMap().get("Length").getValue();
-        gravity = SinglePendulum.getMap().get("Gravity").getValue();
         compute();
 
         ball.setFrame(ball.getX(), ball.getY(), M, M);
@@ -62,7 +61,7 @@ public class Scene extends JPanel implements ActionListener {
     }
 
     private double motion(double x, double... y) {
-        return -gravity / L * Math.sin(y[0]) - friction * y[1];
+        return -gravity / L * sin(y[0]) - friction * y[1];
     }
 
     private void setup() {
@@ -102,7 +101,16 @@ public class Scene extends JPanel implements ActionListener {
         offsetX = getSize().width * 0.5;
         x = L * Math.sin(theta) + offsetX;
         y = L * Math.cos(theta) + offsetY;
-        theta = solveSecondOrder.solveSecondOrder(x0, theta0, v0, step, this::motion);
+
+        M = SinglePendulum.getMap().get("Mass").getValue();
+        L = SinglePendulum.getMap().get("Length").getValue();
+        gravity = SinglePendulum.getMap().get("Gravity").getValue();
+
+        double[] thetaArr = solveSecondOrder.solveSecondOrder(x0, theta0, v0, step, this::motion);
+        // update initial values
+        x0 = step;
+        theta = theta0 = thetaArr[0];
+        v0 = thetaArr[1];
         step += stepSize;
     }
 }

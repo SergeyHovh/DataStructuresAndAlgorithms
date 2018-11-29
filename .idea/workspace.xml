@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="improved optimized ODESolverAdaptive">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Numerical/RK438Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Numerical/RK438Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Numerical/RKClassicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Numerical/RKClassicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Numerical/RKF45Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Numerical/RKF45Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,11 +74,12 @@
     <session id="2124533682">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.108" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.163" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.26" value="1" />
@@ -90,14 +93,14 @@
           <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.95" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="29" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="48142" />
+          <entry key="java" value="48557" />
           <entry key="sql" value="68" />
           <entry key="txt" value="933" />
         </counts>
@@ -105,7 +108,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="2" />
-          <entry key="JAVA" value="48142" />
+          <entry key="JAVA" value="48557" />
           <entry key="PLAIN_TEXT" value="962" />
           <entry key="Scratch" value="68" />
         </counts>
@@ -116,7 +119,7 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="219" />
+          <entry key="java" value="228" />
           <entry key="sql" value="2" />
           <entry key="sqlite_master" value="3" />
           <entry key="txt" value="17" />
@@ -129,7 +132,7 @@
           <entry key="Git file" value="2" />
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="219" />
+          <entry key="JAVA" value="228" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -155,11 +158,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="206">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,41 +173,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="135" selection-start-line="135" selection-end-line="135" />
+            <state relative-caret-position="201">
+              <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4872#4873#0" expanded="true" />
-                <element signature="e#4914#4915#0" expanded="true" />
-                <element signature="e#4945#4946#0" expanded="true" />
-                <element signature="e#4979#4980#0" expanded="true" />
-                <element signature="e#5251#5252#0" expanded="true" />
-                <element signature="e#5312#5313#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+            <state relative-caret-position="267">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODE.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#1961#1962#0" expanded="true" />
+                <element signature="e#2026#2027#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -213,8 +199,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="-853">
+              <caret line="50" selection-start-line="50" selection-end-line="56" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -222,8 +208,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/data.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16830">
-              <caret line="990" column="17" lean-forward="true" selection-start-line="990" selection-start-column="17" selection-end-line="990" selection-end-column="17" />
+            <state relative-caret-position="238">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -262,8 +248,6 @@
         <option value="$PROJECT_DIR$/src/com/company/Numerical/RK4.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/RK4Classic.java" />
         <option value="$PROJECT_DIR$/test/Numerical/RK4ClassicTest.java" />
-        <option value="$PROJECT_DIR$/test/Numerical/RK438Test.java" />
-        <option value="$PROJECT_DIR$/test/Numerical/RKClassicTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/RK438.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/RKClassic.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/RK.java" />
@@ -293,14 +277,16 @@
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/RKClassic.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/Embedded/Lobatto3C.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/Embedded/RKDP.java" />
-        <option value="$PROJECT_DIR$/test/Numerical/RKF45Test.java" />
         <option value="$PROJECT_DIR$/src/com/company/data.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODE.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" />
+        <option value="$PROJECT_DIR$/test/Numerical/RKF45Test.java" />
+        <option value="$PROJECT_DIR$/test/Numerical/RK438Test.java" />
+        <option value="$PROJECT_DIR$/test/Numerical/RKClassicTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" />
       </list>
     </option>
   </component>
@@ -316,7 +302,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="921" />
     <option name="height" value="768" />
   </component>
@@ -396,28 +382,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="58d84e3e:PackageViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="58d84e3e:PackageViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="616d4139:PackageViewModuleNode" />
-              <item name="com.company" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="58d84e3e:PackageViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="616d4139:PackageViewModuleNode" />
-              <item name="com.company" type="1f31426a:PackageElementNode" />
-              <item name="Numerical.ODE" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
           <expand>
@@ -582,6 +546,28 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="616d4139:PackageViewModuleNode" />
+              <item name="com.company" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="616d4139:PackageViewModuleNode" />
+              <item name="com.company" type="1f31426a:PackageElementNode" />
+              <item name="Numerical.ODE" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -592,7 +578,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/src/com/company/data.txt&#10;C:/Users/Sergey/Desktop/PROJECTS/DataStructuresAndAlgorithms/src/com/company/Numerical/ODE/ODESolverAdaptive.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542916643762" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543493490266" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -807,7 +793,8 @@
       <workItem from="1542574988996" duration="26120000" />
       <workItem from="1542728773186" duration="32038000" />
       <workItem from="1542825629184" duration="1161000" />
-      <workItem from="1542909995106" duration="6668000" />
+      <workItem from="1542909995106" duration="7864000" />
+      <workItem from="1543483360975" duration="3654000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST">
       <created>1536172967431</created>
@@ -991,7 +978,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542814250110</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="improved optimized ODESolverAdaptive">
+      <created>1542917093692</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1542917093692</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1027,7 +1021,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243622000" />
+    <option name="totallyTimeSpent" value="248472000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1039,11 +1033,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info auto_hide="true" x="506" y="59" width="415" height="650" id="Learn" order="0" type="WINDOWED" weight="0.32936507" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.21031746" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.22919819" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -1052,13 +1046,13 @@
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3275862" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3276923" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.27846155" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.27586207" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3577586" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49920633" weight="0.36" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50079364" side_tool="true" weight="0.4876923" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32615384" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32614943" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3275862" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" weight="0.46153846" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32923076" />
@@ -1074,39 +1068,6 @@
       <window_info anchor="right" id="Database" order="8" weight="0.21031746" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32936507" />
     </layout>
-    <layout-to-restore>
-      <window_info auto_hide="true" x="506" y="59" width="415" height="650" id="Learn" order="0" type="WINDOWED" weight="0.32936507" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.23492064" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.50442475" side_tool="true" weight="0.23333333" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3275862" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3276923" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.2876923" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.42" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49920633" weight="0.36" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50079364" side_tool="true" weight="0.4876923" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3276923" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3276923" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" weight="0.46153846" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32923076" />
-      <window_info anchor="bottom" id="Structure" order="13" sideWeight="0.50079364" side_tool="true" weight="0.36" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32936507" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.21031746" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32936507" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1208,13 +1169,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/JComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="775" column="19" selection-start-line="775" selection-start-column="19" selection-end-line="775" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Bouncing/util/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -1355,20 +1309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Numerical/RKClassicTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Numerical/RKF45Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Embedded/RKF45.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1390,13 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16830">
-          <caret line="990" column="17" lean-forward="true" selection-start-line="990" selection-start-column="17" selection-end-line="990" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -1412,26 +1345,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Numerical/RK438Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="32" column="76" selection-start-line="32" selection-start-column="76" selection-end-line="32" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Numerical/RKF45Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Numerical/RKClassicTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="81" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="-853">
+          <caret line="50" selection-start-line="50" selection-end-line="56" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        <state relative-caret-position="206">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1440,26 +1397,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        <state relative-caret-position="201">
+          <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4914#4915#0" expanded="true" />
-            <element signature="e#4945#4946#0" expanded="true" />
-            <element signature="e#4979#4980#0" expanded="true" />
-            <element signature="e#5251#5252#0" expanded="true" />
-            <element signature="e#5312#5313#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="267">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#1962#0" expanded="true" />
+            <element signature="e#2026#2027#0" expanded="true" />
           </folding>
         </state>
       </provider>

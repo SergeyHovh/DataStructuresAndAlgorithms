@@ -12,8 +12,15 @@ public abstract class ODESolverAdaptive extends ODESolver {
     private Hashtable<IVP, Hashtable<Double, Value>> odeValues = new Hashtable<>();
     private Value value = new Value();
 
+    /**
+     * @param x0     initial position - x0
+     * @param y0     initial values of y(x0), y'(x0), y''(x0), ...
+     * @param x      desired position
+     * @param system system of first order ODEs
+     * @return value of the all derivatives at point x - y(x), y'(x), y''(x), ...
+     */
     @Override
-    public double solveHighOrder(double x0, double[] y0, double x, ODE[] system) {
+    public double[] solveHighOrder(double x0, double[] y0, double x, ODE[] system) {
         int order = y0.length;
         double[] before = new double[order];
         double[] high = new double[order];
@@ -49,7 +56,7 @@ public abstract class ODESolverAdaptive extends ODESolver {
                 }
             }
         }
-        return y0[0];
+        return y0;
     }
 
     @Override
@@ -110,7 +117,7 @@ public abstract class ODESolverAdaptive extends ODESolver {
         else if (h > max) h = max;
     }
 
-    class Value {
+    private class Value {
         double[] value;
         double h;
 
@@ -123,7 +130,7 @@ public abstract class ODESolverAdaptive extends ODESolver {
         }
     }
 
-    class IVP {
+    private class IVP {
         ODE[] ode;
         double x0;
         double[] y0;

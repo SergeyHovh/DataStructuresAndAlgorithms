@@ -30,7 +30,7 @@ public class RKClassicTest {
     @Test(dataProvider = "firstOrderData")
     public void testSolveFirstOrder(double x0, double y0, double x) {
         ODE firstOrder = (x1, y) -> y[0];
-        double result = round(rk4Classic.solveFirstOrder(x0, y0, x, firstOrder));
+        double result = round(rk4Classic.solveFirstOrder(x0, y0, x, firstOrder)[0]);
         double expected = round(y0 * exp(x - x0));
         System.out.println(expected + " " + result);
         assertEquals(expected, result);

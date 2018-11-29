@@ -19,7 +19,7 @@ public abstract class ODESolver {
      * @param ode y' = f(x, y) ode = f(x, y)
      * @return value of the function at point x
      */
-    public double solveFirstOrder(double x0, double y0, double x, ODE ode) {
+    public double[] solveFirstOrder(double x0, double y0, double x, ODE ode) {
         return solveHighOrder(x0, new double[]{y0}, x, ode);
     }
 
@@ -31,7 +31,7 @@ public abstract class ODESolver {
      * @param ode     y'' = f(x, y, y') ode = f(x, y, y')
      * @return value of the function at point x
      */
-    public double solveSecondOrder(double x0, double y0, double yPrime0, double x, ODE ode) {
+    public double[] solveSecondOrder(double x0, double y0, double yPrime0, double x, ODE ode) {
         return solveHighOrder(x0, new double[]{y0, yPrime0}, x, ode);
     }
 
@@ -39,12 +39,12 @@ public abstract class ODESolver {
         int numberOfEquations = x0.length;
         double[] result = new double[numberOfEquations];
         for (int i = 0; i < numberOfEquations; i++) {
-            result[i] = solveHighOrder(x0[i], y0[i], x[i], odes[i]);
+            result[i] = solveHighOrder(x0[i], y0[i], x[i], odes[i])[0];
         }
         return result;
     }
 
-    public double solveHighOrder(double x0, double[] y0, double x, ODE ode) {
+    public double[] solveHighOrder(double x0, double[] y0, double x, ODE ode) {
         return solveHighOrder(x0, y0, x, higherOrderToSystem(ode, y0.length));
     }
 
@@ -53,9 +53,9 @@ public abstract class ODESolver {
      * @param y0     initial values of y(x0), y'(x0), y''(x0), ...
      * @param x      desired position
      * @param system system of first order ODEs
-     * @return value of the function at point x
+     * @return value of the all derivatives at point x - y(x), y'(x), y''(x), ...
      */
-    public double solveHighOrder(double x0, double[] y0, double x, ODE[] system) {
+    public double[] solveHighOrder(double x0, double[] y0, double x, ODE[] system) {
         int order = y0.length;
         double h = (x - x0) / ITERATION_COUNT;
         double[] before = new double[order];
@@ -71,7 +71,7 @@ public abstract class ODESolver {
             System.arraycopy(y0, 0, before, 0, order); // update
             x0 += h; // increment
         }
-        return y0[0];
+        return y0;
     }
 
     protected abstract double[][] coefficients();
