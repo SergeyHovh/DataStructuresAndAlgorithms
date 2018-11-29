@@ -1,7 +1,8 @@
 package com.company.Physics.Pendulums.SinglePendulum;
 
-import com.company.Numerical.ODE.Embedded.CashKarp;
+import com.company.Numerical.ODE.Embedded.RKDP;
 import com.company.Numerical.ODE.ODESolver;
+import com.company.Numerical.ODE.ODESystem;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,11 +11,10 @@ import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
-import static java.lang.Math.PI;
-import static java.lang.Math.sin;
+import static java.lang.Math.*;
 
 public class Scene extends JPanel implements ActionListener {
-    private ODESolver solveSecondOrder = new CashKarp();
+    private ODESolver solveSecondOrder = new RKDP();
     private int unitLength = 30;
     private int delay = 1;
     private Timer timer = new Timer(delay, this);
@@ -27,9 +27,8 @@ public class Scene extends JPanel implements ActionListener {
     private double v0 = 0;
     private double step = 0;
     private double stepSize = 0.05;
-    private double friction = 0;
-
     private Line2D line = new Line2D.Double(0, 0, 0, 0);
+
     private Ellipse2D ball = new Ellipse2D.Double(0, 0, M, M);
 
     Scene() {
@@ -37,6 +36,10 @@ public class Scene extends JPanel implements ActionListener {
         setPosition(ball, x, y);
         line.setLine(offsetX, offsetY, ball.getCenterX(), ball.getCenterY());
         repaint();
+    }
+
+    private double damping(double x) {
+        return sin(100 * pow(x, 0.1)) / 10;
     }
 
     @Override
@@ -61,9 +64,6 @@ public class Scene extends JPanel implements ActionListener {
         ball.setFrame(x - ball.getWidth() / 2, y - ball.getWidth() / 2, ball.getWidth(), ball.getHeight());
     }
 
-    private double motion(double x, double... y) {
-        return -gravity / L * sin(y[0]) - friction * y[1];
-    }
 
     private void setup() {
         // max
@@ -107,11 +107,17 @@ public class Scene extends JPanel implements ActionListener {
         L = SinglePendulum.getMap().get("Length").getValue();
         gravity = SinglePendulum.getMap().get("Gravity").getValue();
 
-        double[] thetaArr = solveSecondOrder.solveSecondOrder(x0, theta0, v0, step, this::motion);
+        double[][] thetaArr = solveSecondOrder.solveSecondOrder(x0, theta0, v0, step, new ODESystem[]{
+                this::derivative
+        });
         // update initial values
         x0 = step;
-        theta = theta0 = thetaArr[0];
-        v0 = thetaArr[1];
+        theta = theta0 = thetaArr[0][0];
+        v0 = thetaArr[0][1];
         step += stepSize;
+    }
+
+    private double derivative(double x, double[][] y) {
+        return -gravity / L * y[0][0] - damping(x) * y[0][1];
     }
 }

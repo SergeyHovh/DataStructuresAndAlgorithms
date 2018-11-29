@@ -12,22 +12,19 @@ public abstract class ODESolverAdaptive extends ODESolver {
     private Hashtable<IVP, Hashtable<Double, Value>> odeValues = new Hashtable<>();
     private Value value = new Value();
 
-    /**
-     * @param x0     initial position - x0
-     * @param y0     initial values of y(x0), y'(x0), y''(x0), ...
-     * @param x      desired position
-     * @param system system of first order ODEs
-     * @return value of the all derivatives at point x - y(x), y'(x), y''(x), ...
-     */
+
     @Override
-    public double[] solveHighOrder(double x0, double[] y0, double x, ODE[] system) {
-        int order = y0.length;
-        double[] before = new double[order];
-        double[] high = new double[order];
-        double[] low = new double[order];
-        double[] current = new double[order];
-        System.arraycopy(y0, 0, current, 0, order);
-        System.arraycopy(y0, 0, before, 0, order);
+    public double[][] solveHighOrder(double x0, double[][] y0, double x, ODESystem[][] system) {
+        int numberOfEquations = y0.length;
+        int order = y0[0].length;
+        double[][] before = new double[numberOfEquations][order];
+        double[][] high = new double[numberOfEquations][order];
+        double[][] low = new double[numberOfEquations][order];
+        double[][] current = new double[numberOfEquations][order];
+        for (int j = 0; j < numberOfEquations; j++) {
+            System.arraycopy(y0[j], 0, before[j], 0, order); // update
+            System.arraycopy(y0[j], 0, current[j], 0, order);
+        }
         IVP ivp = new IVP(system, x0, current);
         odeValues.putIfAbsent(ivp, new Hashtable<>());
         int multiplier = 2;
@@ -38,16 +35,26 @@ public abstract class ODESolverAdaptive extends ODESolver {
                 System.arraycopy(y0, 0, before, 0, order); // update
                 x0 += odeValues.get(ivp).get(x0).h;
             } else { // computation
-                double[][] keys = generateUnweighted(system, x0, y0, before, h, coefficients());
-                System.arraycopy(rungeKutta(y0, keys, true), 0, high, 0, order);
-                System.arraycopy(before, 0, y0, 0, order); // reset y0
-                System.arraycopy(rungeKutta(y0, keys, false), 0, low, 0, order);
-                double error = Math.abs(high[0] - low[0]);
+                double[][][] keys = generateUnweighted(system, x0, y0, before, h, coefficients());
+                for (int j = 0; j < numberOfEquations; j++) {
+                    System.arraycopy(rungeKutta(y0, keys, true)[j], 0, high[j], 0, order);
+                }
+                for (int j = 0; j < numberOfEquations; j++) {
+                    System.arraycopy(before[j], 0, y0[j], 0, order); // reset
+                }
+                for (int j = 0; j < numberOfEquations; j++) {
+                    System.arraycopy(rungeKutta(y0, keys, false)[j], 0, low[j], 0, order);
+                }
+                double error = Math.abs(high[0][0] - low[0][0]);
                 if (error > maxErr && h > min) {
                     h /= multiplier;
                 } else {
-                    System.arraycopy(high, 0, y0, 0, order);
-                    System.arraycopy(y0, 0, before, 0, order); // update
+                    for (int j = 0; j < numberOfEquations; j++) {
+                        System.arraycopy(high[j], 0, y0[j], 0, order);
+                    }
+                    for (int j = 0; j < numberOfEquations; j++) {
+                        System.arraycopy(y0[j], 0, before[j], 0, order);
+                    }
                     value.setValue(high);
                     value.setH(h);
                     odeValues.get(ivp).put(x0, value);
@@ -60,53 +67,64 @@ public abstract class ODESolverAdaptive extends ODESolver {
     }
 
     @Override
-    protected double[][] generateKeys(double[][] unweighted, double[][] coefficients, boolean high) {
+    protected double[][][] generateKeys(double[][][] K, double[][] coefficients, boolean high) {
         // adjust weights
-        for (int i = 0; i < unweighted.length; i++) {
-            double[] aK = unweighted[i];
-            for (int j = 0; j < aK.length; j++) {
-                double multiplier;
-                if (high) {
-                    multiplier = coefficients[coefficients.length - 2][i + 1];
-                } else {
-                    multiplier = coefficients[coefficients.length - 1][i + 1];
-                }
-                unweighted[i][j] *= multiplier;
-            }
-        }
-        return unweighted;
-    }
-
-    @Override
-    protected double[][] generateUnweighted(ODE[] system, double x0, double[] y0, double[] before, double h, double[][] coefficients) {
-        int order = y0.length;
-        double[][] K = new double[coefficients.length - 2][order];
-        System.arraycopy(y0, 0, before, 0, order);
-        // init Ks
         for (int i = 0; i < K.length; i++) {
-            for (int j = 0; j < order; j++) {
-                for (int k = 0; k < K.length; k++) {
-                    y0[j] += coefficients[i][k + 1] * K[k][j];
+            double[][] aK = K[i];
+            for (int j = 0; j < aK.length; j++) {
+                double[] doubles = aK[j];
+                for (int k = 0; k < doubles.length; k++) {
+                    double multiplier;
+                    if (high) {
+                        multiplier = coefficients[coefficients.length - 2][i + 1];
+                    } else {
+                        multiplier = coefficients[coefficients.length - 1][i + 1];
+                    }
+                    K[i][j][k] *= multiplier;
                 }
             }
-            for (int j = 0; j < order; j++) {
-                K[i][j] = h * system[j].derivative(x0 + coefficients[i][0] * h, y0);
-            }
-            System.arraycopy(before, 0, y0, 0, order); // reset
         }
         return K;
     }
 
-    /**
-     * @param y0   - initial value
-     * @param keys unweighted keys
-     * @param high true - returns high order RK, false - returns low order RK
-     */
-    private double[] rungeKutta(double[] y0, double[][] keys, boolean high) {
-        double[][] generateKeys = generateKeys(keys, coefficients(), high);
-        for (double[] generateKey : generateKeys) {
+    @Override
+    protected double[][][] generateUnweighted(
+            ODESystem[][] system, double x0, double[][] y0, double[][] before, double h, double[][] coefficients) {
+        int numberOfEquations = y0.length;
+        int order = y0[0].length;
+        double[][][] K = new double[coefficients.length - 2][numberOfEquations][order];
+        // init Ks
+        for (int j = 0; j < numberOfEquations; j++) {
+            System.arraycopy(y0[j], 0, before[j], 0, order); // update
+        }
+        for (int i = 0; i < K.length; i++) {
+            for (int j = 0; j < numberOfEquations; j++) {
+                for (int k = 0; k < order; k++) {
+                    for (int m = 0; m < K.length; m++) {
+                        y0[j][k] += coefficients[i][m + 1] * K[m][j][k];
+                    }
+                }
+            }
+            for (int j = 0; j < numberOfEquations; j++) {
+                for (int k = 0; k < order; k++) {
+                    K[i][j][k] = h * system[j][k].derivative(x0 + coefficients[i][0] * h, y0);
+                }
+            }
+            for (int j = 0; j < numberOfEquations; j++) {
+                System.arraycopy(before[j], 0, y0[j], 0, order); // reset
+            }
+        }
+        return K;
+    }
+
+    private double[][] rungeKutta(double[][] y0, double[][][] keys, boolean high) {
+        double[][][] generateKeys = generateKeys(keys, coefficients(), high);
+        for (double[][] generateKey : generateKeys) {
             for (int i = 0; i < generateKey.length; i++) {
-                y0[i] += generateKey[i];
+                double[] keyS = generateKey[i];
+                for (int j = 0; j < keyS.length; j++) {
+                    y0[i][j] += generateKey[i][j];
+                }
             }
         }
         return y0;
@@ -118,10 +136,10 @@ public abstract class ODESolverAdaptive extends ODESolver {
     }
 
     private class Value {
-        double[] value;
+        double[][] value;
         double h;
 
-        void setValue(double[] value) {
+        void setValue(double[][] value) {
             this.value = value;
         }
 
@@ -131,11 +149,11 @@ public abstract class ODESolverAdaptive extends ODESolver {
     }
 
     private class IVP {
-        ODE[] ode;
+        ODESystem[][] ode;
         double x0;
-        double[] y0;
+        double[][] y0;
 
-        IVP(ODE[] ode, double x0, double[] y0) {
+        IVP(ODESystem[][] ode, double x0, double[][] y0) {
             this.ode = ode;
             this.x0 = x0;
             this.y0 = y0;
@@ -161,11 +179,15 @@ public abstract class ODESolverAdaptive extends ODESolver {
         @Override
         public int hashCode() {
             double Ys = 0, vals = 0;
-            for (double v : y0) {
-                Ys += v;
+            for (double[] v : y0) {
+                for (double v1 : v) {
+                    Ys += v1;
+                }
             }
-            for (ODE ode1 : ode) {
-                vals += ode1.derivative(x0, y0);
+            for (ODESystem[] ode1 : ode) {
+                for (ODESystem odeSystem : ode1) {
+                    vals += odeSystem.derivative(x0, y0);
+                }
             }
             return 2 * (int) vals + 3 * (int) x0 + 7 * (int) Ys;
         }
