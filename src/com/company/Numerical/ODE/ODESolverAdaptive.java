@@ -5,7 +5,7 @@ import java.util.Hashtable;
 
 public abstract class ODESolverAdaptive extends ODESolver {
     private final double min = 1.0E-03;
-    private final double max = 5 * min;
+    private final double max = 9 * min;
     private final double minErr = 1.0E-13;
     private final double maxErr = 2 * minErr;
     private double h = 0;
@@ -14,7 +14,7 @@ public abstract class ODESolverAdaptive extends ODESolver {
 
 
     @Override
-    public double[][] solveHighOrder(double x0, double[][] y0, double x, ODESystem[][] system) {
+    protected double[][] solveHighOrder(double x0, double[][] y0, double x, ODESystem[][] system) {
         int numberOfEquations = y0.length;
         int order = y0[0].length;
         double[][] before = new double[numberOfEquations][order];
@@ -27,7 +27,7 @@ public abstract class ODESolverAdaptive extends ODESolver {
         }
         IVP ivp = new IVP(system, x0, current);
         odeValues.putIfAbsent(ivp, new Hashtable<>());
-        int multiplier = 2;
+        int multiplier = 3;
         while (x0 < x) {
             adjustH();
             if (odeValues.get(ivp).containsKey(x0)) {

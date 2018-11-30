@@ -47,7 +47,7 @@ public abstract class ODESolver {
      * @param odeSystem system of first order ODEs
      * @return value of the all derivatives at point x - y(x), y'(x), y''(x), ...
      */
-    public double[][] solveHighOrder(double x0, double[][] y0, double x, ODESystem[][] odeSystem) {
+    protected double[][] solveHighOrder(double x0, double[][] y0, double x, ODESystem[][] odeSystem) {
         int numberOfEquations = y0.length;
         int order = y0[0].length;
         double[][] before = new double[numberOfEquations][order];

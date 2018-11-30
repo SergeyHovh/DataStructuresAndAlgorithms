@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
-import static java.lang.Math.*;
+import static java.lang.Math.PI;
 
 public class Scene extends JPanel implements ActionListener {
     private ODESolver solveSecondOrder = new RKDP();
@@ -21,7 +21,6 @@ public class Scene extends JPanel implements ActionListener {
     private double offsetX, offsetY;
     private double r = 3;
     private double M = 10, L = r * unitLength, theta = PI / 2, gravity = 10;
-    private double theta0 = theta;
     private double x = 0, y = 0;
     private double x0 = x, y0 = y;
     private double v0 = 0;
@@ -39,7 +38,7 @@ public class Scene extends JPanel implements ActionListener {
     }
 
     private double damping(double x) {
-        return sin(100 * pow(x, 0.1)) / 10;
+        return 0;
     }
 
     @Override
@@ -107,12 +106,12 @@ public class Scene extends JPanel implements ActionListener {
         L = SinglePendulum.getMap().get("Length").getValue();
         gravity = SinglePendulum.getMap().get("Gravity").getValue();
 
-        double[][] thetaArr = solveSecondOrder.solveSecondOrder(x0, theta0, v0, step, new ODESystem[]{
+        double[][] thetaArr = solveSecondOrder.solveSecondOrder(x0, theta, v0, step, new ODESystem[]{
                 this::derivative
         });
         // update initial values
         x0 = step;
-        theta = theta0 = thetaArr[0][0];
+        theta = thetaArr[0][0];
         v0 = thetaArr[0][1];
         step += stepSize;
     }
