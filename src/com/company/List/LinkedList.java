@@ -1,28 +1,14 @@
 package com.company.List;
 
 public class LinkedList<E> {
-    class Node<E> {
-        Node<E> next;
-        E val;
-
-        Node(E val) {
-            this.val = val;
-            this.next = null;
-        }
-
-        void print() {
-            System.out.print(val.toString());
-        }
-    }
-
-    private boolean isEmpty() {
-        return head == null;
-    }
-
     private Node<E> head;
 
     public LinkedList() {
         head = null;
+    }
+
+    private boolean isEmpty() {
+        return head == null;
     }
 
     public void insert(E val) {
@@ -81,6 +67,20 @@ public class LinkedList<E> {
             prev.next = current.next;
         }
         return current;
+    }
+
+    class Node<E> {
+        Node<E> next;
+        E val;
+
+        Node(E val) {
+            this.val = val;
+            this.next = null;
+        }
+
+        void print() {
+            System.out.print(val.toString());
+        }
     }
 }
 

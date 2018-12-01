@@ -1,13 +1,14 @@
 package com.company.BinaryTree;
 
 public class BinaryTree<T> {
+    private static String toString = "";
+    private final String className = getClass().getSimpleName();
     private BinaryTree<T> left;
     private BinaryTree<T> right;
     private T value;
     private int objectHashCode;
-    private final String className = getClass().getSimpleName();
     private String valType;
-    private static String toString = "";
+    private final String type = valType + " " + className;
 
     // constructor
     public BinaryTree(T val) {
@@ -18,8 +19,6 @@ public class BinaryTree<T> {
         this.valType = val.getClass().getSimpleName();
 //        System.out.println(val.getClass().getSimpleName());
     }
-
-    private final String type = valType + " " + className;
 
     public void preOrder() {
         System.out.println(type + " PreOrder Traversal");
@@ -130,24 +129,24 @@ public class BinaryTree<T> {
         return left;
     }
 
-    void setLeft(BinaryTree<T> left) {
-        this.left = left;
-    }
-
     public void setLeft(T value) {
         this.left = new BinaryTree<>(value);
+    }
+
+    void setLeft(BinaryTree<T> left) {
+        this.left = left;
     }
 
     public BinaryTree<T> getRight() {
         return right;
     }
 
-    void setRight(BinaryTree<T> right) {
-        this.right = right;
-    }
-
     public void setRight(T value) {
         this.right = new BinaryTree<>(value);
+    }
+
+    void setRight(BinaryTree<T> right) {
+        this.right = right;
     }
 
     @Override

@@ -97,36 +97,13 @@ public abstract class ODESolverAdaptive extends ODESolver {
         for (int j = 0; j < numberOfEquations; j++) {
             System.arraycopy(y0[j], 0, before[j], 0, order); // update
         }
-        for (int i = 0; i < K.length; i++) {
-            for (int j = 0; j < numberOfEquations; j++) {
-                for (int k = 0; k < order; k++) {
-                    for (int m = 0; m < K.length; m++) {
-                        y0[j][k] += coefficients[i][m + 1] * K[m][j][k];
-                    }
-                }
-            }
-            for (int j = 0; j < numberOfEquations; j++) {
-                for (int k = 0; k < order; k++) {
-                    K[i][j][k] = h * system[j][k].derivative(x0 + coefficients[i][0] * h, y0);
-                }
-            }
-            for (int j = 0; j < numberOfEquations; j++) {
-                System.arraycopy(before[j], 0, y0[j], 0, order); // reset
-            }
-        }
+        convertFromMatrix(system, x0, y0, before, h, coefficients, numberOfEquations, order, K);
         return K;
     }
 
     private double[][] rungeKutta(double[][] y0, double[][][] keys, boolean high) {
         double[][][] generateKeys = generateKeys(keys, coefficients(), high);
-        for (double[][] generateKey : generateKeys) {
-            for (int i = 0; i < generateKey.length; i++) {
-                double[] keyS = generateKey[i];
-                for (int j = 0; j < keyS.length; j++) {
-                    y0[i][j] += generateKey[i][j];
-                }
-            }
-        }
+        updateY(y0, generateKeys);
         return y0;
     }
 

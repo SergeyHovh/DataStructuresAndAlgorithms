@@ -12,6 +12,37 @@ public abstract class ODESolver {
         this(1000);
     }
 
+    void updateY(double[][] y0, double[][][] keys) {
+        for (double[][] aDouble : keys) {
+            for (int j = 0; j < aDouble.length; j++) {
+                double[] doubles1 = aDouble[j];
+                for (int k = 0; k < doubles1.length; k++) {
+                    y0[j][k] += aDouble[j][k];
+                }
+            }
+        }
+    }
+
+    void convertFromMatrix(ODESystem[][] system, double x0, double[][] y0, double[][] before, double h, double[][] coefficients, int numberOfEquations, int order, double[][][] K) {
+        for (int i = 0; i < K.length; i++) {
+            for (int j = 0; j < numberOfEquations; j++) {
+                for (int k = 0; k < order; k++) {
+                    for (int m = 0; m < K.length; m++) {
+                        y0[j][k] += coefficients[i][m + 1] * K[m][j][k];
+                    }
+                }
+            }
+            for (int j = 0; j < numberOfEquations; j++) {
+                for (int k = 0; k < order; k++) {
+                    K[i][j][k] = h * system[j][k].derivative(x0 + coefficients[i][0] * h, y0);
+                }
+            }
+            for (int j = 0; j < numberOfEquations; j++) {
+                System.arraycopy(before[j], 0, y0[j], 0, order); // reset
+            }
+        }
+    }
+
     /**
      * @param x0  initial position - x0
      * @param y0  initial value - f(x0)
@@ -58,14 +89,7 @@ public abstract class ODESolver {
 
         for (int i = 0; i < ITERATION_COUNT; i++) {
             double[][][] doubles = generateKeys(generateUnweighted(odeSystem, x0, y0, before, h, coefficients()), coefficients(), false);
-            for (double[][] aDouble : doubles) {
-                for (int j = 0; j < aDouble.length; j++) {
-                    double[] doubles1 = aDouble[j];
-                    for (int k = 0; k < doubles1.length; k++) {
-                        y0[j][k] += aDouble[j][k];
-                    }
-                }
-            }
+            updateY(y0, doubles);
             for (int j = 0; j < numberOfEquations; j++) {
                 System.arraycopy(y0[j], 0, before[j], 0, order); // update
             }
@@ -82,7 +106,6 @@ public abstract class ODESolver {
             for (int j = 0; j < aK.length; j++) {
                 double[] doubles = aK[j];
                 for (int k = 0; k < doubles.length; k++) {
-                    double v = doubles[k];
                     double multiplier = coefficients[coefficients.length - 1][i + 1];
                     K[i][j][k] *= multiplier;
                 }
@@ -99,23 +122,7 @@ public abstract class ODESolver {
         for (int j = 0; j < numberOfEquations; j++) {
             System.arraycopy(y0[j], 0, before[j], 0, order); // update
         }
-        for (int i = 0; i < K.length; i++) {
-            for (int j = 0; j < numberOfEquations; j++) {
-                for (int k = 0; k < order; k++) {
-                    for (int m = 0; m < K.length; m++) {
-                        y0[j][k] += coefficients[i][m + 1] * K[m][j][k];
-                    }
-                }
-            }
-            for (int j = 0; j < numberOfEquations; j++) {
-                for (int k = 0; k < order; k++) {
-                    K[i][j][k] = h * system[j][k].derivative(x0 + coefficients[i][0] * h, y0);
-                }
-            }
-            for (int j = 0; j < numberOfEquations; j++) {
-                System.arraycopy(before[j], 0, y0[j], 0, order); // reset
-            }
-        }
+        convertFromMatrix(system, x0, y0, before, h, coefficients, numberOfEquations, order, K);
         return K;
     }
 

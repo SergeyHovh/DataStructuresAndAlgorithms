@@ -1,20 +1,6 @@
 package com.company.StacksAndQueues;
 
 public class Stack<E> {
-    static class Node<E> {
-        Node<E> next;
-        E val;
-
-        Node(E val) {
-            this.val = val;
-            this.next = null;
-        }
-
-        void display() {
-            System.out.println(val.toString());
-        }
-    }
-
     private Node<E> top;
 
     public boolean isEmpty() {
@@ -49,5 +35,19 @@ public class Stack<E> {
             top = top.next;
         }
         System.out.println();
+    }
+
+    static class Node<E> {
+        Node<E> next;
+        E val;
+
+        Node(E val) {
+            this.val = val;
+            this.next = null;
+        }
+
+        void display() {
+            System.out.println(val.toString());
+        }
     }
 }
