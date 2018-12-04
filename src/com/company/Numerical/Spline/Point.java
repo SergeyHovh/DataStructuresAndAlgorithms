@@ -13,10 +13,15 @@ class Point extends Ellipse2D.Double {
     public String toString() {
         return "Point{" +
                 "xCoordinate = " + xCoordinate +
-                ", yCoordinate = " + yCoordinate +
-                ", x = " + x +
-                ", y = " + y +
+                "\nyCoordinate = " + yCoordinate +
+                "\nx = " + x +
+                "\ny = " + y +
                 '}';
+    }
+
+    public void setXYCoordinate(double xCoordinate, double yCoordinate) {
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
     }
 
     public double getxCoordinate() {

@@ -12,6 +12,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
 import static java.lang.Math.PI;
+import static java.lang.Math.sin;
 
 public class Scene extends JPanel implements ActionListener {
     private ODESolver solveSecondOrder = new RKDP();
@@ -117,6 +118,6 @@ public class Scene extends JPanel implements ActionListener {
     }
 
     private double derivative(double x, double[][] y) {
-        return -gravity / L * y[0][0] - damping(x) * y[0][1];
+        return -gravity / L * sin(y[0][0]) - damping(x) * y[0][1];
     }
 }

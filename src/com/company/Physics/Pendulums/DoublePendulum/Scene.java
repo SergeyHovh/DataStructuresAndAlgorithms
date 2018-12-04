@@ -11,8 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
-import static java.lang.Math.cos;
-import static java.lang.Math.sin;
+import static java.lang.Math.*;
 
 public class Scene extends JPanel implements ActionListener {
     private ODESolver solver = new RKF45();
@@ -22,7 +21,7 @@ public class Scene extends JPanel implements ActionListener {
     private double offsetX, offsetY;
     private double m1 = 8, m2 = 8; // masses
     private double L_1 = 3, L_2 = 3; // rode lengths
-    private double theta1 = 0.5, theta2 = 0, theta_v1 = 0, theta_v2 = 0; // angles
+    private double theta1 = PI, theta2 = 1.5 * PI, theta_v1 = 0, theta_v2 = 0; // angles
     private double x0 = 0, x1 = 0, y1 = 0, x2 = 0, y2 = 0; // initial positions
     private double stepSize = 0.1, step = 0;
     private double gravity = 10;

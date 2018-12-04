@@ -31,4 +31,36 @@ public class NaturalCubicSpline {
     double SiDoublePrime(double x, int i) {
         return 6 * A[i] * x + 2 * B[i];
     }
+
+    public double[] getA() {
+        return A;
+    }
+
+    public void setA(double[] a) {
+        A = a;
+    }
+
+    public double[] getB() {
+        return B;
+    }
+
+    public void setB(double[] b) {
+        B = b;
+    }
+
+    public double[] getC() {
+        return C;
+    }
+
+    public void setC(double[] c) {
+        C = c;
+    }
+
+    public double[] getD() {
+        return D;
+    }
+
+    public void setD(double[] d) {
+        D = d;
+    }
 }
