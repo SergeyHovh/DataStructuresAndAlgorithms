@@ -2,7 +2,6 @@ package com.company.Physics.Pendulums.SinglePendulum;
 
 import com.company.Numerical.ODE.Embedded.RKDP;
 import com.company.Numerical.ODE.ODESolver;
-import com.company.Numerical.ODE.ODESystem;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,10 +35,6 @@ public class Scene extends JPanel implements ActionListener {
         setPosition(ball, x, y);
         line.setLine(offsetX, offsetY, ball.getCenterX(), ball.getCenterY());
         repaint();
-    }
-
-    private double damping(double x) {
-        return 0;
     }
 
     @Override
@@ -107,9 +102,7 @@ public class Scene extends JPanel implements ActionListener {
         L = SinglePendulum.getMap().get("Length").getValue();
         gravity = SinglePendulum.getMap().get("Gravity").getValue();
 
-        double[][] thetaArr = solveSecondOrder.solveSecondOrder(x0, theta, v0, step, new ODESystem[]{
-                this::derivative
-        });
+        double[][] thetaArr = solveSecondOrder.solveSecondOrder(x0, theta, v0, step, this::motionEquation);
         // update initial values
         x0 = step;
         theta = thetaArr[0][0];
@@ -117,7 +110,12 @@ public class Scene extends JPanel implements ActionListener {
         step += stepSize;
     }
 
-    private double derivative(double x, double[][] y) {
+    private double motionEquation(double x, double[][] y) {
         return -gravity / L * sin(y[0][0]) - damping(x) * y[0][1];
+    }
+
+    private double damping(double x) {
+        return sin(10 * x * x);
+//        return sin(100 * exp(10 * x));
     }
 }
