@@ -9,7 +9,9 @@ public interface ODESystem {
 
     default boolean equal(ODESystem ode) {
         for (double i = 0; i < 100; i++) {
-            if (!(this.derivative(i / 100, new double[][]{{1, 0}}) == ode.derivative(i / 100, new double[][]{{1, 0}}))) {
+            double der1 = this.derivative(i / 100, new double[][]{{1, 0}});
+            double der2 = ode.derivative(i / 100, new double[][]{{1, 0}});
+            if (der1 != der2) {
                 return false;
             }
         }
