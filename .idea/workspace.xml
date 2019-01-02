@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="added solver for System of Linear Equations (SLE)&#10;-Cramer's method">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FFT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalCubicSpline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" afterDir="false" />
@@ -23,11 +28,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/DataStructuresAndAlgorithms$DoublePendulumApp.ic" NAME="DoublePendulumApp Coverage Results" MODIFIED="1545679753279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.Physics.Pendulums.DoublePendulum.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DataStructuresAndAlgorithms$Main.ic" NAME="Main Coverage Results" MODIFIED="1545679694519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DataStructuresAndAlgorithms$DecoderTest.ic" NAME="DecoderTest Coverage Results" MODIFIED="1541624719488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.company.Algorithms.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageViewManager">
+    <option name="myFlattenPackages" value="true" />
     <option name="myElementSize" value="179" />
   </component>
   <component name="DatabaseView">
@@ -76,23 +86,26 @@
     <session id="2124533682">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="31" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.108" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.163" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.44" value="2" />
           <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.56" value="1" />
+          <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.66" value="1" />
@@ -100,26 +113,28 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.82" value="1" />
+          <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.85" value="1" />
+          <entry key="project.open.time.88" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.95" value="1" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.opened" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="32" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="74921" />
+          <entry key="java" value="79455" />
           <entry key="sql" value="68" />
-          <entry key="txt" value="1539" />
+          <entry key="txt" value="1582" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="2" />
-          <entry key="JAVA" value="74921" />
-          <entry key="PLAIN_TEXT" value="1571" />
+          <entry key="JAVA" value="79455" />
+          <entry key="PLAIN_TEXT" value="1614" />
           <entry key="Scratch" value="68" />
         </counts>
       </usages-collector>
@@ -129,7 +144,7 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="312" />
+          <entry key="java" value="338" />
           <entry key="sql" value="2" />
           <entry key="sqlite_master" value="3" />
           <entry key="txt" value="22" />
@@ -142,7 +157,7 @@
           <entry key="Git file" value="2" />
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="312" />
+          <entry key="JAVA" value="338" />
           <entry key="PLAIN_TEXT" value="22" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -169,63 +184,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="90">
+              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#320#321#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
-                <element signature="e#2559#2560#0" expanded="true" />
-                <element signature="e#2594#2595#0" expanded="true" />
-                <element signature="e#2648#2649#0" expanded="true" />
-                <element signature="e#2201#2202#0" expanded="true" />
-                <element signature="e#2253#2254#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2363">
-              <caret line="144" selection-start-line="144" selection-end-line="144" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sin.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="35" selection-start-column="35" selection-end-column="35" />
+            <state relative-caret-position="68">
+              <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+              <folding>
+                <element signature="e#111#112#0" expanded="true" />
+                <element signature="e#145#146#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -252,9 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODESolverAdaptive.java" />
-        <option value="$PROJECT_DIR$/Numerical/src/Numerical/Euler.java" />
-        <option value="$PROJECT_DIR$/Numerical/src/ODE/Euler.java" />
         <option value="$PROJECT_DIR$/test/ODE/RK438Test.java" />
         <option value="$PROJECT_DIR$/test/ODE/RKClassicTest.java" />
         <option value="$PROJECT_DIR$/test/ODE/RKF45Test.java" />
@@ -283,26 +267,29 @@
         <option value="$PROJECT_DIR$/../NumericalMethods/src/com/company/ODE/ODESolver.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/Draw.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalCublicSpline.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/SplineInterpolation.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" />
         <option value="$PROJECT_DIR$/src/com/company/data.txt" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESystem.java" />
         <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" />
         <option value="$PROJECT_DIR$/fOff.txt" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalCubicSpline.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java" />
         <option value="$PROJECT_DIR$/sin.txt" />
-        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/FFT.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/ComplexNumbers.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/SLE/Matrix.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java" />
       </list>
     </option>
   </component>
@@ -398,79 +385,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
-              <item name="ODE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
-              <item name="SLE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
-              <item name="Spline" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Physics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Physics" type="462c0819:PsiDirectoryNode" />
-              <item name="Pendulums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
           <expand>
@@ -562,7 +477,43 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
+              <item name="FFT" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -573,7 +524,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/src/com/company/data.txt&#10;C:/Users/Sergey/Desktop/PROJECTS/DataStructuresAndAlgorithms/src/com/company/Numerical/ODE/ODESolverAdaptive.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545337320268" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546440706166" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -622,13 +573,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SLESolver">
+  <component name="RunManager" selected="Application.FourierSeriesApp">
     <configuration name="DoublePendulumApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Physics.Pendulums.DoublePendulum.DoublePendulumApp" />
       <module name="DataStructuresAndAlgorithms" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.Physics.Pendulums.DoublePendulum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FourierSeriesApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Numerical.FFT.FourierSeriesApp" />
+      <module name="DataStructuresAndAlgorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Numerical.FFT.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -710,38 +674,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RKF45Test (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DataStructuresAndAlgorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Numerical.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Numerical" />
-      <option name="MAIN_CLASS_NAME" value="Numerical.RKF45Test" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="TestNG.DecoderTest" />
       <item itemvalue="Application.SinglePendulumApp" />
       <item itemvalue="Application.DoublePendulumApp" />
-      <item itemvalue="TestNG.RKF45Test (1)" />
       <item itemvalue="Application.SplineInterpolation" />
       <item itemvalue="Application.SLESolver" />
+      <item itemvalue="Application.FourierSeriesApp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SLESolver" />
-        <item itemvalue="Application.SinglePendulumApp" />
+        <item itemvalue="Application.FourierSeriesApp" />
         <item itemvalue="Application.SplineInterpolation" />
         <item itemvalue="Application.DoublePendulumApp" />
-        <item itemvalue="TestNG.RKF45Test (1)" />
+        <item itemvalue="Application.SinglePendulumApp" />
+        <item itemvalue="Application.SLESolver" />
       </list>
     </recent_temporary>
   </component>
@@ -789,7 +737,13 @@
       <workItem from="1544638999268" duration="9499000" />
       <workItem from="1545036586758" duration="14424000" />
       <workItem from="1545208399728" duration="27000" />
-      <workItem from="1545324881780" duration="11898000" />
+      <workItem from="1545324881780" duration="14014000" />
+      <workItem from="1545384135212" duration="264000" />
+      <workItem from="1545384417485" duration="6720000" />
+      <workItem from="1545676794788" duration="5392000" />
+      <workItem from="1546023432593" duration="3090000" />
+      <workItem from="1546265610394" duration="4530000" />
+      <workItem from="1546431988074" duration="8626000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST">
       <created>1536172967431</created>
@@ -1050,7 +1004,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545157870803</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="added Gauss-Jordan elimination method">
+      <created>1545337407074</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1545337407074</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1086,7 +1047,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401734000" />
+    <option name="totallyTimeSpent" value="432472000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1102,7 +1063,7 @@
     <editor active="true" />
     <layout>
       <window_info auto_hide="true" x="506" y="59" width="415" height="650" id="Learn" order="0" type="WINDOWED" weight="0.32936507" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.23524962" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.2579425" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -1111,7 +1072,7 @@
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3275862" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3275862" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7595238" weight="0.5632184" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.39511493" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.43247128" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1132,42 +1093,8 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.21031746" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32936507" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3290469" />
     </layout>
-    <layout-to-restore>
-      <window_info auto_hide="true" x="506" y="59" width="415" height="650" id="Learn" order="0" type="WINDOWED" weight="0.32936507" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.25945538" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.50442475" side_tool="true" weight="0.23333333" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3275862" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3275862" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7595238" weight="0.34195402" />
-      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.35632184" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49920633" weight="0.3591954" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50079364" side_tool="true" weight="0.48706895" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32614943" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3275862" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" weight="0.46153846" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32923076" />
-      <window_info anchor="bottom" id="Structure" order="13" sideWeight="0.50079364" side_tool="true" weight="0.36" />
-      <window_info anchor="bottom" id="Extract Method" order="14" weight="0.32902297" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32936507" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.21031746" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32936507" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1223,7 +1150,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="added Bouncing" />
     <MESSAGE value="implemented RK4" />
     <MESSAGE value="added SinglePendulum" />
     <MESSAGE value="added minor helper methods&#10;-ODE&#10;--- add, subtract&#10;-Main&#10;--- getPoints" />
@@ -1248,7 +1174,8 @@
     <MESSAGE value="added ComplexNumbers class&#10;implemented addition, subtraction and multiplication of complex numbers" />
     <MESSAGE value="minor improvements in ODESolverAdaptive class" />
     <MESSAGE value="added solver for System of Linear Equations (SLE)&#10;-Cramer's method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added solver for System of Linear Equations (SLE)&#10;-Cramer's method" />
+    <MESSAGE value="added Gauss-Jordan elimination method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Gauss-Jordan elimination method" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1278,9 +1205,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/ODE/RK438Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/src/ODE/RK438.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Numerical.iml" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/Euler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1406,13 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/SplineInterpolation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1424,16 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="360" column="26" selection-start-line="360" selection-start-column="26" selection-end-line="360" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#1951#1952#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1455,13 +1362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1498,41 +1398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-464">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Embedded/RKDP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1540,27 +1405,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="175">
+          <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
+        <state relative-caret-position="221">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1571,31 +1426,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="612">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#2559#2560#0" expanded="true" />
-            <element signature="e#2594#2595#0" expanded="true" />
-            <element signature="e#2648#2649#0" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2253#2254#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#1440#1441#0" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+            <element signature="e#1572#1573#0" expanded="true" />
+            <element signature="e#3108#3109#0" expanded="true" />
+            <element signature="e#3143#3144#0" expanded="true" />
+            <element signature="e#3173#3174#0" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/SinglePendulum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+          <folding>
+            <element signature="e#111#112#0" expanded="true" />
+            <element signature="e#145#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
