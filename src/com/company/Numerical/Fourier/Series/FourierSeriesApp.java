@@ -1,4 +1,4 @@
-package com.company.Numerical.FFT;
+package com.company.Numerical.Fourier.Series;
 
 public class FourierSeriesApp {
     public static void main(String[] args) {

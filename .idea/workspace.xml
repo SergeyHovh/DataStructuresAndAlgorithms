@@ -2,19 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="added solver for System of Linear Equations (SLE)&#10;-Cramer's method">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FFT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_Star.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_StarApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Draw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Spot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/ComplexNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Transform/ComplexNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/Draw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FFT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Transform/FFT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/FourierSeries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/FourierSeriesApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalCubicSpline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Base.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" afterDir="false" />
@@ -86,7 +92,7 @@
     <session id="2124533682">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="31" />
+          <entry key="project.closed" value="32" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.108" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -109,7 +115,7 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.66" value="1" />
-          <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.69" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.82" value="1" />
@@ -118,23 +124,23 @@
           <entry key="project.open.time.88" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.95" value="1" />
-          <entry key="project.opened" value="39" />
+          <entry key="project.opened" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="32" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="79455" />
+          <entry key="java" value="83836" />
           <entry key="sql" value="68" />
-          <entry key="txt" value="1582" />
+          <entry key="txt" value="1874" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="2" />
-          <entry key="JAVA" value="79455" />
-          <entry key="PLAIN_TEXT" value="1614" />
+          <entry key="JAVA" value="83836" />
+          <entry key="PLAIN_TEXT" value="1906" />
           <entry key="Scratch" value="68" />
         </counts>
       </usages-collector>
@@ -144,7 +150,7 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="338" />
+          <entry key="java" value="345" />
           <entry key="sql" value="2" />
           <entry key="sqlite_master" value="3" />
           <entry key="txt" value="22" />
@@ -157,7 +163,7 @@
           <entry key="Git file" value="2" />
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="338" />
+          <entry key="JAVA" value="345" />
           <entry key="PLAIN_TEXT" value="22" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -184,34 +190,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_Star.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Draw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+            <state relative-caret-position="366">
+              <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4147#4148#0" expanded="true" />
+                <element signature="e#4215#4216#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Spot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+            <state relative-caret-position="136">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
               <folding>
-                <element signature="e#111#112#0" expanded="true" />
-                <element signature="e#145#146#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#324#325#0" expanded="true" />
+                <element signature="e#1402#1403#0" expanded="true" />
+                <element signature="e#1431#1432#0" expanded="true" />
+                <element signature="e#2154#2155#0" expanded="true" />
+                <element signature="e#2237#2238#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -239,14 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/ODE/RK438Test.java" />
-        <option value="$PROJECT_DIR$/test/ODE/RKClassicTest.java" />
-        <option value="$PROJECT_DIR$/test/ODE/RKF45Test.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/RKF45.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/CashKarp.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/Euler.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/Heun.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/Heun3.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/MidPoint.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/Ralston.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/RK3.java" />
@@ -288,8 +295,16 @@
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/Fourier/FourierSeries.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/FourierSeries.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/Draw.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Physics/Base.java" />
+        <option value="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_StarApp.java" />
+        <option value="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Spot.java" />
+        <option value="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_Star.java" />
+        <option value="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Draw.java" />
       </list>
     </option>
   </component>
@@ -385,7 +400,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
           <expand>
@@ -500,20 +514,13 @@
               <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndAlgorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
-              <item name="FFT" type="462c0819:PsiDirectoryNode" />
+              <item name="A_Star" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -524,7 +531,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/src/com/company/data.txt&#10;C:/Users/Sergey/Desktop/PROJECTS/DataStructuresAndAlgorithms/src/com/company/Numerical/ODE/ODESolverAdaptive.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546440706166" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546612103321" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -573,7 +580,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FourierSeriesApp">
+  <component name="RunManager" selected="Application.A_StarApp">
+    <configuration name="A_StarApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.PathFinding.A_Star.A_StarApp" />
+      <module name="DataStructuresAndAlgorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.PathFinding.A_Star.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DoublePendulumApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Physics.Pendulums.DoublePendulum.DoublePendulumApp" />
       <module name="DataStructuresAndAlgorithms" />
@@ -588,11 +608,11 @@
       </method>
     </configuration>
     <configuration name="FourierSeriesApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Numerical.FFT.FourierSeriesApp" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Numerical.Fourier.Series.FourierSeriesApp" />
       <module name="DataStructuresAndAlgorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Numerical.FFT.*" />
+          <option name="PATTERN" value="com.company.Numerical.Fourier.Series.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -606,19 +626,6 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SLESolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Numerical.SLE.SLESolver" />
-      <module name="DataStructuresAndAlgorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.Numerical.SLE.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -680,16 +687,16 @@
       <item itemvalue="Application.SinglePendulumApp" />
       <item itemvalue="Application.DoublePendulumApp" />
       <item itemvalue="Application.SplineInterpolation" />
-      <item itemvalue="Application.SLESolver" />
       <item itemvalue="Application.FourierSeriesApp" />
+      <item itemvalue="Application.A_StarApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A_StarApp" />
         <item itemvalue="Application.FourierSeriesApp" />
         <item itemvalue="Application.SplineInterpolation" />
         <item itemvalue="Application.DoublePendulumApp" />
         <item itemvalue="Application.SinglePendulumApp" />
-        <item itemvalue="Application.SLESolver" />
       </list>
     </recent_temporary>
   </component>
@@ -743,7 +750,8 @@
       <workItem from="1545676794788" duration="5392000" />
       <workItem from="1546023432593" duration="3090000" />
       <workItem from="1546265610394" duration="4530000" />
-      <workItem from="1546431988074" duration="8626000" />
+      <workItem from="1546431988074" duration="9354000" />
+      <workItem from="1546590785799" duration="17280000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST">
       <created>1536172967431</created>
@@ -1011,7 +1019,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545337407074</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="added Fourier Series visualisation for square, saw and reverse saw functions">
+      <created>1546440784424</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1546440784424</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1047,7 +1062,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432472000" />
+    <option name="totallyTimeSpent" value="450480000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1063,7 +1078,7 @@
     <editor active="true" />
     <layout>
       <window_info auto_hide="true" x="506" y="59" width="415" height="650" id="Learn" order="0" type="WINDOWED" weight="0.32936507" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.2579425" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.26172465" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -1072,7 +1087,7 @@
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3275862" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3275862" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.39511493" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.28304598" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.43247128" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1150,8 +1165,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="implemented RK4" />
-    <MESSAGE value="added SinglePendulum" />
     <MESSAGE value="added minor helper methods&#10;-ODE&#10;--- add, subtract&#10;-Main&#10;--- getPoints" />
     <MESSAGE value="made RK4 abstract&#10;added RK4Classic and RK438" />
     <MESSAGE value="added RK4Classic and RK438 tests" />
@@ -1175,7 +1188,9 @@
     <MESSAGE value="minor improvements in ODESolverAdaptive class" />
     <MESSAGE value="added solver for System of Linear Equations (SLE)&#10;-Cramer's method" />
     <MESSAGE value="added Gauss-Jordan elimination method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Gauss-Jordan elimination method" />
+    <MESSAGE value="added Fourier Series visualisation for square, saw and reverse saw functions" />
+    <MESSAGE value="added Fourier.Series and Fourier.Transform directories" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Fourier.Series and Fourier.Transform directories" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1205,34 +1220,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/Euler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/Ralston.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/RK3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/Heun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Embedded/Lobatto3C.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Explicit/RK438.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1316,13 +1303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="10" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/Draw.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1382,20 +1362,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/data.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16685" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/FFT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/ComplexNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="102" column="29" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="29" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Embedded/RKDP.java">
@@ -1518,30 +1484,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Fourier/Transform/FFT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Fourier/Transform/ComplexNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#3396#3397#0" expanded="true" />
+            <element signature="e#3423#3424#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/FourierSeriesApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#111#112#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/Draw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        <state relative-caret-position="-375">
+          <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_StarApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#109#110#0" expanded="true" />
+            <element signature="e#136#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/FourierSeries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Spot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#2154#2155#0" expanded="true" />
+            <element signature="e#2237#2238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_Star.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Draw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4147#4148#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,4 @@
-package com.company.Numerical.FFT;
+package com.company.Numerical.Fourier.Series;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ public class Draw extends JPanel implements ActionListener {
     private int numberOfCircles;
     private double offX = 250, offY = 250;
     private double pointX, pointY;
-    private double R = 150;
+    private double R = 50;
     private double offset = 0;
 
     Draw(int n) {
@@ -30,6 +30,10 @@ public class Draw extends JPanel implements ActionListener {
         }
     }
 
+    Draw() {
+        this(5);
+    }
+
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -38,10 +42,10 @@ public class Draw extends JPanel implements ActionListener {
         double prevX = offX, prevY = offY;
         for (int i = 0; i < numberOfCircles; i++) {
             // square wave
-            int n = 2 * i + 1;
-            double radius = R * 4 / (n * PI);
-//            int n = i + 1;
-//            double radius = R * 2 / (pow(-1, n + 1) * n * PI); // saw wave
+//            int n = 2 * i + 1;
+//            double radius = R * 4 / (n * PI);
+            int n = i + 1;
+            double radius = R * 2 / (pow(-1, n + 1) * n * PI); // saw wave
 //            double radius = R * 2 / (pow(-1, n) * n * PI); // saw wave reverse
             double angle = n * t;
 

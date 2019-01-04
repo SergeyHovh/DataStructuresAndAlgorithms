@@ -1,4 +1,4 @@
-package com.company.Numerical.FFT;
+package com.company.Numerical.Fourier.Transform;
 
 import java.util.Objects;
 
