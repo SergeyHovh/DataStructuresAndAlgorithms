@@ -1,5 +1,7 @@
 package com.company.Numerical.SLE;
 
+import static java.lang.Math.abs;
+
 public class SLESolver {
 
     /**
@@ -25,9 +27,9 @@ public class SLESolver {
         system.eliminate();
         double[][] A = system.getCoefficients();
         int length = A.length;
-
         for (int i = length - 2; i >= 0; i--) {
             for (int j = i; j >= 0; j--) {
+                if (abs(A[j][i + 1]) <= 1.0E-10) continue;
                 system.addRows(i + 1, j, -A[j][i + 1]);
             }
         }

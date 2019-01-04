@@ -9,7 +9,7 @@ public class SLE {
     private double[][] coefficients;
     private double[] B;
 
-    SLE(double[][] coefficients, double[] B) {
+    public SLE(double[][] coefficients, double[] B) {
         this.coefficients = coefficients;
         this.B = B;
     }
@@ -18,17 +18,40 @@ public class SLE {
         eliminate(coefficients);
     }
 
+    private void rowEchelonForm() {
+        rowEchelonForm(coefficients);
+    }
+
+    private void rowEchelonForm(double[][] A) {
+        int length = A.length;
+        for (int i = 0; i < length; i++) {
+            int j = i + 1;
+            while (A[i][i] == 0) {
+                changeRows(i, j++);
+            }
+        }
+    }
+
     private void eliminate(double[][] A) {
+        rowEchelonForm();
         int length = A.length;
         for (int i = 1; i < length; i++) {
             for (int j = i; j < length; j++) {
-                if (abs(A[j][i - 1]) <= 1.0E-12) continue;
+                if (abs(A[j][i - 1]) <= 1.0E-10) continue;
                 addRows(i - 1, j, -A[j][i - 1] / A[i - 1][i - 1]);
             }
         }
         for (int i = 0; i < length; i++) {
             multiplyRow(i, 1 / A[i][i]);
         }
+    }
+
+    public void changeRows(int source, int dest) {
+        addRows(source, dest, 1);
+        addRows(dest, source, -1);
+        addRows(source, dest, 1);
+
+        multiplyRow(source, -1);
     }
 
     public void addRows(int source, int dest, double coefficient) {
