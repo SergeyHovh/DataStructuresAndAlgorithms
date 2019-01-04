@@ -16,15 +16,15 @@ import static java.lang.Math.sin;
 
 public class Scene extends JPanel implements ActionListener {
     private ODESolver solver = new RKDP();
-    private int unitLength = 30;
-    private Timer timer = new Timer(0, this);
+    private int unitLength = 25;
+    private Timer timer = new Timer(1, this);
     // values
     private double offsetX, offsetY;
     private double m1 = 8, m2 = 8; // masses
     private double L_1 = 3, L_2 = 3; // rode lengths
-    private double theta1 = 0.1, theta2 = -0.1, theta_v1 = 0, theta_v2 = 0; // angles
+    private double theta1 = 0.8, theta2 = -theta1 / 4, theta_v1 = 0, theta_v2 = 0; // angles
     private double x0 = 0, x1 = 0, y1 = 0, x2 = 0, y2 = 0; // initial positions
-    private double stepSize = 0.05, step = 0;
+    private double stepSize = 0.1, step = 0;
     private double gravity = 10;
     private double r1 = L_1 * unitLength, r2 = L_2 * unitLength;
     private ODESystem[] equations = new ODESystem[]{

@@ -10,4 +10,8 @@ public class Base extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
+
+    public Base(String name) {
+        this(name, 640, 480);
+    }
 }

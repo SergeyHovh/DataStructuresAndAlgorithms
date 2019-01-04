@@ -9,25 +9,25 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
-
-import static java.lang.Math.PI;
-import static java.lang.Math.sin;
+import java.io.FileNotFoundException;
+import java.util.Formatter;
+import java.util.Vector;
 
 public class Scene extends JPanel implements ActionListener {
+    private Vector<Double> values;
     private ODESolver solveSecondOrder = new RKDP();
     private int unitLength = 30;
     private int delay = 1;
     private Timer timer = new Timer(delay, this);
     private double offsetX, offsetY;
     private double r = 3;
-    private double M = 10, L = r * unitLength, theta = PI / 2, gravity = 10;
+    private double M = 10, L = r * unitLength, theta = 1, gravity = 9.81;
     private double x = 0, y = 0;
-    private double x0 = x, y0 = y;
+    private double x0 = 0;
     private double v0 = 0;
     private double step = 0;
-    private double stepSize = 0.05;
+    private double stepSize = 0.1;
     private Line2D line = new Line2D.Double(0, 0, 0, 0);
-
     private Ellipse2D ball = new Ellipse2D.Double(0, 0, M, M);
 
     Scene() {
@@ -59,7 +59,6 @@ public class Scene extends JPanel implements ActionListener {
         ball.setFrame(x - ball.getWidth() / 2, y - ball.getWidth() / 2, ball.getWidth(), ball.getHeight());
     }
 
-
     private void setup() {
         // max
         SinglePendulum.getMap().get("Mass").setMaximum(20);
@@ -73,12 +72,13 @@ public class Scene extends JPanel implements ActionListener {
         reset();
     }
 
-
     void start() {
+        values = new Vector<>();
         timer.start();
     }
 
     void stop() {
+        writeToFile(values, "fOff.txt");
         timer.stop();
     }
 
@@ -90,7 +90,6 @@ public class Scene extends JPanel implements ActionListener {
         SinglePendulum.getMap().get("Gravity").setValue(10);
         repaint();
     }
-
 
     private void compute() {
         offsetY = getSize().height * 0.5;
@@ -108,14 +107,30 @@ public class Scene extends JPanel implements ActionListener {
         theta = thetaArr[0][0];
         v0 = thetaArr[0][1];
         step += stepSize;
+        values.add(theta);
     }
 
     private double motionEquation(double x, double[][] y) {
-        return -gravity / L * sin(y[0][0]) - damping(x) * y[0][1];
+        return -gravity / L * y[0][0] - damping(x) * y[0][1];
     }
 
     private double damping(double x) {
-        return sin(10 * x * x);
-//        return sin(100 * exp(10 * x));
+        return 0;
+//        return (pow(E, x) % 10) / 100;
+//        return pow(-1, (int) (x / 20)) * (x % 10) / 100;
+    }
+
+    private void writeToFile(Vector<Double> value, String fileName) {
+        Formatter file;
+        try {
+            file = new Formatter(fileName);
+            file.flush();
+            for (Double v : value) {
+                file.format("%s", v + "\n");
+            }
+            file.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
