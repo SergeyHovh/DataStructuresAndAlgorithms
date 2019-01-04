@@ -2,29 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="added solver for System of Linear Equations (SLE)&#10;-Cramer's method">
-      <change afterPath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_Star.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_StarApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Draw.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Spot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/ComplexNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Transform/ComplexNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/Draw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FFT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Transform/FFT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/FourierSeries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Fourier/Series/FourierSeriesApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalCubicSpline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/Spline/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/data.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,16 +115,16 @@
         <counts>
           <entry key="dummy" value="32" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="83836" />
+          <entry key="java" value="83838" />
           <entry key="sql" value="68" />
-          <entry key="txt" value="1874" />
+          <entry key="txt" value="2041" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="2" />
-          <entry key="JAVA" value="83836" />
-          <entry key="PLAIN_TEXT" value="1906" />
+          <entry key="JAVA" value="83838" />
+          <entry key="PLAIN_TEXT" value="2073" />
           <entry key="Scratch" value="68" />
         </counts>
       </usages-collector>
@@ -150,10 +134,10 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="345" />
+          <entry key="java" value="354" />
           <entry key="sql" value="2" />
           <entry key="sqlite_master" value="3" />
-          <entry key="txt" value="22" />
+          <entry key="txt" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -163,8 +147,8 @@
           <entry key="Git file" value="2" />
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="345" />
-          <entry key="PLAIN_TEXT" value="22" />
+          <entry key="JAVA" value="354" />
+          <entry key="PLAIN_TEXT" value="23" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -198,16 +182,55 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Draw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
+            <state relative-caret-position="-212">
               <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4147#4148#0" expanded="true" />
                 <element signature="e#4215#4216#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1411">
+              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -276,7 +299,6 @@
         <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalCublicSpline.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/SplineInterpolation.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" />
-        <option value="$PROJECT_DIR$/src/com/company/data.txt" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESystem.java" />
         <option value="$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java" />
         <option value="$PROJECT_DIR$/fOff.txt" />
@@ -292,7 +314,6 @@
         <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/FourierSeriesApp.java" />
         <option value="$PROJECT_DIR$/src/com/company/Numerical/FFT/Draw.java" />
@@ -305,6 +326,8 @@
         <option value="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Spot.java" />
         <option value="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_Star.java" />
         <option value="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Draw.java" />
+        <option value="$PROJECT_DIR$/src/com/company/data.txt" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
@@ -514,7 +537,7 @@
               <item name="DataStructuresAndAlgorithms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="A_Star" type="462c0819:PsiDirectoryNode" />
+              <item name="Numerical" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -531,7 +554,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/src/com/company/data.txt&#10;C:/Users/Sergey/Desktop/PROJECTS/DataStructuresAndAlgorithms/src/com/company/Numerical/ODE/ODESolverAdaptive.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546612368367" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546612495479" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -751,7 +774,7 @@
       <workItem from="1546023432593" duration="3090000" />
       <workItem from="1546265610394" duration="4530000" />
       <workItem from="1546431988074" duration="9354000" />
-      <workItem from="1546590785799" duration="17280000" />
+      <workItem from="1546590785799" duration="17560000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST">
       <created>1536172967431</created>
@@ -1026,7 +1049,35 @@
       <option name="project" value="LOCAL" />
       <updated>1546440784424</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added Fourier.Series and Fourier.Transform directories">
+      <created>1546612288107</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1546612288107</updated>
+    </task>
+    <task id="LOCAL-00041" summary="added A* path finding algorithm with visualisation">
+      <created>1546612321581</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1546612321581</updated>
+    </task>
+    <task id="LOCAL-00042" summary="minor changes in Pendulums directory">
+      <created>1546612403224</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1546612403224</updated>
+    </task>
+    <task id="LOCAL-00043" summary="improved SLESolver by implementing the rowEchelonForm">
+      <created>1546612484054</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1546612484054</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1062,7 +1113,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450480000" />
+    <option name="totallyTimeSpent" value="450760000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1078,7 +1129,7 @@
     <editor active="true" />
     <layout>
       <window_info auto_hide="true" x="506" y="59" width="415" height="650" id="Learn" order="0" type="WINDOWED" weight="0.32936507" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.26172465" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.5531915" visible="true" weight="0.26172465" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -1087,7 +1138,7 @@
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3275862" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3275862" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.28304598" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7595238" visible="true" weight="0.28304598" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.43247128" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1165,9 +1216,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="added minor helper methods&#10;-ODE&#10;--- add, subtract&#10;-Main&#10;--- getPoints" />
-    <MESSAGE value="made RK4 abstract&#10;added RK4Classic and RK438" />
-    <MESSAGE value="added RK4Classic and RK438 tests" />
     <MESSAGE value="created generateKeys method" />
     <MESSAGE value="added new explicit methods for RK" />
     <MESSAGE value="renamed RK to ODESolver, moved to Numerical/ODE" />
@@ -1190,7 +1238,10 @@
     <MESSAGE value="added Gauss-Jordan elimination method" />
     <MESSAGE value="added Fourier Series visualisation for square, saw and reverse saw functions" />
     <MESSAGE value="added Fourier.Series and Fourier.Transform directories" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Fourier.Series and Fourier.Transform directories" />
+    <MESSAGE value="added A* path finding algorithm with visualisation" />
+    <MESSAGE value="minor changes in Pendulums directory" />
+    <MESSAGE value="improved SLESolver by implementing the rowEchelonForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved SLESolver by implementing the rowEchelonForm" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1359,11 +1410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16685" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/Embedded/RKDP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1378,38 +1424,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sin.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1420,13 +1438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/NaturalSpline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1434,46 +1445,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1493#1494#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#3108#3109#0" expanded="true" />
-            <element signature="e#3143#3144#0" expanded="true" />
-            <element signature="e#3173#3174#0" expanded="true" />
-            <element signature="e#3197#3198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/SLE/SLESolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1525,17 +1500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_StarApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1579,14 +1543,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/SinglePendulum/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulumApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Physics/Pendulums/DoublePendulum/DoublePendulum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/PathFinding/A_Star/Draw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
+        <state relative-caret-position="-212">
           <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4147#4148#0" expanded="true" />
             <element signature="e#4215#4216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolverAdaptive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/SLE/SLE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Numerical/Spline/DrawPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

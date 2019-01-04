@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Hashtable;
 
 public abstract class ODESolverAdaptive extends ODESolver {
-    private final double min = 1.0E-02;
-    private final double max = 5 * min;
-    private final double minErr = 1.0E-13;
-    private final double maxErr = 2 * minErr;
-    private double h = 0;
+    private final double min = 1.0E-10;
+    private final double max = 1;
+    private final double minErr = 1.0E-5;
+    private final double maxErr = 10 * minErr;
+    private double h = max / 2;
     private Hashtable<IVP, Hashtable<Double, Value>> odeValues = new Hashtable<>();
     private Value value = new Value();
 
@@ -27,7 +27,7 @@ public abstract class ODESolverAdaptive extends ODESolver {
         }
         IVP ivp = new IVP(system, x0, current);
         odeValues.putIfAbsent(ivp, new Hashtable<>());
-        int multiplier = 3;
+        int multiplier = 2;
         while (x0 < x) {
             adjustH();
             if (odeValues.get(ivp).containsKey(x0)) {
@@ -106,6 +106,7 @@ public abstract class ODESolverAdaptive extends ODESolver {
     private void adjustH() {
         if (h < min) h = min;
         else if (h > max) h = max;
+        System.out.println(h);
     }
 
     private class Value {
