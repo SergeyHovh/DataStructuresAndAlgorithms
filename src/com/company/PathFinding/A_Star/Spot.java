@@ -1,29 +1,29 @@
 package com.company.PathFinding.A_Star;
 
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
+import java.awt.geom.Ellipse2D;
 import java.util.Objects;
 import java.util.Vector;
 
-public class Spot extends Rectangle2D.Double {
-    public Spot prev = null;
+public class Spot extends Ellipse2D.Double {
+    Spot prev = null;
     double f = 0, g = 0, h = 0;
     private Color color;
     private boolean isWall = false;
     private int i, j;
 
-    public Spot(double x, double y, double w, double h) {
+    Spot(double x, double y, double w, double h) {
         super(x * w, y * h, w, h);
         this.i = (int) x;
         this.j = (int) y;
         color = Color.WHITE;
     }
 
-    public Color getColor() {
+    Color getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    void setColor(Color color) {
         this.color = color;
     }
 
@@ -45,11 +45,11 @@ public class Spot extends Rectangle2D.Double {
         return result;
     }
 
-    public boolean isWall() {
+    boolean isWall() {
         return isWall;
     }
 
-    public void setWall(boolean wall) {
+    void setWall(boolean wall) {
         isWall = wall;
         if (wall) setColor(Color.BLACK);
     }

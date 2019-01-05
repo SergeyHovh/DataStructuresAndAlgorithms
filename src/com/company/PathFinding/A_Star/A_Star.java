@@ -5,9 +5,9 @@ import com.company.Physics.Base;
 public class A_Star extends Base {
     public A_Star(String name) {
         super(name, 1000, 750);
-        int N = 100;
+        int N = 30;
         Draw draw = new Draw(N, getWidth(), getHeight());
         add(draw);
-        setResizable(true);
+        setResizable(false);
     }
 }

@@ -23,7 +23,7 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
     private LinkedList<Spot> path = new LinkedList<>();
     private Spot start;
     private Spot end;
-    private Timer timer = new Timer(50, this);
+    private Timer timer = new Timer(10, this);
     private int count = 0;
 
     Draw(int N, double w, double h) {
@@ -36,7 +36,7 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 grid[i][j] = new Spot(i, j, scaleX, scaleY);
-                if (abs(r.nextGaussian()) <= 0.7) {
+                if (abs(r.nextGaussian()) <= 0.5) {
                     grid[i][j].setWall(true);
                 }
             }
@@ -60,75 +60,84 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         repaint();
+        Color color = new Color(255, 255, 0);
+        start.setColor(color);
+        end.setColor(color);
+        A_Star(diagonal);
+    }
 
+    private void A_Star(boolean allowDiagonals) {
         if (!openSet.isEmpty()) {
-            int winner = 0;
-            for (int i = 0; i < openSet.size(); i++) {
-                Spot spot = openSet.get(i);
-                if (spot.f <= openSet.get(winner).f) winner = i;
-            }
-            Spot current = openSet.get(winner);
-
+            Spot current = getSpotWithMinimalScoreF();
             if (current.equals(end)) {
-                Spot temp = current;
-                path.addFirst(temp);
-                while (temp.prev != null) {
-                    path.addLast(temp.prev);
-                    temp = temp.prev;
-                }
                 System.out.println("DONE");
                 timer.stop();
             }
-
             openSet.removeElement(current);
             closedSet.add(current);
-            for (Spot neighbor : current.getNeighbors(grid, diagonal)) {
-                if (!closedSet.contains(neighbor) && !neighbor.isWall()) {
-                    double tempG = current.g + 1;
-                    boolean newPath = false;
-                    if (openSet.contains(neighbor)) {
-                        if (tempG < neighbor.g) {
-                            neighbor.g = tempG;
-                            newPath = true;
-                        }
-                    } else {
-                        neighbor.g = tempG;
-                        newPath = true;
-                        openSet.add(neighbor);
-                    }
-                    if (newPath) {
-                        neighbor.h = dist(neighbor, end);
-                        neighbor.f = neighbor.g + neighbor.h;
-                        neighbor.prev = current;
-
-                    }
-                }
-            }
-            for (Spot spot : openSet) {
-                spot.setColor(Color.GREEN);
-            }
-            for (Spot spot : closedSet) {
-                spot.setColor(Color.RED);
-            }
-            for (Spot spot : path) {
-                spot.setColor(Color.BLUE);
-            }
+            lookForNeighbors(current, allowDiagonals);
+            drawPath(current);
         } else {
             timer.stop();
             System.out.println("NO SOLUTION");
         }
-        Color color = new Color(47, 67, 255);
-        start.setColor(color);
-        end.setColor(color);
     }
 
-    private double dist(Spot neighbor, Spot end) {
-        return hypot(neighbor.x - end.x, neighbor.y - end.y);
+    private Spot getSpotWithMinimalScoreF() {
+        int winner = 0;
+        for (int i = 0; i < openSet.size(); i++) {
+            Spot spot = openSet.get(i);
+            if (spot.f <= openSet.get(winner).f) winner = i;
+        }
+        return openSet.get(winner);
     }
 
-    @Override
-    public void mouseClicked(MouseEvent e) {
+    private void lookForNeighbors(Spot current, boolean diagonal) {
+        for (Spot neighbor : current.getNeighbors(grid, diagonal)) { // for each neighbor
+            if (!closedSet.contains(neighbor) && !neighbor.isWall()) { // if it is not closed or a wall
+                double dist = dist(neighbor, current);
+                double tempG = current.g + dist; // calculate the G score
+                boolean newPath = false;
+                if (openSet.contains(neighbor)) {
+                    if (tempG < neighbor.g) { // if found better path
+                        neighbor.g = tempG;
+                        newPath = true;
+                    }
+                } else { // if is not in the open set
+                    neighbor.g = tempG;
+                    newPath = true;
+                    openSet.add(neighbor);
+                }
+                if (newPath) {
+                    neighbor.h = dist(neighbor, end);
+                    neighbor.f = neighbor.g + neighbor.h;
+                    neighbor.prev = current; // add to path
+                }
+            }
+        }
+    }
 
+    private void drawPath(Spot current) {
+        path.clear();
+        for (Spot spot : openSet) {
+            spot.setColor(Color.GREEN);
+        }
+        for (Spot spot : closedSet) {
+            spot.setColor(Color.RED);
+        }
+        Spot temp = current;
+        path.addFirst(temp);
+        while (temp.prev != null) {
+            path.addLast(temp.prev);
+            temp = temp.prev;
+        }
+        for (Spot spot : path) {
+            spot.setColor(Color.BLUE);
+        }
+    }
+
+    private double dist(Spot A, Spot B) {
+        return hypot(A.getCenterX() - B.getCenterX(), A.getCenterY() - B.getCenterY());
     }
 
     @Override
@@ -139,9 +148,9 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
             Spot current = grid[i][j];
             if (!current.isWall())
                 if (count % 2 == 0) {
-                    openSet.clear();
-                    closedSet.clear();
-                    path.clear();
+                    openSet = new Vector<>();
+                    closedSet = new Vector<>();
+                    path = new LinkedList<>();
 
                     start = current;
                     start.setWall(false);
@@ -153,6 +162,11 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
                 }
             count++;
         }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
     }
 
     @Override
