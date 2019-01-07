@@ -30,7 +30,7 @@ Here I have implementations of some Data Structures and some unusual algorithms.
 #### Video
 * [Link] to the Video(https://www.youtube.com/watch?v=hzlvuQahhqU)
 ## Path Finding
-* [A* algorithm](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/tree/master/src/com/company/PathFinding/A_Star) with visualization
+### [A* algorithm](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/tree/master/src/com/company/PathFinding/A_Star) with visualization
 #### Videos
 * [Diagonals not allowed](https://www.youtube.com/watch?v=b2BErxYozug)
 * [Diagonals allowed](https://www.youtube.com/watch?v=Iekvx9oGup0)
