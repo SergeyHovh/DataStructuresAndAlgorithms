@@ -1,11 +1,11 @@
 package com.company.PathFinding.A_Star;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
+import java.awt.geom.Rectangle2D;
 import java.util.Objects;
 import java.util.Vector;
 
-public class Spot extends Ellipse2D.Double {
+public class Spot extends Rectangle2D.Double {
     Spot prev = null;
     double f = 0, g = 0, h = 0;
     private Color color;
@@ -52,6 +52,14 @@ public class Spot extends Ellipse2D.Double {
     void setWall(boolean wall) {
         isWall = wall;
         if (wall) setColor(Color.BLACK);
+    }
+
+    public int getI() {
+        return i;
+    }
+
+    public int getJ() {
+        return j;
     }
 
     @Override

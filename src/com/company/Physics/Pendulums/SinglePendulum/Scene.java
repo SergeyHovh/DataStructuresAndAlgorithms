@@ -17,7 +17,7 @@ public class Scene extends JPanel implements ActionListener {
     private Vector<Double> values;
     private ODESolver solveSecondOrder = new RKDP();
     private int unitLength = 30;
-    private int delay = 1;
+    private int delay = 2;
     private Timer timer = new Timer(delay, this);
     private double offsetX, offsetY;
     private double r = 3;
@@ -116,6 +116,7 @@ public class Scene extends JPanel implements ActionListener {
 
     private double damping(double x) {
         return 0;
+//        return 0.1;
 //        return (pow(E, x) % 10) / 100;
 //        return pow(-1, (int) (x / 20)) * (x % 10) / 100;
     }

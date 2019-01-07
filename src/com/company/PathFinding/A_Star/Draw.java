@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.LinkedList;
+import java.awt.geom.Path2D;
 import java.util.Random;
 import java.util.Vector;
 
@@ -14,13 +14,13 @@ import static java.lang.Math.abs;
 import static java.lang.Math.hypot;
 
 public class Draw extends JPanel implements ActionListener, MouseListener {
-    private boolean diagonal = true;
+    private boolean diagonal = true, started = false;
 
     private Spot[][] grid;
     private double scaleX, scaleY;
     private int N;
     private Vector<Spot> openSet = new Vector<>(), closedSet = new Vector<>();
-    private LinkedList<Spot> path = new LinkedList<>();
+    private Path2D path2D = new Path2D.Double();
     private Spot start;
     private Spot end;
     private Timer timer = new Timer(10, this);
@@ -36,7 +36,7 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 grid[i][j] = new Spot(i, j, scaleX, scaleY);
-                if (abs(r.nextGaussian()) <= 0.5) {
+                if (abs(r.nextDouble()) <= 0.3) {
                     grid[i][j].setWall(true);
                 }
             }
@@ -49,10 +49,17 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
         Graphics2D graphics2D = (Graphics2D) g;
         for (Spot[] rectangle2DS : grid) {
             for (Spot spot : rectangle2DS) {
+                graphics2D.setStroke(new BasicStroke(0));
                 graphics2D.setColor(spot.getColor());
                 graphics2D.fill(spot);
-                graphics2D.setColor(Color.BLACK);
-                graphics2D.draw(spot);
+                graphics2D.setColor(Color.blue);
+                graphics2D.setStroke(new BasicStroke((float) scaleX / 5));
+                graphics2D.draw(path2D);
+                if (!started) {
+                    graphics2D.setStroke(new BasicStroke(0));
+                    graphics2D.setColor(Color.BLACK);
+                    graphics2D.draw(spot);
+                }
             }
         }
     }
@@ -67,17 +74,24 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
     }
 
     private void A_Star(boolean allowDiagonals) {
+        started = true;
         if (!openSet.isEmpty()) {
             Spot current = getSpotWithMinimalScoreF();
             if (current.equals(end)) {
                 System.out.println("DONE");
+                started = false;
                 timer.stop();
+                end.setColor(Color.WHITE);
+                start.setColor(Color.WHITE);
             }
             openSet.removeElement(current);
             closedSet.add(current);
             lookForNeighbors(current, allowDiagonals);
             drawPath(current);
         } else {
+            started = false;
+            end.setColor(Color.RED);
+            start.setColor(Color.RED);
             timer.stop();
             System.out.println("NO SOLUTION");
         }
@@ -94,7 +108,9 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
 
     private void lookForNeighbors(Spot current, boolean diagonal) {
         for (Spot neighbor : current.getNeighbors(grid, diagonal)) { // for each neighbor
-            if (!closedSet.contains(neighbor) && !neighbor.isWall()) { // if it is not closed or a wall
+            if (!closedSet.contains(neighbor) //if it is not closed
+                    && !neighbor.isWall() // if it is not a wall
+                    && (!diagonal || isValidNeighbor(grid, current, neighbor))) { //  if it is a valid move
                 double dist = dist(neighbor, current);
                 double tempG = current.g + dist; // calculate the G score
                 boolean newPath = false;
@@ -118,26 +134,32 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
     }
 
     private void drawPath(Spot current) {
-        path.clear();
-        for (Spot spot : openSet) {
-            spot.setColor(Color.GREEN);
-        }
-        for (Spot spot : closedSet) {
-            spot.setColor(Color.RED);
-        }
+        path2D = new Path2D.Double();
         Spot temp = current;
-        path.addFirst(temp);
+        path2D.moveTo(current.getCenterX(), current.getCenterY());
         while (temp.prev != null) {
-            path.addLast(temp.prev);
+            path2D.lineTo(temp.prev.getCenterX(), temp.prev.getCenterY());
             temp = temp.prev;
-        }
-        for (Spot spot : path) {
-            spot.setColor(Color.BLUE);
         }
     }
 
     private double dist(Spot A, Spot B) {
         return hypot(A.getCenterX() - B.getCenterX(), A.getCenterY() - B.getCenterY());
+    }
+
+    private boolean isValidNeighbor(Spot[][] grid, Spot prev, Spot next) {
+        int i = prev.getI();
+        int j = prev.getJ();
+        int nextI = next.getI();
+        int nextJ = next.getJ();
+        boolean A = true, B = true;
+        if (nextI > 0 && nextI < grid.length - 1) {
+            A = !grid[nextI][j].isWall();
+        }
+        if (nextJ > 0 && nextJ < grid[0].length - 1) {
+            B = !grid[i][nextJ].isWall();
+        }
+        return A || B;
     }
 
     @Override
@@ -150,7 +172,7 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
                 if (count % 2 == 0) {
                     openSet = new Vector<>();
                     closedSet = new Vector<>();
-                    path = new LinkedList<>();
+                    path2D = new Path2D.Double();
 
                     start = current;
                     start.setWall(false);
@@ -158,7 +180,7 @@ public class Draw extends JPanel implements ActionListener, MouseListener {
                 } else {
                     end = current;
                     end.setWall(false);
-                    timer.restart();
+                    timer.start();
                 }
             count++;
         }

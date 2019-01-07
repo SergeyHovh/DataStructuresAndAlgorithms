@@ -106,7 +106,6 @@ public abstract class ODESolverAdaptive extends ODESolver {
     private void adjustH() {
         if (h < min) h = min;
         else if (h > max) h = max;
-        System.out.println(h);
     }
 
     private class Value {

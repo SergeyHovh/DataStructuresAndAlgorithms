@@ -45,8 +45,8 @@ public class Draw extends JPanel implements ActionListener {
 //            int n = 2 * i + 1;
 //            double radius = R * 4 / (n * PI);
             int n = i + 1;
-            double radius = R * 2 / (pow(-1, n + 1) * n * PI); // saw wave
-//            double radius = R * 2 / (pow(-1, n) * n * PI); // saw wave reverse
+//            double radius = R * 2 / (pow(-1, n + 1) * n * PI); // saw wave
+            double radius = R * 2 / (pow(-1, n) * n * PI); // saw wave reverse
             double angle = n * t;
 
 
@@ -69,7 +69,7 @@ public class Draw extends JPanel implements ActionListener {
         points.addFirst(pointY);
         for (int j = 0; j < points.size(); j++) {
             double p = points.get(j);
-            path2D.lineTo(offX + offset + 20 + R / 125 * j, p);
+            path2D.lineTo(offX + offset + R / 125 * j, p);
             graphics2D.draw(path2D);
         }
         if (points.size() >= 430) {

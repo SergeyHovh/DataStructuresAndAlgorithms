@@ -9,20 +9,31 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Random;
 import java.util.Vector;
 
 public class Draw extends GridPanel implements ActionListener, KeyListener {
     private int map[][];
     private boolean start = false;
     private Timer timer = new Timer(100, this);
-    private Color alive = Color.BLACK, dead = Color.WHITE;
+    private Color alive = Color.BLACK;
+    private Color dead = Color.WHITE;
     private int counter = 0;
 
-    Draw(int N, double w, double h) {
+    Draw(int N, double w, double h, boolean random) {
         super(N, w, h);
         addKeyListener(this);
         map = new int[N][N]; // dead 0, alive 1
         timer.start();
+        if (random) {
+            Random r = new Random();
+            for (Cell[] cells : getGrid()) {
+                for (Cell cell : cells) {
+                    if (r.nextDouble() < 0.5)
+                        cell.setColor(alive);
+                }
+            }
+        }
     }
 
     @Override

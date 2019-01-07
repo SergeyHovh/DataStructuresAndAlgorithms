@@ -13,7 +13,7 @@ Here I have implementations of some Data Structures and some unusual algorithms.
 ### Runge-Kutta methods
 * Both usual and step-adaptive [implementations](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/tree/master/src/com/company/Numerical/ODE) of the method
 ### Solver for a system of linear equations
-* [Gauss Method](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/blob/597517e43f9274b5f44e0be73b52e9c1c1c0f23a/src/com/company/Numerical/SLE/SLESolver.java#L26) and [Cramer](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/blob/597517e43f9274b5f44e0be73b52e9c1c1c0f23a/src/com/company/Numerical/SLE/SLESolver.java#L10) method
+* [Gauss](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/blob/597517e43f9274b5f44e0be73b52e9c1c1c0f23a/src/com/company/Numerical/SLE/SLESolver.java#L26) and [Cramer](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/blob/597517e43f9274b5f44e0be73b52e9c1c1c0f23a/src/com/company/Numerical/SLE/SLESolver.java#L10) methods
 ### Fourier
 * [Series](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/tree/master/src/com/company/Numerical/Fourier/Series) visualization
 #### Video
@@ -28,7 +28,7 @@ Here I have implementations of some Data Structures and some unusual algorithms.
 * [With non-linear damping force](https://www.youtube.com/watch?v=n_eQ8j66ySs)
 ### [Double Pendulum](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/tree/master/src/com/company/Physics/Pendulums/DoublePendulum)
 #### Video
-* [Link] to the Video(https://www.youtube.com/watch?v=hzlvuQahhqU)
+* [Link](https://www.youtube.com/watch?v=hzlvuQahhqU)  to the Video
 ## Path Finding
 ### [A* algorithm](https://github.com/SergeyHovh/DataStructuresAndAlgorithms/tree/master/src/com/company/PathFinding/A_Star) with visualization
 #### Videos
