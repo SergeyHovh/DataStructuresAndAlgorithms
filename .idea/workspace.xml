@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="added rotate method using complex numbers">
-      <change afterPath="$PROJECT_DIR$/.idea/rSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="904dfdcd-cd5d-4731-8fdd-adccde62be2f" name="Default" comment="minor fixes">
+      <change afterPath="$PROJECT_DIR$/src/com/company/CellularAutomata/GameOfLifeShort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/BinaryTree/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/BinaryTree/BinarySearchTree.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/BinaryTree/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/BinaryTree/BinaryTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndAlgorithms/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/BinaryTree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BinaryTree/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/BinaryTree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BinaryTree/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Numerical/ODE/ODESystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_Star.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PathFinding/A_Star/A_Star.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CellularAutomata/GridPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CellularAutomata/GridPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CellularAutomata/Rules.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CellularAutomata/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CellularAutomata/CellularAutomata.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,8 +223,11 @@
       <recent name="com.company" />
       <recent name="com.company.Algorithms" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.company.Bouncing.tablesAndBalls" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sergey\Desktop\PROJECTS\DataStructuresAndAlgorithms\src\com\company" />
+      <recent name="C:\Users\Sergey\Desktop\PROJECTS\DataStructuresAndAlgorithms\Numerical\src" />
+      <recent name="C:\Users\Sergey\Desktop\PROJECTS\DataStructuresAndAlgorithms\Numerical" />
+      <recent name="C:\Users\Sergey\Desktop\PROJECTS\DataStructuresAndAlgorithms\src\com\company\Algorithms" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.company.Numerical.ODE.Explicit" />
@@ -224,14 +238,24 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Sergey\Desktop\PROJECTS\DataStructuresAndAlgorithms\src\com\company" />
-      <recent name="C:\Users\Sergey\Desktop\PROJECTS\DataStructuresAndAlgorithms\Numerical\src" />
-      <recent name="C:\Users\Sergey\Desktop\PROJECTS\DataStructuresAndAlgorithms\Numerical" />
-      <recent name="C:\Users\Sergey\Desktop\PROJECTS\DataStructuresAndAlgorithms\src\com\company\Algorithms" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.Bouncing.tablesAndBalls" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.GameOfLifeShort">
+    <configuration name="CellularAutomata" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.CellularAutomata.CellularAutomata" />
+      <module name="DataStructuresAndAlgorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.CellularAutomata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Decoder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Algorithms.Decoder" />
       <module name="DataStructuresAndAlgorithms" />
@@ -258,6 +282,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameOfLifeShort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.CellularAutomata.GameOfLifeShort" />
+      <module name="DataStructuresAndAlgorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.CellularAutomata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="DataStructuresAndAlgorithms" />
@@ -270,32 +307,6 @@
     </configuration>
     <configuration name="PacMan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.CellularAutomata.PacMan" />
-      <module name="DataStructuresAndAlgorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.CellularAutomata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Point" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Algorithms.Point" />
-      <module name="DataStructuresAndAlgorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.Algorithms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.CellularAutomata.Test" />
       <module name="DataStructuresAndAlgorithms" />
       <extension name="coverage">
         <pattern>
@@ -336,19 +347,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.GameOfLifeApp" />
-      <item itemvalue="Application.Point" />
       <item itemvalue="Application.PacMan" />
       <item itemvalue="Application.Decoder" />
       <item itemvalue="TestNG.DecoderTest" />
-      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.CellularAutomata" />
+      <item itemvalue="Application.GameOfLifeShort" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.GameOfLifeShort" />
+        <item itemvalue="Application.CellularAutomata" />
         <item itemvalue="Application.GameOfLifeApp" />
         <item itemvalue="Application.PacMan" />
         <item itemvalue="Application.Decoder" />
-        <item itemvalue="Application.Point" />
       </list>
     </recent_temporary>
   </component>
@@ -428,14 +439,7 @@
       <workItem from="1585481521537" duration="2082000" />
       <workItem from="1585588262552" duration="4000" />
       <workItem from="1586667553644" duration="4302000" />
-      <workItem from="1589240910893" duration="4439000" />
-    </task>
-    <task id="LOCAL-00001" summary="&#10;added mapGraph&lt;v, w&gt; data structure&#10;some changes in list and BST">
-      <created>1536172967431</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1536172967431</updated>
+      <workItem from="1589240910893" duration="5093000" />
     </task>
     <task id="LOCAL-00002" summary="&#10;edited MapGraph class - added isConnected method&#10;edited Main class - added generateGraph, generateSet and generateTree methods&#10;created Person class, made it Comparable">
       <created>1536410664975</created>
@@ -773,11 +777,28 @@
       <option name="project" value="LOCAL" />
       <updated>1589245208632</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="minor fixes">
+      <created>1589245424547</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1589245424547</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -798,7 +819,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="optimised ODESolverAdaptive" />
     <MESSAGE value="fixed optimized ODESolverAdaptive" />
     <MESSAGE value="improved optimized ODESolverAdaptive" />
     <MESSAGE value="optimized single pendulum movement" />
@@ -823,16 +843,17 @@
     <MESSAGE value="implemented Game Of Life" />
     <MESSAGE value="added BigInteger support for Decoder and edited Weights" />
     <MESSAGE value="fixed some issues with GridPanel and update mechanics" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some issues with GridPanel and update mechanics" />
+    <MESSAGE value="minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor fixes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="575" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1589242317204">
+    <state x="575" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1589245956271">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="575" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1589242317204" />
+    <state x="575" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1589245956271" />
     <state x="606" y="322" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584284655746">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -841,10 +862,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="450" y="161" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.864@0.0.1536.864" timestamp="1584628489517" />
-    <state x="286" y="20" key="CommitChangelistDialog2" timestamp="1589245207053">
+    <state x="553" y="302" width="430" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589245570407">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="286" y="20" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1589245207053" />
+    <state x="553" y="302" width="430" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1589245570407" />
+    <state x="455" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589245856486">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="455" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1589245856486" />
+    <state x="286" y="20" key="CommitChangelistDialog2" timestamp="1589245423129">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="286" y="20" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1589245423129" />
     <state width="416" height="466" key="DebuggerActiveHint" timestamp="1586670895034">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -853,22 +882,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="591" y="332" key="Github.CreateGistDialog/0.0.1536.864@0.0.1536.864" timestamp="1584311137123" />
-    <state width="1492" height="163" key="GridCell.Tab.0.bottom" timestamp="1589245126000">
+    <state width="1492" height="163" key="GridCell.Tab.0.bottom" timestamp="1589245725436">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="163" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589245126000" />
-    <state width="1492" height="163" key="GridCell.Tab.0.center" timestamp="1589245126000">
+    <state width="1492" height="163" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589245725436" />
+    <state width="1492" height="163" key="GridCell.Tab.0.center" timestamp="1589245725436">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="163" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589245126000" />
-    <state width="1492" height="163" key="GridCell.Tab.0.left" timestamp="1589245126000">
+    <state width="1492" height="163" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589245725436" />
+    <state width="1492" height="163" key="GridCell.Tab.0.left" timestamp="1589245725436">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="163" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589245126000" />
-    <state width="1492" height="163" key="GridCell.Tab.0.right" timestamp="1589245126000">
+    <state width="1492" height="163" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589245725436" />
+    <state width="1492" height="163" key="GridCell.Tab.0.right" timestamp="1589245725436">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="163" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589245126000" />
+    <state width="1492" height="163" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589245725436" />
     <state width="1492" height="125" key="GridCell.Tab.1.bottom" timestamp="1586671858788">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -889,6 +918,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="424" y="136" key="RollbackChangesDialog/0.0.1536.864@0.0.1536.864" timestamp="1589242243316" />
+    <state x="362" y="166" key="Vcs.Push.Dialog.v2" timestamp="1589245471206">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="362" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1589245471206" />
     <state x="500" y="184" key="extract.method.dialog" timestamp="1589241715130">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
