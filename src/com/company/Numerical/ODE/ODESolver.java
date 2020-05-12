@@ -83,7 +83,8 @@ public abstract class ODESolver {
         }
 
         for (int i = 0; i < ITERATION_COUNT; i++) {
-            double[][][] doubles = generateKeys(generateUnweighted(odeSystem, x0, y0, before, h, coefficients()), coefficients(), false);
+            double[][][] doubles = generateKeys(generateUnweighted(odeSystem, x0, y0, before, h, coefficients()),
+                    coefficients(), false);
             updateY(y0, doubles);
             for (int j = 0; j < numberOfEquations; j++) {
                 System.arraycopy(y0[j], 0, before[j], 0, order); // update
@@ -147,7 +148,8 @@ public abstract class ODESolver {
         }
     }
 
-    void convertFromMatrix(ODESystem[][] system, double x0, double[][] y0, double[][] before, double h, double[][] coefficients, int numberOfEquations, int order, double[][][] K) {
+    void convertFromMatrix(ODESystem[][] system, double x0, double[][] y0, double[][] before, double h,
+                           double[][] coefficients, int numberOfEquations, int order, double[][][] K) {
         for (int i = 0; i < K.length; i++) {
             for (int j = 0; j < numberOfEquations; j++) {
                 for (int k = 0; k < order; k++) {

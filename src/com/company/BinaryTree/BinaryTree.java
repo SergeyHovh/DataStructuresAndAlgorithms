@@ -1,12 +1,12 @@
 package com.company.BinaryTree;
 
-public class BinaryTree<T> {
+public class BinaryTree<T extends Comparable> {
     private static String toString = "";
     private final String className = getClass().getSimpleName();
     private BinaryTree<T> left;
     private BinaryTree<T> right;
     private T value;
-    private int objectHashCode;
+    private final int objectHashCode;
     private String valType;
     private final String type = valType + " " + className;
 

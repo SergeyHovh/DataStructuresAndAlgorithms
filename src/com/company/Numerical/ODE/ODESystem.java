@@ -1,5 +1,6 @@
 package com.company.Numerical.ODE;
 
+@FunctionalInterface
 public interface ODESystem {
     /**
      * @param x0 initial position
