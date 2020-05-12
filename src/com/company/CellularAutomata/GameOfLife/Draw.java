@@ -13,11 +13,11 @@ import java.util.Random;
 import java.util.Vector;
 
 public class Draw extends GridPanel implements ActionListener, KeyListener {
-    private int map[][];
-    private boolean start = false;
-    private Timer timer = new Timer(100, this);
-    private Color alive = Color.BLACK;
-    private Color dead = Color.WHITE;
+    private final int[][] map;
+    private final Timer timer = new Timer(100, this);
+    private final Color alive = Color.BLACK;
+    private final Color dead = Color.WHITE;
+    private boolean start = true;
     private int counter = 0;
 
     Draw(int N, double w, double h, boolean random) {

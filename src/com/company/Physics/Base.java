@@ -1,6 +1,7 @@
 package com.company.Physics;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Base extends JFrame {
     public Base(String name, int width, int height) {
@@ -14,5 +15,11 @@ public class Base extends JFrame {
 
     public Base(String name) {
         this(name, 640, 480);
+    }
+
+    public void addComponent(Component comp) {
+        super.add(comp);
+        comp.setFocusable(true);
+        comp.requestFocus();
     }
 }
