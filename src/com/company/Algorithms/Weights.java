@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Weights {
     private int m1, m2, m3, m4;
-    private int[] weigths;
+    private int[] weights;
 
     public Weights() {
         this(1, 2, 3, 4);
@@ -17,8 +17,8 @@ public class Weights {
         m4 = k4;
     }
 
-    Weights(int... weigths) {
-        this.weigths = weigths;
+    Weights(int... weights) {
+        this.weights = weights;
     }
 
     public static void count(int M, int N, int... weights) {

@@ -1,19 +1,19 @@
 package Algorithms;
 
-import com.company.Algorithms.DataStructureGenerator;
 import com.company.Algorithms.Decoder;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 public class DecoderTest {
-    private Decoder decoder = new Decoder();
+    private final Decoder decoder = new Decoder();
 
     @DataProvider
-    Object[][] data() {
-        return new Object[][]{
+    Object[][] encryptionTestData() {
+        return new String[][]{
+//                {"n3sEKLlFLzI"}
                 {"hello world"},
                 {"HELp Me !!@ansdnaskd"},
                 {"ZXCvbnm,./><MNBVCFyjmKjhvGH"},
@@ -31,25 +31,28 @@ public class DecoderTest {
                 {"101"},
                 {"1010"},
                 {"10101"},
-                {"858481"},
+                {"8589481"},
                 {"985812"},
                 {"0 123"},
                 {"0123"},
                 {"01 23"},
-                {DataStructureGenerator.generateGraph(3).toString()},
-                {DataStructureGenerator.generateTree(5).toString()},
-                {DataStructureGenerator.generateSet(5).toString()}
+                {" 0123"},
+                {"1234567898 76543234567"},
+                {"999999999"},
+                {""},
+                {"            "},
+//                {DataStructureGenerator.generateTree(6).toString()}
         };
     }
 
-    @Test(dataProvider = "data")
-    public void decoderTest(String text) {
+    @Test(dataProvider = "encryptionTestData")
+    public void encoderTest(String text) {
         System.out.println("[text = " + text + "]");
-        String decode = decoder.decode(text);
-        System.out.println("[decode = " + decode + "]");
-        String encode = decoder.encode(decode);
+        String encode = decoder.encode(text);
         System.out.println("[encode = " + encode + "]");
-        assertEquals(encode, text);
+        String decode = decoder.decode(encode);
+        System.out.println("[decode = " + decode + "]");
+        assertEquals(decode, text);
     }
 
     @BeforeMethod
